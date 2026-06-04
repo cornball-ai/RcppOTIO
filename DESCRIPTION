@@ -1,7 +1,7 @@
 Package: rotio
 Type: Package
 Title: R Bindings for OpenTimelineIO
-Version: 0.0.0.4
+Version: 0.0.0.5
 Date: 2026-06-04
 Authors@R: c(
     person("Troy", "Hernandez", role = c("aut", "cre"),
@@ -17,7 +17,8 @@ Description: An Rcpp wrapper over the OpenTimelineIO C++ library
 License: MIT + file LICENSE
 Imports: Rcpp (>= 1.0.0)
 LinkingTo: Rcpp
-Suggests: tinytest
+Suggests: tinytest, simplermarkdown
+VignetteBuilder: simplermarkdown
 SystemRequirements: OpenTimelineIO C++ library (>= 0.18),
-    Imath headers; C++17
+    Imath headers; C++17, pandoc
 Encoding: UTF-8
