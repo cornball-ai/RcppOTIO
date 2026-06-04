@@ -1,0 +1,16 @@
+% tinyrox says don't edit this manually, but it can't stop you!
+\name{to_seconds}
+\alias{to_seconds}
+\title{Convert a RationalTime to seconds}
+\usage{
+to_seconds(rt)
+}
+\arguments{
+\item{rt}{A \code{RationalTime}.}
+}
+\value{
+Numeric seconds.
+}
+\description{
+Convert a RationalTime to seconds
+}

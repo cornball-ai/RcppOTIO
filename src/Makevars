@@ -1,0 +1,10 @@
+## OpenTimelineIO is installed under /usr/local by the cornball.ai build.
+## Override OTIO_HOME at install time to point elsewhere, e.g.
+##   R CMD INSTALL --configure-vars='OTIO_HOME=/opt/otio' rotio
+OTIO_HOME = /usr/local
+
+CXX_STD = CXX17
+
+PKG_CPPFLAGS = -I$(OTIO_HOME)/include
+PKG_LIBS = -L$(OTIO_HOME)/lib -Wl,-rpath,$(OTIO_HOME)/lib \
+           -lopentimelineio -lopentime

@@ -1,0 +1,23 @@
+Package: rotio
+Type: Package
+Title: R Bindings for OpenTimelineIO
+Version: 0.0.0.1
+Date: 2026-06-04
+Authors@R: c(
+    person("Troy", "Hernandez", role = c("aut", "cre"),
+           email = "troy.hernandez@pm.me",
+           comment = c(ORCID = "0009-0005-4248-604X")),
+    person("cornball.ai", role = "cph"))
+Description: An Rcpp wrapper over the OpenTimelineIO C++ library
+    (OTIO). Provides R bindings for the OTIO time types
+    (RationalTime, TimeRange, TimeTransform) and the serializable
+    schema objects (Timeline, Stack, Track, Clip, Gap, Transition,
+    Marker, Effect, and media references), including tree
+    construction and JSON serialisation round-trips.
+License: MIT + file LICENSE
+Imports: Rcpp (>= 1.0.0)
+LinkingTo: Rcpp
+Suggests: tinytest
+SystemRequirements: OpenTimelineIO C++ library (>= 0.18),
+    Imath headers; C++17
+Encoding: UTF-8
