@@ -22,50 +22,52 @@ jobs:
       - uses: actions/checkout@v4
 
       # OpenTimelineIO is not packaged for apt/brew as a C++ library, so we
-      # build it from source. The INSTALLED tree is cached per OS + OTIO
-      # version, so the compile happens exactly once: the first run on each
-      # OS builds and saves it, every later run just restores the files and
-      # skips CMake entirely. Imath and RapidJSON come from OTIO's bundled
-      # submodules.
+      # build it from source. The INSTALLED tree (~/otio) is cached per OS +
+      # version, so the compile happens exactly once per OS; later runs just
+      # restore the files. Everything lives OUTSIDE the package working
+      # directory so R CMD build/check never sees the clone or build trees.
+      # Imath and RapidJSON come from OTIO's bundled submodules.
       - name: Cache OpenTimelineIO (built once, then reused)
         id: otio-cache
         uses: actions/cache@v4
         with:
-          path: otio-install
-          key: otio-v0.18.1-${{ matrix.os }}-1
+          path: ~/otio
+          key: otio-v0.18.1-${{ matrix.os }}-2
 
       - name: Build OpenTimelineIO (only on a cache miss)
         if: steps.otio-cache.outputs.cache-hit != 'true'
         run: |
           set -e
           git clone --recursive --depth 1 --branch v0.18.1 \
-            https://github.com/AcademySoftwareFoundation/OpenTimelineIO.git otio-src
-          cmake -S otio-src -B otio-build \
+            https://github.com/AcademySoftwareFoundation/OpenTimelineIO.git "$RUNNER_TEMP/otio-src"
+          cmake -S "$RUNNER_TEMP/otio-src" -B "$RUNNER_TEMP/otio-build" \
             -DCMAKE_BUILD_TYPE=Release \
-            -DCMAKE_INSTALL_PREFIX="$GITHUB_WORKSPACE/otio-install" \
+            -DCMAKE_INSTALL_PREFIX="$HOME/otio" \
             -DOTIO_CXX_INSTALL=ON \
             -DOTIO_PYTHON_INSTALL=OFF \
             -DOTIO_DEPENDENCIES_INSTALL=ON \
             -DOTIO_FIND_IMATH=OFF \
             -DOTIO_SHARED_LIBS=ON
-          cmake --build otio-build --parallel 3
-          cmake --install otio-build
+          cmake --build "$RUNNER_TEMP/otio-build" --parallel 3
+          cmake --install "$RUNNER_TEMP/otio-build"
 
       # Point the package build (and runtime loader) at the cached tree.
-      # OTIO_HOME feeds src/Makevars; the rpath baked from it is an absolute
-      # workspace path, so the .so/.dylib resolves libopentimelineio without
-      # touching /usr/local.
       - name: Point the build at OpenTimelineIO
         run: |
-          echo "OTIO_HOME=$GITHUB_WORKSPACE/otio-install" >> "$GITHUB_ENV"
-          echo "LD_LIBRARY_PATH=$GITHUB_WORKSPACE/otio-install/lib:$LD_LIBRARY_PATH" >> "$GITHUB_ENV"
-          echo "DYLD_FALLBACK_LIBRARY_PATH=$GITHUB_WORKSPACE/otio-install/lib:$DYLD_FALLBACK_LIBRARY_PATH" >> "$GITHUB_ENV"
+          echo "OTIO_HOME=$HOME/otio" >> "$GITHUB_ENV"
+          echo "LD_LIBRARY_PATH=$HOME/otio/lib:$LD_LIBRARY_PATH" >> "$GITHUB_ENV"
+          echo "DYLD_FALLBACK_LIBRARY_PATH=$HOME/otio/lib:$DYLD_FALLBACK_LIBRARY_PATH" >> "$GITHUB_ENV"
 
       - name: Setup r-ci
         uses: eddelbuettel/github-actions/r-ci@master
 
       - name: Install dependencies
         run: ./run.sh install_deps
+
+      # The vignette is built by simplermarkdown during R CMD build, so it
+      # must be present (it is a Suggests, which install_deps may skip).
+      - name: Install vignette builder
+        run: Rscript -e 'if (!requireNamespace("simplermarkdown", quietly = TRUE)) install.packages("simplermarkdown")'
 
       - name: Run tests
         run: ./run.sh run_tests
