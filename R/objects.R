@@ -36,6 +36,34 @@ active_media_reference_key <- function(x) cpp_clip_active_media_reference_key(x)
 #' @export
 default_media_key <- function() cpp_clip_default_media_key()
 
+#' All media references of a Clip, keyed by media key
+#'
+#' A clip can hold several media references (e.g. proxy and full-res) under
+#' string keys, one of which is the \code{active_media_reference_key}.
+#'
+#' @param x A \code{Clip}.
+#' @return A named list mapping media keys to media-reference objects.
+#' @export
+media_references <- function(x) cpp_clip_media_references(x)
+
+#' Set all media references of a Clip
+#'
+#' Replaces the clip's media-reference map and chooses the active key.
+#' OTIO requires \code{new_active_key} to be one of the map's keys and
+#' rejects empty keys.
+#'
+#' @param x A \code{Clip}.
+#' @param media_references A named list mapping non-empty keys to media
+#'   references.
+#' @param new_active_key The key to make active (must exist in
+#'   \code{media_references}).
+#' @return \code{x}, invisibly.
+#' @export
+set_media_references <- function(x, media_references, new_active_key) {
+    cpp_clip_set_media_references(x, media_references, new_active_key)
+    invisible(x)
+}
+
 # ---- MediaReference subtypes -----------------------------------------
 
 #' Is this a MissingReference?
