@@ -48,6 +48,12 @@ expect_true(intersects(tr, tr2))
 r3 <- range_from_start_end_time(RationalTime(0, 24), RationalTime(48, 24))
 expect_equal(to_seconds(duration(r3)), 2)
 
+## Malformed value-type input is rejected at the C++ boundary with a
+## clear error rather than producing garbage.
+expect_error(to_seconds(structure(c(foo = 1), class = "RationalTime")), "RationalTime")
+expect_error(to_seconds(list(a = 1)), "RationalTime")
+expect_error(end_time_exclusive(list(start_time = RationalTime(0, 24))), "TimeRange")
+
 ## TimeTransform
 tt <- TimeTransform(RationalTime(0, 24), scale = 2, rate = 24)
 expect_inherits(tt, "TimeTransform")

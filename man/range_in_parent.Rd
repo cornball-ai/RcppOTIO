@@ -9,7 +9,8 @@ range_in_parent(x)
 \item{x}{An \code{Item} or \code{Transition}.}
 }
 \value{
-A \code{TimeRange}.
+A \code{TimeRange}. For a \code{Transition} this is
+  \code{NULL} when it has no parent (an \code{Item} always has a range).
 }
 \description{
 This is where the item sits in its parent's time, the OTIO notion of

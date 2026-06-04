@@ -14,6 +14,16 @@ Rcpp::List cpp_children(SEXP x) {
     return otio_xptr_list(kids);
 }
 
+// SerializableCollection holds SerializableObjects (not Composables) and
+// is not a Composition, so it has its own children() accessor.
+// [[Rcpp::export]]
+Rcpp::List cpp_collection_children(SEXP x) {
+    otio::SerializableCollection* coll = otio_get<otio::SerializableCollection>(x);
+    std::vector<otio::SerializableObject*> kids;
+    for (auto const& r : coll->children()) kids.push_back(r.value);
+    return otio_xptr_list(kids);
+}
+
 // [[Rcpp::export]]
 void cpp_append_child(SEXP x, SEXP child) {
     otio::ErrorStatus err;

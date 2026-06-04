@@ -6,7 +6,10 @@
 #' @param x A \code{Composition} (Track, Stack) or \code{SerializableCollection}.
 #' @return A list of child OTIO objects, in order.
 #' @export
-children <- function(x) cpp_children(x)
+children <- function(x) {
+    if (inherits(x, "SerializableCollection")) cpp_collection_children(x)
+    else cpp_children(x)
+}
 
 #' Append a child to a composition
 #' @param x A \code{Composition}.

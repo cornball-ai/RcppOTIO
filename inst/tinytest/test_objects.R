@@ -50,6 +50,17 @@ expect_true(overlapping(tx))
 transition_type(tx) <- "Custom_Transition"
 expect_equal(transition_type(tx), "Custom_Transition")
 
+## Transition is a Composable, not an Item, but has its own range methods.
+## Unparented: OTIO raises ("no parent"). Parented between clips: a TimeRange.
+expect_error(range_in_parent(tx), "parent")
+expect_error(trimmed_range_in_parent(tx), "parent")
+trk_tx <- Track("V1", "Video")
+append_child(trk_tx, Clip("a", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24))))
+append_child(trk_tx, tx)
+append_child(trk_tx, Clip("b", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24))))
+expect_inherits(range_in_parent(tx), "TimeRange")
+expect_inherits(trimmed_range_in_parent(tx), "TimeRange")
+
 ## ---- Marker ----
 mk <- Marker("m", marked_range = TimeRange(RationalTime(0, 24), RationalTime(1, 24)),
              color = "RED", comment = "look here")
@@ -79,3 +90,8 @@ expect_inherits(ff, "LinearTimeWarp")
 coll <- SerializableCollection("bin", children = list(Clip("x"), Clip("y")))
 expect_inherits(coll, "SerializableCollection")
 expect_equal(length(find_clips(coll)), 2L)
+## children() works on a collection (which is not a Composition)
+kids <- children(coll)
+expect_equal(length(kids), 2L)
+expect_equal(name(kids[[1]]), "x")
+expect_equal(name(kids[[2]]), "y")

@@ -70,6 +70,24 @@ void cpp_transition_set_out_offset(SEXP x, SEXP out_offset) {
     otio_get<otio::Transition>(x)->set_out_offset(as_rational_time(out_offset));
 }
 
+// Transition is a Composable, not an Item, and has its own range methods
+// that return std::optional (NULL when the transition has no parent).
+// [[Rcpp::export]]
+SEXP cpp_transition_range_in_parent(SEXP x) {
+    otio::ErrorStatus err;
+    std::optional<ot::TimeRange> r = otio_get<otio::Transition>(x)->range_in_parent(&err);
+    otio_check(err);
+    return wrap_opt_time_range(r);
+}
+
+// [[Rcpp::export]]
+SEXP cpp_transition_trimmed_range_in_parent(SEXP x) {
+    otio::ErrorStatus err;
+    std::optional<ot::TimeRange> r = otio_get<otio::Transition>(x)->trimmed_range_in_parent(&err);
+    otio_check(err);
+    return wrap_opt_time_range(r);
+}
+
 // ---- Marker ----------------------------------------------------------
 
 // [[Rcpp::export]]
