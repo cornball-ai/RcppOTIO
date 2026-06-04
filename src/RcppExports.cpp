@@ -10,6 +10,165 @@ Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
 Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
+// cpp_algo_overwrite
+void cpp_algo_overwrite(SEXP item, SEXP composition, SEXP range, bool remove_transitions, SEXP fill_template);
+RcppExport SEXP _rotio_cpp_algo_overwrite(SEXP itemSEXP, SEXP compositionSEXP, SEXP rangeSEXP, SEXP remove_transitionsSEXP, SEXP fill_templateSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type item(itemSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type composition(compositionSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type range(rangeSEXP);
+    Rcpp::traits::input_parameter< bool >::type remove_transitions(remove_transitionsSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type fill_template(fill_templateSEXP);
+    cpp_algo_overwrite(item, composition, range, remove_transitions, fill_template);
+    return R_NilValue;
+END_RCPP
+}
+// cpp_algo_insert
+void cpp_algo_insert(SEXP item, SEXP composition, SEXP time, bool remove_transitions, SEXP fill_template);
+RcppExport SEXP _rotio_cpp_algo_insert(SEXP itemSEXP, SEXP compositionSEXP, SEXP timeSEXP, SEXP remove_transitionsSEXP, SEXP fill_templateSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type item(itemSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type composition(compositionSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type time(timeSEXP);
+    Rcpp::traits::input_parameter< bool >::type remove_transitions(remove_transitionsSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type fill_template(fill_templateSEXP);
+    cpp_algo_insert(item, composition, time, remove_transitions, fill_template);
+    return R_NilValue;
+END_RCPP
+}
+// cpp_algo_trim
+void cpp_algo_trim(SEXP item, SEXP delta_in, SEXP delta_out, SEXP fill_template);
+RcppExport SEXP _rotio_cpp_algo_trim(SEXP itemSEXP, SEXP delta_inSEXP, SEXP delta_outSEXP, SEXP fill_templateSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type item(itemSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type delta_in(delta_inSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type delta_out(delta_outSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type fill_template(fill_templateSEXP);
+    cpp_algo_trim(item, delta_in, delta_out, fill_template);
+    return R_NilValue;
+END_RCPP
+}
+// cpp_algo_slice
+void cpp_algo_slice(SEXP composition, SEXP time, bool remove_transitions);
+RcppExport SEXP _rotio_cpp_algo_slice(SEXP compositionSEXP, SEXP timeSEXP, SEXP remove_transitionsSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type composition(compositionSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type time(timeSEXP);
+    Rcpp::traits::input_parameter< bool >::type remove_transitions(remove_transitionsSEXP);
+    cpp_algo_slice(composition, time, remove_transitions);
+    return R_NilValue;
+END_RCPP
+}
+// cpp_algo_slip
+void cpp_algo_slip(SEXP item, SEXP delta);
+RcppExport SEXP _rotio_cpp_algo_slip(SEXP itemSEXP, SEXP deltaSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type item(itemSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type delta(deltaSEXP);
+    cpp_algo_slip(item, delta);
+    return R_NilValue;
+END_RCPP
+}
+// cpp_algo_slide
+void cpp_algo_slide(SEXP item, SEXP delta);
+RcppExport SEXP _rotio_cpp_algo_slide(SEXP itemSEXP, SEXP deltaSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type item(itemSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type delta(deltaSEXP);
+    cpp_algo_slide(item, delta);
+    return R_NilValue;
+END_RCPP
+}
+// cpp_algo_ripple
+void cpp_algo_ripple(SEXP item, SEXP delta_in, SEXP delta_out);
+RcppExport SEXP _rotio_cpp_algo_ripple(SEXP itemSEXP, SEXP delta_inSEXP, SEXP delta_outSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type item(itemSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type delta_in(delta_inSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type delta_out(delta_outSEXP);
+    cpp_algo_ripple(item, delta_in, delta_out);
+    return R_NilValue;
+END_RCPP
+}
+// cpp_algo_roll
+void cpp_algo_roll(SEXP item, SEXP delta_in, SEXP delta_out);
+RcppExport SEXP _rotio_cpp_algo_roll(SEXP itemSEXP, SEXP delta_inSEXP, SEXP delta_outSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type item(itemSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type delta_in(delta_inSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type delta_out(delta_outSEXP);
+    cpp_algo_roll(item, delta_in, delta_out);
+    return R_NilValue;
+END_RCPP
+}
+// cpp_algo_fill
+void cpp_algo_fill(SEXP item, SEXP track, SEXP track_time, std::string reference_point);
+RcppExport SEXP _rotio_cpp_algo_fill(SEXP itemSEXP, SEXP trackSEXP, SEXP track_timeSEXP, SEXP reference_pointSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type item(itemSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type track(trackSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type track_time(track_timeSEXP);
+    Rcpp::traits::input_parameter< std::string >::type reference_point(reference_pointSEXP);
+    cpp_algo_fill(item, track, track_time, reference_point);
+    return R_NilValue;
+END_RCPP
+}
+// cpp_algo_remove
+void cpp_algo_remove(SEXP composition, SEXP time, bool fill, SEXP fill_template);
+RcppExport SEXP _rotio_cpp_algo_remove(SEXP compositionSEXP, SEXP timeSEXP, SEXP fillSEXP, SEXP fill_templateSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type composition(compositionSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type time(timeSEXP);
+    Rcpp::traits::input_parameter< bool >::type fill(fillSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type fill_template(fill_templateSEXP);
+    cpp_algo_remove(composition, time, fill, fill_template);
+    return R_NilValue;
+END_RCPP
+}
+// cpp_track_trimmed_to_range
+SEXP cpp_track_trimmed_to_range(SEXP track, SEXP trim_range);
+RcppExport SEXP _rotio_cpp_track_trimmed_to_range(SEXP trackSEXP, SEXP trim_rangeSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type track(trackSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type trim_range(trim_rangeSEXP);
+    rcpp_result_gen = Rcpp::wrap(cpp_track_trimmed_to_range(track, trim_range));
+    return rcpp_result_gen;
+END_RCPP
+}
+// cpp_flatten_stack
+SEXP cpp_flatten_stack(SEXP stack);
+RcppExport SEXP _rotio_cpp_flatten_stack(SEXP stackSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type stack(stackSEXP);
+    rcpp_result_gen = Rcpp::wrap(cpp_flatten_stack(stack));
+    return rcpp_result_gen;
+END_RCPP
+}
+// cpp_flatten_stack_tracks
+SEXP cpp_flatten_stack_tracks(Rcpp::List tracks);
+RcppExport SEXP _rotio_cpp_flatten_stack_tracks(SEXP tracksSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rcpp::List >::type tracks(tracksSEXP);
+    rcpp_result_gen = Rcpp::wrap(cpp_flatten_stack_tracks(tracks));
+    return rcpp_result_gen;
+END_RCPP
+}
 // cpp_children
 Rcpp::List cpp_children(SEXP x);
 RcppExport SEXP _rotio_cpp_children(SEXP xSEXP) {
@@ -1646,6 +1805,19 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
+    {"_rotio_cpp_algo_overwrite", (DL_FUNC) &_rotio_cpp_algo_overwrite, 5},
+    {"_rotio_cpp_algo_insert", (DL_FUNC) &_rotio_cpp_algo_insert, 5},
+    {"_rotio_cpp_algo_trim", (DL_FUNC) &_rotio_cpp_algo_trim, 4},
+    {"_rotio_cpp_algo_slice", (DL_FUNC) &_rotio_cpp_algo_slice, 3},
+    {"_rotio_cpp_algo_slip", (DL_FUNC) &_rotio_cpp_algo_slip, 2},
+    {"_rotio_cpp_algo_slide", (DL_FUNC) &_rotio_cpp_algo_slide, 2},
+    {"_rotio_cpp_algo_ripple", (DL_FUNC) &_rotio_cpp_algo_ripple, 3},
+    {"_rotio_cpp_algo_roll", (DL_FUNC) &_rotio_cpp_algo_roll, 3},
+    {"_rotio_cpp_algo_fill", (DL_FUNC) &_rotio_cpp_algo_fill, 4},
+    {"_rotio_cpp_algo_remove", (DL_FUNC) &_rotio_cpp_algo_remove, 4},
+    {"_rotio_cpp_track_trimmed_to_range", (DL_FUNC) &_rotio_cpp_track_trimmed_to_range, 2},
+    {"_rotio_cpp_flatten_stack", (DL_FUNC) &_rotio_cpp_flatten_stack, 1},
+    {"_rotio_cpp_flatten_stack_tracks", (DL_FUNC) &_rotio_cpp_flatten_stack_tracks, 1},
     {"_rotio_cpp_children", (DL_FUNC) &_rotio_cpp_children, 1},
     {"_rotio_cpp_collection_children", (DL_FUNC) &_rotio_cpp_collection_children, 1},
     {"_rotio_cpp_collection_set_children", (DL_FUNC) &_rotio_cpp_collection_set_children, 2},

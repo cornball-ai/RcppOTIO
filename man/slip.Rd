@@ -1,0 +1,19 @@
+% tinyrox says don't edit this manually, but it can't stop you!
+\name{slip}
+\alias{slip}
+\title{Slip an item's source in/out by a delta, keeping its duration and position}
+\usage{
+slip(item, delta)
+}
+\arguments{
+\item{item}{The \code{Item} to slip.}
+
+\item{delta}{\code{RationalTime} to slip by (positive or negative).}
+}
+\value{
+\code{item}, invisibly.
+}
+\description{
+Shifts which part of the media is shown; clamped to the available range
+when known. Other items are unaffected.
+}
