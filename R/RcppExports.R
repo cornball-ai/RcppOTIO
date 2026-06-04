@@ -445,12 +445,24 @@ cpp_genref_set_parameters <- function(x, parameters) {
     invisible(.Call(`_rotio_cpp_genref_set_parameters`, x, parameters))
 }
 
-cpp_to_json_string <- function(x, indent) {
-    .Call(`_rotio_cpp_to_json_string`, x, indent)
+cpp_register_upgrade_function <- function(schema_name, version_to_upgrade_to, fn) {
+    .Call(`_rotio_cpp_register_upgrade_function`, schema_name, version_to_upgrade_to, fn)
 }
 
-cpp_to_json_file <- function(x, file_name, indent) {
-    .Call(`_rotio_cpp_to_json_file`, x, file_name, indent)
+cpp_register_downgrade_function <- function(schema_name, version_to_downgrade_from, fn) {
+    .Call(`_rotio_cpp_register_downgrade_function`, schema_name, version_to_downgrade_from, fn)
+}
+
+cpp_type_version_map <- function() {
+    .Call(`_rotio_cpp_type_version_map`)
+}
+
+cpp_to_json_string <- function(x, indent, target_schema_versions) {
+    .Call(`_rotio_cpp_to_json_string`, x, indent, target_schema_versions)
+}
+
+cpp_to_json_file <- function(x, file_name, indent, target_schema_versions) {
+    .Call(`_rotio_cpp_to_json_file`, x, file_name, indent, target_schema_versions)
 }
 
 cpp_from_json_string <- function(input) {

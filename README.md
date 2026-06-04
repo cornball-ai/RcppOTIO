@@ -8,7 +8,10 @@ round-trips, and the edit algorithms (`overwrite`, `insert`, `trim`,
 `slice`, `slip`, `slide`, `ripple`, `roll`, `fill`, `remove`) plus
 `track_trimmed_to_range` and `flatten_stack`. Clips carry the full
 `media_references` map (multiple keyed references with an active key).
-Still not wrapped: the `TypeRegistry` schema-upgrade hooks.
+Schema versioning is supported too: `register_upgrade_function` /
+`register_downgrade_function` take R callbacks over the schema dictionary,
+`to_json_string` accepts `target_schema_versions` to downgrade on write,
+and `type_version_map` reports the registered schema versions.
 
 ## Design
 
