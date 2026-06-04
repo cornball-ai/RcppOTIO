@@ -5,6 +5,30 @@ cpp_children <- function(x) {
     .Call(`_rotio_cpp_children`, x)
 }
 
+cpp_collection_children <- function(x) {
+    .Call(`_rotio_cpp_collection_children`, x)
+}
+
+cpp_collection_set_children <- function(x, children) {
+    invisible(.Call(`_rotio_cpp_collection_set_children`, x, children))
+}
+
+cpp_collection_clear_children <- function(x) {
+    invisible(.Call(`_rotio_cpp_collection_clear_children`, x))
+}
+
+cpp_collection_insert_child <- function(x, index, child) {
+    invisible(.Call(`_rotio_cpp_collection_insert_child`, x, index, child))
+}
+
+cpp_collection_set_child <- function(x, index, child) {
+    invisible(.Call(`_rotio_cpp_collection_set_child`, x, index, child))
+}
+
+cpp_collection_remove_child <- function(x, index) {
+    invisible(.Call(`_rotio_cpp_collection_remove_child`, x, index))
+}
+
 cpp_append_child <- function(x, child) {
     invisible(.Call(`_rotio_cpp_append_child`, x, child))
 }
@@ -167,6 +191,14 @@ cpp_transition_out_offset <- function(x) {
 
 cpp_transition_set_out_offset <- function(x, out_offset) {
     invisible(.Call(`_rotio_cpp_transition_set_out_offset`, x, out_offset))
+}
+
+cpp_transition_range_in_parent <- function(x) {
+    .Call(`_rotio_cpp_transition_range_in_parent`, x)
+}
+
+cpp_transition_trimmed_range_in_parent <- function(x) {
+    .Call(`_rotio_cpp_transition_trimmed_range_in_parent`, x)
 }
 
 cpp_marker_color <- function(x) {

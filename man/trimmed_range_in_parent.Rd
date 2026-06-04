@@ -6,7 +6,7 @@
 trimmed_range_in_parent(x)
 }
 \arguments{
-\item{x}{An \code{Item}.}
+\item{x}{An \code{Item} or \code{Transition}.}
 }
 \value{
 A \code{TimeRange} or \code{NULL}.

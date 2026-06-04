@@ -9,9 +9,10 @@ set_children(x, children)
 set_children(x) <- value
 }
 \arguments{
-\item{x}{A \code{Composition}.}
+\item{x}{A \code{Composition} or \code{SerializableCollection}.}
 
-\item{children,value}{A list of \code{Composable} objects.}
+\item{children,value}{A list of OTIO objects (\code{Composable} for a
+Composition; any OTIO object for a SerializableCollection).}
 }
 \value{
 \code{x} (invisibly from the function form).

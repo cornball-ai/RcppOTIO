@@ -6,7 +6,7 @@
 remove_child(x, index)
 }
 \arguments{
-\item{x}{A \code{Composition}.}
+\item{x}{A \code{Composition} or \code{SerializableCollection}.}
 
 \item{index}{1-based position to remove.}
 }

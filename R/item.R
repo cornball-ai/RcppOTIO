@@ -91,15 +91,22 @@ visible_range <- function(x) cpp_visible_range(x)
 #' timeline position. There is no separately stored "in" point.
 #'
 #' @param x An \code{Item} or \code{Transition}.
-#' @return A \code{TimeRange}.
+#' @return A \code{TimeRange}. An object with no parent has no range there,
+#'   so OTIO raises an error in that case (for both items and transitions).
 #' @export
-range_in_parent <- function(x) cpp_range_in_parent(x)
+range_in_parent <- function(x) {
+    if (inherits(x, "Transition")) cpp_transition_range_in_parent(x)
+    else cpp_range_in_parent(x)
+}
 
 #' Trimmed range of an Item within its parent
-#' @param x An \code{Item}.
+#' @param x An \code{Item} or \code{Transition}.
 #' @return A \code{TimeRange} or \code{NULL}.
 #' @export
-trimmed_range_in_parent <- function(x) cpp_trimmed_range_in_parent(x)
+trimmed_range_in_parent <- function(x) {
+    if (inherits(x, "Transition")) cpp_transition_trimmed_range_in_parent(x)
+    else cpp_trimmed_range_in_parent(x)
+}
 
 #' Is a Composable visible?
 #' @param x A \code{Composable}.

@@ -9,7 +9,8 @@ range_in_parent(x)
 \item{x}{An \code{Item} or \code{Transition}.}
 }
 \value{
-A \code{TimeRange}.
+A \code{TimeRange}. An object with no parent has no range there,
+  so OTIO raises an error in that case (for both items and transitions).
 }
 \description{
 This is where the item sits in its parent's time, the OTIO notion of

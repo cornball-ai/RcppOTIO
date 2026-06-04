@@ -14,6 +14,52 @@ Rcpp::List cpp_children(SEXP x) {
     return otio_xptr_list(kids);
 }
 
+// SerializableCollection holds SerializableObjects (not Composables) and
+// is not a Composition, so it has its own children() accessor and its own
+// mutation methods. Indices are 0-based here (R wrappers present 1-based).
+// [[Rcpp::export]]
+Rcpp::List cpp_collection_children(SEXP x) {
+    otio::SerializableCollection* coll = otio_get<otio::SerializableCollection>(x);
+    std::vector<otio::SerializableObject*> kids;
+    for (auto const& r : coll->children()) kids.push_back(r.value);
+    return otio_xptr_list(kids);
+}
+
+// [[Rcpp::export]]
+void cpp_collection_set_children(SEXP x, Rcpp::List children) {
+    std::vector<otio::SerializableObject*> kids;
+    kids.reserve(children.size());
+    for (R_xlen_t i = 0; i < children.size(); ++i)
+        kids.push_back(otio_get<otio::SerializableObject>(children[i]));
+    otio_get<otio::SerializableCollection>(x)->set_children(kids);
+}
+
+// [[Rcpp::export]]
+void cpp_collection_clear_children(SEXP x) {
+    otio_get<otio::SerializableCollection>(x)->clear_children();
+}
+
+// [[Rcpp::export]]
+void cpp_collection_insert_child(SEXP x, int index, SEXP child) {
+    otio_get<otio::SerializableCollection>(x)->insert_child(
+        index, otio_get<otio::SerializableObject>(child));
+}
+
+// [[Rcpp::export]]
+void cpp_collection_set_child(SEXP x, int index, SEXP child) {
+    otio::ErrorStatus err;
+    otio_get<otio::SerializableCollection>(x)->set_child(
+        index, otio_get<otio::SerializableObject>(child), &err);
+    otio_check(err);
+}
+
+// [[Rcpp::export]]
+void cpp_collection_remove_child(SEXP x, int index) {
+    otio::ErrorStatus err;
+    otio_get<otio::SerializableCollection>(x)->remove_child(index, &err);
+    otio_check(err);
+}
+
 // [[Rcpp::export]]
 void cpp_append_child(SEXP x, SEXP child) {
     otio::ErrorStatus err;
