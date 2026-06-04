@@ -6,8 +6,9 @@ an Rcpp wrapper over the OTIO C++ library (0.18.x).
 It covers the time types, the schema classes, tree construction, JSON
 round-trips, and the edit algorithms (`overwrite`, `insert`, `trim`,
 `slice`, `slip`, `slide`, `ripple`, `roll`, `fill`, `remove`) plus
-`track_trimmed_to_range` and `flatten_stack`. Still not wrapped: the full
-`media_references` map and the `TypeRegistry` schema-upgrade hooks.
+`track_trimmed_to_range` and `flatten_stack`. Clips carry the full
+`media_references` map (multiple keyed references with an active key).
+Still not wrapped: the `TypeRegistry` schema-upgrade hooks.
 
 ## Design
 

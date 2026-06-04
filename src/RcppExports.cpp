@@ -1037,6 +1037,29 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// cpp_clip_media_references
+SEXP cpp_clip_media_references(SEXP x);
+RcppExport SEXP _rotio_cpp_clip_media_references(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(cpp_clip_media_references(x));
+    return rcpp_result_gen;
+END_RCPP
+}
+// cpp_clip_set_media_references
+void cpp_clip_set_media_references(SEXP x, Rcpp::List media_references, SEXP new_active_key);
+RcppExport SEXP _rotio_cpp_clip_set_media_references(SEXP xSEXP, SEXP media_referencesSEXP, SEXP new_active_keySEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
+    Rcpp::traits::input_parameter< Rcpp::List >::type media_references(media_referencesSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type new_active_key(new_active_keySEXP);
+    cpp_clip_set_media_references(x, media_references, new_active_key);
+    return R_NilValue;
+END_RCPP
+}
 // cpp_mediaref_available_range
 SEXP cpp_mediaref_available_range(SEXP x);
 RcppExport SEXP _rotio_cpp_mediaref_available_range(SEXP xSEXP) {
@@ -1892,6 +1915,8 @@ static const R_CallMethodDef CallEntries[] = {
     {"_rotio_cpp_clip_active_media_reference_key", (DL_FUNC) &_rotio_cpp_clip_active_media_reference_key, 1},
     {"_rotio_cpp_clip_set_active_media_reference_key", (DL_FUNC) &_rotio_cpp_clip_set_active_media_reference_key, 2},
     {"_rotio_cpp_clip_default_media_key", (DL_FUNC) &_rotio_cpp_clip_default_media_key, 0},
+    {"_rotio_cpp_clip_media_references", (DL_FUNC) &_rotio_cpp_clip_media_references, 1},
+    {"_rotio_cpp_clip_set_media_references", (DL_FUNC) &_rotio_cpp_clip_set_media_references, 3},
     {"_rotio_cpp_mediaref_available_range", (DL_FUNC) &_rotio_cpp_mediaref_available_range, 1},
     {"_rotio_cpp_mediaref_set_available_range", (DL_FUNC) &_rotio_cpp_mediaref_set_available_range, 2},
     {"_rotio_cpp_mediaref_is_missing_reference", (DL_FUNC) &_rotio_cpp_mediaref_is_missing_reference, 1},

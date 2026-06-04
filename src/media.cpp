@@ -37,6 +37,56 @@ std::string cpp_clip_default_media_key() {
     return otio::Clip::default_media_key;
 }
 
+// The full media_references map: media key -> MediaReference. Represented
+// in R as a named list of media-reference handles.
+// [[Rcpp::export]]
+SEXP cpp_clip_media_references(SEXP x) {
+    otio::Clip::MediaReferences refs = otio_get<otio::Clip>(x)->media_references();
+    Rcpp::List out(refs.size());
+    Rcpp::CharacterVector nms(refs.size());
+    R_xlen_t i = 0;
+    for (auto const& kv : refs) {
+        nms[i] = kv.first;
+        out[i] = otio_xptr(kv.second);
+        ++i;
+    }
+    out.names() = nms;
+    return out;
+}
+
+// [[Rcpp::export]]
+void cpp_clip_set_media_references(SEXP x, Rcpp::List media_references,
+                                   SEXP new_active_key) {
+    if (TYPEOF(new_active_key) != STRSXP || Rf_length(new_active_key) != 1 ||
+        STRING_ELT(new_active_key, 0) == NA_STRING)
+        Rcpp::stop("new_active_key must be a single non-NA string");
+    std::string active = CHAR(STRING_ELT(new_active_key, 0));
+
+    otio::Clip::MediaReferences m;
+    if (media_references.size() > 0) {
+        SEXP names = Rf_getAttrib(media_references, R_NamesSymbol);
+        if (Rf_isNull(names))
+            Rcpp::stop("media_references must be a named list (keys -> media references)");
+        Rcpp::CharacterVector nms(names);
+        for (R_xlen_t i = 0; i < media_references.size(); ++i) {
+            // R names can be NA, empty, or duplicated; OTIO's std::map would
+            // silently coerce/collapse those, so reject them explicitly.
+            if (Rcpp::CharacterVector::is_na(nms[i]))
+                Rcpp::stop("media_references keys must not be NA");
+            std::string key = Rcpp::as<std::string>(nms[i]);
+            if (key.empty())
+                Rcpp::stop("media_references keys must be non-empty strings");
+            if (m.count(key))
+                Rcpp::stop("duplicate media_references key '%s'", key);
+            m[key] = otio_get<otio::MediaReference>(media_references[i]);
+        }
+    }
+    otio::ErrorStatus err;
+    // OTIO additionally validates that new_active_key exists in the map.
+    otio_get<otio::Clip>(x)->set_media_references(m, active, &err);
+    otio_check(err);
+}
+
 // ---- MediaReference (base) -------------------------------------------
 
 // [[Rcpp::export]]

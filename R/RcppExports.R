@@ -349,6 +349,14 @@ cpp_clip_default_media_key <- function() {
     .Call(`_rotio_cpp_clip_default_media_key`)
 }
 
+cpp_clip_media_references <- function(x) {
+    .Call(`_rotio_cpp_clip_media_references`, x)
+}
+
+cpp_clip_set_media_references <- function(x, media_references, new_active_key) {
+    invisible(.Call(`_rotio_cpp_clip_set_media_references`, x, media_references, new_active_key))
+}
+
 cpp_mediaref_available_range <- function(x) {
     .Call(`_rotio_cpp_mediaref_available_range`, x)
 }
