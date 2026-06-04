@@ -14,3 +14,11 @@ Logical.
 \description{
 Does a composition contain any clips (recursively)?
 }
+\examples{
+library(rotio)
+trk <- Track("V1")
+has_clips(trk)
+a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
+append_child(trk, a)
+has_clips(trk)
+}

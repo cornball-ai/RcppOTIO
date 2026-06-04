@@ -19,3 +19,9 @@ The kind string; the setter returns \code{x}.
 \description{
 Kind of a Track
 }
+\examples{
+trk <- Track("V1", kind = "Video")
+kind(trk)
+kind(trk) <- "Audio"
+kind(trk)
+}

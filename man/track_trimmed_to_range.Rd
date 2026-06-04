@@ -16,3 +16,10 @@ A new \code{Track}.
 \description{
 Return a copy of a track trimmed to a range
 }
+\examples{
+library(rotio)
+trk <- Track("V1", kind = "Video")
+append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+trimmed <- track_trimmed_to_range(trk, TimeRange(RationalTime(24, 24), RationalTime(48, 24)))
+}

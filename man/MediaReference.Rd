@@ -18,3 +18,8 @@ A \code{MediaReference}.
 \description{
 MediaReference
 }
+\examples{
+mr <- MediaReference("ref")
+mr <- MediaReference("ref",
+                     available_range = TimeRange(RationalTime(0, 24), RationalTime(240, 24)))
+}

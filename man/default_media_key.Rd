@@ -11,3 +11,6 @@ The string OTIO uses for a clip's default media (\code{"DEFAULT_MEDIA"}).
 \description{
 The default media reference key
 }
+\examples{
+default_media_key()
+}

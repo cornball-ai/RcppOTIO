@@ -14,3 +14,9 @@ The deserialized OTIO object.
 \description{
 Read an OTIO object from a JSON string
 }
+\examples{
+tl <- Timeline("demo")
+js <- to_json_string(tl)
+tl2 <- from_json_string(js)
+is_equivalent_to(tl, tl2)
+}

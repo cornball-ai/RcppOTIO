@@ -18,3 +18,7 @@ A \code{Stack}.
 \description{
 Stack
 }
+\examples{
+st <- Stack("main stack")
+st <- Stack("trimmed", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24)))
+}

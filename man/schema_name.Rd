@@ -17,3 +17,8 @@ The schema name (string) or version (integer).
 \description{
 Schema name and version of an OTIO object
 }
+\examples{
+clip <- Clip("A")
+schema_name(clip)
+schema_version(clip)
+}

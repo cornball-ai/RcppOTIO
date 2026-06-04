@@ -14,3 +14,7 @@ Logical.
 \description{
 Was this object loaded from an unknown schema?
 }
+\examples{
+clip <- Clip("A")
+is_unknown_schema(clip)
+}

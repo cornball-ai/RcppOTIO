@@ -18,3 +18,7 @@ A \code{Timeline}.
 \description{
 Timeline
 }
+\examples{
+tl <- Timeline("my timeline")
+tl <- Timeline("with start", global_start_time = RationalTime(0, 24))
+}

@@ -20,3 +20,7 @@ An \code{Effect}.
 \description{
 Effect
 }
+\examples{
+ef <- Effect("blur", effect_name = "GaussianBlur")
+ef <- Effect("blur", effect_name = "GaussianBlur", enabled = FALSE)
+}

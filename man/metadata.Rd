@@ -22,3 +22,8 @@ double, and character scalars/vectors, the OTIO time types, nested
 named lists (sub-dictionaries), unnamed lists (vectors), and OTIO
 objects. Other value types are dropped with a warning on read.
 }
+\examples{
+clip <- Clip("A")
+metadata(clip) <- list(fps = 24, note = "hero shot")
+metadata(clip)$fps
+}

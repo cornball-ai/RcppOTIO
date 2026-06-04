@@ -23,3 +23,8 @@ A timecode string.
 \description{
 SMPTE timecode conversions
 }
+\examples{
+tc <- to_timecode(RationalTime(48, 24), 24)
+tc
+from_timecode(tc, 24)
+}

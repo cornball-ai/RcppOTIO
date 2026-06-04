@@ -14,3 +14,7 @@ Logical.
 \description{
 Does a Composable overlap its neighbours? (TRUE for transitions)
 }
+\examples{
+library(rotio)
+overlapping(Clip("A"))
+}

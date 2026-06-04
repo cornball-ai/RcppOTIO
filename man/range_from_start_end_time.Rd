@@ -14,3 +14,6 @@ A \code{TimeRange}.
 \description{
 Build a TimeRange from start and exclusive end times
 }
+\examples{
+range_from_start_end_time(RationalTime(0, 24), RationalTime(48, 24))
+}

@@ -19,3 +19,8 @@ A \code{TimeRange}; the setter returns \code{x}.
 \description{
 Marked range of a Marker
 }
+\examples{
+m <- Marker("m", marked_range = TimeRange(RationalTime(0, 24), RationalTime(1, 24)),
+  color = "RED")
+marked_range(m)
+}

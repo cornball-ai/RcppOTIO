@@ -32,3 +32,9 @@ An \code{ImageSequenceReference}.
 \description{
 ImageSequenceReference
 }
+\examples{
+isr <- ImageSequenceReference(
+    target_url_base = "file:///renders/", name_prefix = "frame.",
+    name_suffix = ".exr", start_frame = 1L, rate = 24,
+    frame_zero_padding = 4L)
+}

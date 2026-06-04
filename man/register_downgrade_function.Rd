@@ -24,3 +24,9 @@ The function is run when serializing with a target schema version below
 the object's current version. It downgrades the dictionary from
 \code{version_to_downgrade_from} to \code{version_to_downgrade_from - 1}.
 }
+\examples{
+library(rotio)
+# Register an identity downgrade for Gap from version 9.
+result <- register_downgrade_function("Gap", 9L, function(d) d)
+is.logical(result)
+}

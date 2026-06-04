@@ -23,3 +23,8 @@ A \code{Marker}.
 \description{
 Marker
 }
+\examples{
+m <- Marker("look here",
+            marked_range = TimeRange(RationalTime(0, 24), RationalTime(1, 24)),
+            color = "RED")
+}

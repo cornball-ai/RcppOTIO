@@ -14,3 +14,11 @@ clear_children(x)
 \description{
 Remove all children of a composition
 }
+\examples{
+library(rotio)
+trk <- Track("V1")
+a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
+append_child(trk, a)
+clear_children(trk)
+length(children(trk))
+}

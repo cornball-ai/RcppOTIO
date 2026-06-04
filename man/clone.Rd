@@ -14,3 +14,9 @@ An independent copy.
 \description{
 Deep-clone an OTIO object
 }
+\examples{
+clip <- Clip("orig")
+clip2 <- clone(clip)
+name(clip2) <- "copy"
+name(clip)   # still "orig"
+}

@@ -19,3 +19,9 @@ The timeline's \code{Stack}; the setter returns \code{x}.
 \description{
 Tracks (the Stack) of a Timeline
 }
+\examples{
+tl <- Timeline("demo")
+trk <- Track("V1", kind = "Video")
+append_child(tracks(tl), trk)
+length(children(tracks(tl)))
+}

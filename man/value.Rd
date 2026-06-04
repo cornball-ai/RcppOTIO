@@ -18,3 +18,7 @@ A numeric scalar.
 \description{
 Value and rate accessors
 }
+\examples{
+value(RationalTime(48, 24))
+rate(RationalTime(48, 24))
+}

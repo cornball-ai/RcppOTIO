@@ -21,3 +21,9 @@ downgrade targets; see \code{\link{to_json_string}}.}
 \description{
 Write an OTIO object to a JSON file
 }
+\examples{
+tl <- Timeline("demo")
+f <- tempfile(fileext = ".otio")
+to_json_file(tl, f)
+unlink(f)
+}

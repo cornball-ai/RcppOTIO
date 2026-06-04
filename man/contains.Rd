@@ -21,3 +21,8 @@ included, the exclusive end is not. For a \code{TimeRange}, OTIO is
 strict at both edges, so a range sharing a boundary with \code{tr} is
 not contained; only strictly-interior ranges are.
 }
+\examples{
+tr <- TimeRange(RationalTime(0, 24), RationalTime(48, 24))
+contains(tr, RationalTime(24, 24))
+contains(tr, TimeRange(RationalTime(12, 24), RationalTime(12, 24)))
+}

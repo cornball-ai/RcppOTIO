@@ -21,3 +21,11 @@ Composition; any OTIO object for a SerializableCollection).}
 Available both as a function, \code{set_children(x, kids)}, and as a
 replacement, \code{set_children(x) <- kids}.
 }
+\examples{
+library(rotio)
+trk <- Track("V1")
+a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
+b <- Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(12, 24)))
+set_children(trk, list(a, b))
+length(children(trk))
+}

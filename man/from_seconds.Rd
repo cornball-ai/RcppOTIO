@@ -16,3 +16,6 @@ A \code{RationalTime}.
 \description{
 Build a RationalTime from seconds
 }
+\examples{
+from_seconds(2, 24)
+}

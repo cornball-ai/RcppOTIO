@@ -25,3 +25,9 @@ A \code{RationalTime}; the setter returns \code{x}.
 \description{
 In and out offsets of a Transition
 }
+\examples{
+tx <- Transition("d", transition_type = "SMPTE_Dissolve",
+  in_offset = RationalTime(6, 24), out_offset = RationalTime(6, 24))
+in_offset(tx)
+out_offset(tx)
+}

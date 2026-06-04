@@ -16,3 +16,8 @@ Logical.
 \description{
 Does a TimeRange overlap another range?
 }
+\examples{
+a <- TimeRange(RationalTime(0, 24), RationalTime(48, 24))
+b <- TimeRange(RationalTime(24, 24), RationalTime(48, 24))
+overlaps(a, b)
+}

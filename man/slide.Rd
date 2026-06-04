@@ -17,3 +17,11 @@ slide(item, delta)
 Moves \code{item}'s start, growing or shrinking the previous item. Does
 nothing if \code{item} is first.
 }
+\examples{
+library(rotio)
+trk <- Track("V1", kind = "Video")
+append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+clip_b <- children(trk)[[2]]
+slide(clip_b, RationalTime(12, 24))
+}

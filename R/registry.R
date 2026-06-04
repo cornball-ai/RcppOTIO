@@ -45,6 +45,12 @@
 #' @return \code{TRUE} if registered; \code{FALSE} if a function is already
 #'   registered for this \code{(schema_name, version)} pair or the schema is
 #'   not registered.
+#' @examples
+#' library(rotio)
+#' # Register an identity upgrade for Timeline to version 9.
+#' # Returns TRUE on the first call; FALSE if already registered.
+#' result <- register_upgrade_function("Timeline", 9L, function(d) d)
+#' is.logical(result)
 #' @export
 register_upgrade_function <- function(schema_name, version_to_upgrade_to, fn) {
     cpp_register_upgrade_function(schema_name, as.integer(version_to_upgrade_to), fn)
@@ -64,6 +70,11 @@ register_upgrade_function <- function(schema_name, version_to_upgrade_to, fn) {
 #' @return \code{TRUE} if registered; \code{FALSE} if a function is already
 #'   registered for this \code{(schema_name, version)} pair or the schema is
 #'   not registered.
+#' @examples
+#' library(rotio)
+#' # Register an identity downgrade for Gap from version 9.
+#' result <- register_downgrade_function("Gap", 9L, function(d) d)
+#' is.logical(result)
 #' @export
 register_downgrade_function <- function(schema_name, version_to_downgrade_from, fn) {
     cpp_register_downgrade_function(schema_name, as.integer(version_to_downgrade_from), fn)
@@ -72,5 +83,10 @@ register_downgrade_function <- function(schema_name, version_to_downgrade_from, 
 #' Registered schema names and their current versions
 #'
 #' @return A named integer vector mapping schema name to current version.
+#' @examples
+#' library(rotio)
+#' tvm <- type_version_map()
+#' is.integer(tvm)
+#' tvm[["Clip"]]
 #' @export
 type_version_map <- function() cpp_type_version_map()

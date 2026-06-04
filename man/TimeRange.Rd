@@ -18,3 +18,8 @@ A span with a start time and a duration. Stored as a classed list with
 elements \code{start_time} and \code{duration}, each a
 \code{RationalTime}.
 }
+\examples{
+tr <- TimeRange(RationalTime(0, 24), RationalTime(48, 24))
+start_time(tr)
+end_time_exclusive(tr)
+}

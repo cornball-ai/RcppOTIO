@@ -16,3 +16,10 @@ Logical.
 \description{
 Is one object a parent (ancestor) of another?
 }
+\examples{
+library(rotio)
+trk <- Track("V1")
+a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
+append_child(trk, a)
+is_parent_of(trk, a)
+}

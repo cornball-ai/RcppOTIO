@@ -24,3 +24,11 @@ is past the composition's end; \code{NULL} uses OTIO's default.}
 \description{
 Insert an item at a time, splitting whatever is there
 }
+\examples{
+library(rotio)
+trk <- Track("V1", kind = "Video")
+append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+new_clip <- Clip("C", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
+insert(new_clip, trk, RationalTime(24, 24))
+}

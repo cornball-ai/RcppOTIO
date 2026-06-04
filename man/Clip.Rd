@@ -20,3 +20,7 @@ A \code{Clip}.
 \description{
 Clip
 }
+\examples{
+clip <- Clip("shot")
+clip <- Clip("shot", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24)))
+}

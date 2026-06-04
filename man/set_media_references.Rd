@@ -22,3 +22,9 @@ Replaces the clip's media-reference map and chooses the active key.
 OTIO requires \code{new_active_key} to be one of the map's keys and
 rejects empty keys.
 }
+\examples{
+clip <- Clip("c", media_reference = ExternalReference("a.mov"))
+set_media_references(clip,
+  list(proxy = ExternalReference("p.mov"), full = ExternalReference("f.mov")),
+  new_active_key = "full")
+}

@@ -20,3 +20,6 @@ An offset/scale/rate transform applied to times. Stored as a classed
 list with elements \code{offset} (a \code{RationalTime}), \code{scale},
 and \code{rate}.
 }
+\examples{
+TimeTransform(RationalTime(0, 24), scale = 2, rate = 24)
+}

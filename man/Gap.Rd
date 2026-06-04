@@ -18,3 +18,7 @@ A \code{Gap}.
 \description{
 Gap
 }
+\examples{
+g <- Gap(RationalTime(12, 24))
+g <- Gap(RationalTime(24, 24), name = "black")
+}

@@ -21,3 +21,8 @@ A JSON string in OTIO's vocabulary.
 \description{
 Serialize an OTIO object to a JSON string
 }
+\examples{
+tl <- Timeline("demo")
+js <- to_json_string(tl)
+nchar(js) > 0
+}

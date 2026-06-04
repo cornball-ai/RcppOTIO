@@ -20,3 +20,9 @@ The name string; the setter returns \code{x}.
 \code{name} is descriptive metadata, not identity: siblings may share a
 name. Address tree children by position and reference instead.
 }
+\examples{
+clip <- Clip("A")
+name(clip)
+name(clip) <- "B"
+name(clip)
+}

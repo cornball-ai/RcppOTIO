@@ -18,3 +18,6 @@ A \code{SerializableCollection}.
 \description{
 SerializableCollection
 }
+\examples{
+sc <- SerializableCollection("bin", children = list(Clip("a"), Clip("b")))
+}

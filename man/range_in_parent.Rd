@@ -16,3 +16,10 @@ A \code{TimeRange}. An object with no parent has no range there,
 This is where the item sits in its parent's time, the OTIO notion of
 timeline position. There is no separately stored "in" point.
 }
+\examples{
+library(rotio)
+trk <- Track("V1")
+a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
+append_child(trk, a)
+range_in_parent(a)
+}

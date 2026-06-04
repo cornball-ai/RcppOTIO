@@ -32,3 +32,17 @@ The named field value.
 \description{
 Image sequence frame fields
 }
+\examples{
+isr <- ImageSequenceReference(
+  target_url_base = "file:///seq/", name_prefix = "frame.",
+  name_suffix = ".exr", start_frame = 1L, frame_step = 1L,
+  rate = 24, frame_zero_padding = 4L,
+  available_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24)))
+name_prefix(isr)
+name_suffix(isr)
+start_frame(isr)
+frame_step(isr)
+frame_zero_padding(isr)
+end_frame(isr)
+number_of_images_in_sequence(isr)
+}

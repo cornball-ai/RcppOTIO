@@ -18,3 +18,11 @@ slice(composition, time, remove_transitions = TRUE)
 \description{
 Splits whatever item covers \code{time} into two adjacent items.
 }
+\examples{
+library(rotio)
+trk <- Track("V1", kind = "Video")
+append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+slice(trk, RationalTime(24, 24))
+length(children(trk))  # 3 after the split
+}

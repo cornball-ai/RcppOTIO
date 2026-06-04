@@ -19,3 +19,8 @@ A \code{RationalTime} or \code{NULL}; the setter returns \code{x}.
 \description{
 Global start time of a Timeline
 }
+\examples{
+tl <- Timeline("demo")
+global_start_time(tl) <- RationalTime(86400, 24)
+global_start_time(tl)
+}

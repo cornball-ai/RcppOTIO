@@ -18,3 +18,8 @@ An \code{ExternalReference}.
 \description{
 ExternalReference
 }
+\examples{
+er <- ExternalReference("shot.mov")
+er <- ExternalReference("shot.mov",
+                        available_range = TimeRange(RationalTime(0, 24), RationalTime(240, 24)))
+}
