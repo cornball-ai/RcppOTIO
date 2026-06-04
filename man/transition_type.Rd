@@ -19,3 +19,8 @@ The transition type; the setter returns \code{x}.
 \description{
 Transition type
 }
+\examples{
+tx <- Transition("d", transition_type = "SMPTE_Dissolve",
+  in_offset = RationalTime(6, 24), out_offset = RationalTime(6, 24))
+transition_type(tx)
+}

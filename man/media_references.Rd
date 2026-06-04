@@ -15,3 +15,7 @@ A named list mapping media keys to media-reference objects.
 A clip can hold several media references (e.g. proxy and full-res) under
 string keys, one of which is the \code{active_media_reference_key}.
 }
+\examples{
+clip <- Clip("c", media_reference = ExternalReference("a.mov"))
+media_references(clip)
+}

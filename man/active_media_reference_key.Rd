@@ -19,3 +19,7 @@ The active key string; the setter returns \code{x}.
 \description{
 Active media reference key of a Clip
 }
+\examples{
+clip <- Clip("c", media_reference = ExternalReference("a.mov"))
+active_media_reference_key(clip)
+}

@@ -16,3 +16,11 @@ A \code{RationalTime}.
 \description{
 Presentation time for a given image number in a sequence
 }
+\examples{
+isr <- ImageSequenceReference(
+  target_url_base = "file:///seq/", name_prefix = "frame.",
+  name_suffix = ".exr", start_frame = 1L, frame_step = 1L,
+  rate = 24, frame_zero_padding = 4L,
+  available_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24)))
+presentation_time_for_image_number(isr, 1L)
+}

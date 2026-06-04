@@ -22,3 +22,10 @@ if \code{FALSE} concatenate the neighbours.}
 Masks \code{base::remove}; use \code{rotio::remove} / \code{base::remove}
 to disambiguate.
 }
+\examples{
+library(rotio)
+trk <- Track("V1", kind = "Video")
+append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+rotio::remove(trk, RationalTime(60, 24))
+}

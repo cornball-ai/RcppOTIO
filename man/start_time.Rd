@@ -14,3 +14,6 @@ A \code{RationalTime}.
 \description{
 TimeRange start and duration accessors
 }
+\examples{
+start_time(TimeRange(RationalTime(12, 24), RationalTime(24, 24)))
+}

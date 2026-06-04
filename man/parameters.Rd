@@ -19,3 +19,8 @@ The parameters list; the setter returns \code{x}.
 \description{
 Parameters of a GeneratorReference
 }
+\examples{
+gen <- GeneratorReference("bars", generator_kind = "SMPTEBars")
+parameters(gen) <- list(width = 1920)
+parameters(gen)
+}

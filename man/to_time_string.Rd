@@ -21,3 +21,8 @@ A time string.
 \description{
 Time-string conversions (HH:MM:SS.s)
 }
+\examples{
+ts <- to_time_string(RationalTime(48, 24))
+ts
+from_time_string(ts, 24)
+}

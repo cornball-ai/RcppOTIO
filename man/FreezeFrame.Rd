@@ -16,3 +16,6 @@ A \code{FreezeFrame}.
 \description{
 FreezeFrame
 }
+\examples{
+ff <- FreezeFrame("hold")
+}

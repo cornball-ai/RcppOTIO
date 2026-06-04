@@ -18,3 +18,6 @@ A \code{MissingReference}.
 \description{
 MissingReference
 }
+\examples{
+mr <- MissingReference("offline")
+}

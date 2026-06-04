@@ -21,3 +21,9 @@ A \code{TimeRange} (or \code{NULL} for an unset media range);
 For an \code{Item} the range available to be trimmed; for a
 \code{MediaReference} the range of the underlying media.
 }
+\examples{
+library(rotio)
+ref <- ExternalReference("a.mov",
+    available_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24)))
+available_range(ref)
+}

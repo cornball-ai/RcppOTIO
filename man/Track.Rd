@@ -20,3 +20,7 @@ A \code{Track}.
 \description{
 Track
 }
+\examples{
+trk <- Track("V1", kind = "Video")
+aud <- Track("A1", kind = "Audio")
+}

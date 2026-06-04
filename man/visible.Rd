@@ -14,3 +14,8 @@ Logical.
 \description{
 Is a Composable visible?
 }
+\examples{
+library(rotio)
+visible(Clip("A"))
+visible(Gap(RationalTime(6, 24)))
+}

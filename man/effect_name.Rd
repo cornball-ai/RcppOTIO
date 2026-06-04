@@ -19,3 +19,7 @@ The effect name; the setter returns \code{x}.
 \description{
 Effect name (the effect identifier, distinct from object name)
 }
+\examples{
+ef <- Effect("blur", effect_name = "GaussianBlur")
+effect_name(ef)
+}

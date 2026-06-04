@@ -17,3 +17,8 @@ A \code{RationalTime}.
 \description{
 Exclusive and inclusive end times of a TimeRange
 }
+\examples{
+tr <- TimeRange(RationalTime(0, 24), RationalTime(48, 24))
+end_time_exclusive(tr)
+end_time_inclusive(tr)
+}

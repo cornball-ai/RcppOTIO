@@ -14,3 +14,8 @@ Logical.
 \description{
 Object-value equivalence (not pointer identity)
 }
+\examples{
+tl <- Timeline("demo")
+tl2 <- clone(tl)
+is_equivalent_to(tl, tl2)
+}

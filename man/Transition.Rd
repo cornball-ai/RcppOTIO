@@ -22,3 +22,7 @@ A \code{Transition}.
 \description{
 Transition
 }
+\examples{
+tr <- Transition("dissolve", transition_type = "SMPTE_Dissolve",
+                 in_offset = RationalTime(6, 24), out_offset = RationalTime(6, 24))
+}

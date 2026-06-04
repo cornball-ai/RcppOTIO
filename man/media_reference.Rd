@@ -19,3 +19,8 @@ The active media reference (or \code{NULL}); the setter returns \code{x}.
 \description{
 Active media reference of a Clip
 }
+\examples{
+clip <- Clip("c", media_reference = ExternalReference("a.mov"))
+media_reference(clip)
+media_reference(clip) <- ExternalReference("b.mov")
+}

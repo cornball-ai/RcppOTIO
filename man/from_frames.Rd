@@ -16,3 +16,6 @@ A \code{RationalTime}.
 \description{
 Build a RationalTime from a frame number
 }
+\examples{
+from_frames(48, 24)
+}

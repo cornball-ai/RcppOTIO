@@ -20,3 +20,7 @@ A \code{LinearTimeWarp}.
 \description{
 LinearTimeWarp
 }
+\examples{
+ltw <- LinearTimeWarp("half speed", time_scalar = 0.5)
+ltw <- LinearTimeWarp("double speed", time_scalar = 2)
+}

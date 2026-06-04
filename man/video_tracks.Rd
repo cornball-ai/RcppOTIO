@@ -17,3 +17,9 @@ A list of \code{Track} objects of the matching kind.
 \description{
 Video and audio tracks of a Timeline
 }
+\examples{
+tl <- Timeline("demo")
+append_child(tracks(tl), Track("V1", kind = "Video"))
+length(video_tracks(tl))
+length(audio_tracks(tl))
+}

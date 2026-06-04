@@ -19,3 +19,9 @@ Logical; the setter returns \code{x}.
 \description{
 Whether an Item or Effect is enabled
 }
+\examples{
+library(rotio)
+clip <- Clip("A")
+enabled(clip)
+enabled(clip) <- FALSE
+}

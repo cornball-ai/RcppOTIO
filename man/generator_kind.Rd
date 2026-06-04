@@ -19,3 +19,7 @@ The generator kind; the setter returns \code{x}.
 \description{
 Generator kind of a GeneratorReference
 }
+\examples{
+gen <- GeneratorReference("bars", generator_kind = "SMPTEBars")
+generator_kind(gen)
+}

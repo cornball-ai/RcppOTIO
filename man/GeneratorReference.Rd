@@ -23,3 +23,8 @@ A \code{GeneratorReference}.
 \description{
 GeneratorReference
 }
+\examples{
+gr <- GeneratorReference("bars", generator_kind = "SMPTEBars")
+gr <- GeneratorReference("bars", generator_kind = "SMPTEBars",
+                         available_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24)))
+}

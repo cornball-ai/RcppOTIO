@@ -1,3 +1,8 @@
+# rotio 0.0.0.4
+
+* Every exported function now has a runnable `\examples` block, executed by
+  `R CMD check`.
+
 # rotio 0.0.0.3
 
 * Wrap the `TypeRegistry` schema upgrade/downgrade hooks:

@@ -14,3 +14,6 @@ Numeric seconds.
 \description{
 Convert a RationalTime to seconds
 }
+\examples{
+to_seconds(RationalTime(48, 24))
+}

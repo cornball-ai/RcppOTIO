@@ -16,3 +16,6 @@ Logical.
 \description{
 Approximate RationalTime equality
 }
+\examples{
+almost_equal(RationalTime(24, 24), RationalTime(24, 24))
+}

@@ -14,3 +14,11 @@ The deserialized OTIO object.
 \description{
 Read an OTIO object from a JSON file
 }
+\examples{
+tl <- Timeline("demo")
+f <- tempfile(fileext = ".otio")
+to_json_file(tl, f)
+tl2 <- from_json_file(f)
+unlink(f)
+is_equivalent_to(tl, tl2)
+}

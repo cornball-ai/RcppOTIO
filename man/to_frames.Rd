@@ -14,3 +14,6 @@ Integer frame number at the time's own rate.
 \description{
 Convert a RationalTime to a frame number
 }
+\examples{
+to_frames(RationalTime(48, 24))
+}

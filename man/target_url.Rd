@@ -19,3 +19,8 @@ The target URL; the setter returns \code{x}.
 \description{
 Target URL of an ExternalReference
 }
+\examples{
+er <- ExternalReference("a.mov")
+target_url(er)
+target_url(er) <- "b.mov"
+}

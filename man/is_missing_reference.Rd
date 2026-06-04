@@ -14,3 +14,7 @@ Logical.
 \description{
 Is this a MissingReference?
 }
+\examples{
+is_missing_reference(MissingReference("x"))
+is_missing_reference(ExternalReference("a.mov"))
+}

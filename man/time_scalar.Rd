@@ -19,3 +19,8 @@ The time scalar; the setter returns \code{x}.
 \description{
 Time scalar of a LinearTimeWarp
 }
+\examples{
+ltw <- LinearTimeWarp("speed", time_scalar = 2)
+time_scalar(ltw)
+time_scalar(ltw) <- 0.5
+}

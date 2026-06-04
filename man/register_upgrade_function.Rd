@@ -24,3 +24,10 @@ whose stored schema version is older than \code{version_to_upgrade_to}.
 Each upgrade function should bring the dictionary from the version just
 below \code{version_to_upgrade_to} up to it.
 }
+\examples{
+library(rotio)
+# Register an identity upgrade for Timeline to version 9.
+# Returns TRUE on the first call; FALSE if already registered.
+result <- register_upgrade_function("Timeline", 9L, function(d) d)
+is.logical(result)
+}

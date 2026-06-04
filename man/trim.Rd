@@ -22,3 +22,11 @@ Adjusts a single item's \code{source_range} without moving other items;
 the now-empty time is filled with a gap (or \code{fill_template}), or an
 adjacent gap is grown.
 }
+\examples{
+library(rotio)
+trk <- Track("V1", kind = "Video")
+append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+clip_a <- children(trk)[[1]]
+trim(clip_a, RationalTime(12, 24), RationalTime(0, 24))
+}

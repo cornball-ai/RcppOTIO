@@ -14,3 +14,8 @@ A \code{TimeRange}: the source_range if set, else available_range.
 \description{
 Trimmed range of an Item
 }
+\examples{
+library(rotio)
+clip <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
+trimmed_range(clip)
+}

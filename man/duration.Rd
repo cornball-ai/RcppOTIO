@@ -16,3 +16,8 @@ For a \code{TimeRange} this is its \code{duration} field; for a
 \code{Timeline} the duration of its tracks; for a \code{Composable}
 (Item, Clip, Track, ...) the computed duration.
 }
+\examples{
+library(rotio)
+clip <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24)))
+to_seconds(duration(clip))
+}

@@ -24,6 +24,13 @@
 #' @param fill_template Optional \code{Item} used to fill gaps; \code{NULL}
 #'   uses OTIO's default gap synthesis.
 #' @return \code{composition}, invisibly.
+#' @examples
+#' library(rotio)
+#' trk <- Track("V1", kind = "Video")
+#' append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+#' append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+#' new_clip <- Clip("C", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
+#' overwrite(new_clip, trk, TimeRange(RationalTime(24, 24), RationalTime(24, 24)))
 #' @export
 overwrite <- function(item, composition, range,
                       remove_transitions = TRUE, fill_template = NULL) {
@@ -41,6 +48,13 @@ overwrite <- function(item, composition, range,
 #' @param fill_template Optional \code{Item} to fill any gap when \code{time}
 #'   is past the composition's end; \code{NULL} uses OTIO's default.
 #' @return \code{composition}, invisibly.
+#' @examples
+#' library(rotio)
+#' trk <- Track("V1", kind = "Video")
+#' append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+#' append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+#' new_clip <- Clip("C", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
+#' insert(new_clip, trk, RationalTime(24, 24))
 #' @export
 insert <- function(item, composition, time,
                    remove_transitions = TRUE, fill_template = NULL) {
@@ -59,6 +73,13 @@ insert <- function(item, composition, time,
 #' @param delta_out \code{RationalTime} added to the exclusive end time.
 #' @param fill_template Optional \code{Item} to fill with; \code{NULL} uses a gap.
 #' @return \code{item}, invisibly.
+#' @examples
+#' library(rotio)
+#' trk <- Track("V1", kind = "Video")
+#' append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+#' append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+#' clip_a <- children(trk)[[1]]
+#' trim(clip_a, RationalTime(12, 24), RationalTime(0, 24))
 #' @export
 trim <- function(item, delta_in, delta_out, fill_template = NULL) {
     cpp_algo_trim(item, delta_in, delta_out, fill_template)
@@ -73,6 +94,13 @@ trim <- function(item, delta_in, delta_out, fill_template = NULL) {
 #' @param time The \code{RationalTime} to slice at.
 #' @param remove_transitions Whether to drop transitions at \code{time}.
 #' @return \code{composition}, invisibly.
+#' @examples
+#' library(rotio)
+#' trk <- Track("V1", kind = "Video")
+#' append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+#' append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+#' slice(trk, RationalTime(24, 24))
+#' length(children(trk))  # 3 after the split
 #' @export
 slice <- function(composition, time, remove_transitions = TRUE) {
     cpp_algo_slice(composition, time, remove_transitions)
@@ -87,6 +115,15 @@ slice <- function(composition, time, remove_transitions = TRUE) {
 #' @param item The \code{Item} to slip.
 #' @param delta \code{RationalTime} to slip by (positive or negative).
 #' @return \code{item}, invisibly.
+#' @examples
+#' library(rotio)
+#' ref <- ExternalReference("a.mov",
+#'   available_range = TimeRange(RationalTime(0, 24), RationalTime(96, 24)))
+#' clip <- Clip("A", media_reference = ref,
+#'   source_range = TimeRange(RationalTime(24, 24), RationalTime(24, 24)))
+#' trk <- Track("V1", kind = "Video")
+#' append_child(trk, clip)
+#' slip(clip, RationalTime(-12, 24))
 #' @export
 slip <- function(item, delta) {
     cpp_algo_slip(item, delta)
@@ -101,6 +138,13 @@ slip <- function(item, delta) {
 #' @param item The \code{Item} to slide.
 #' @param delta \code{RationalTime} to slide by.
 #' @return \code{item}, invisibly.
+#' @examples
+#' library(rotio)
+#' trk <- Track("V1", kind = "Video")
+#' append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+#' append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+#' clip_b <- children(trk)[[2]]
+#' slide(clip_b, RationalTime(12, 24))
 #' @export
 slide <- function(item, delta) {
     cpp_algo_slide(item, delta)
@@ -116,6 +160,13 @@ slide <- function(item, delta) {
 #' @param delta_in \code{RationalTime} added to the start time.
 #' @param delta_out \code{RationalTime} added to the exclusive end time.
 #' @return \code{item}, invisibly.
+#' @examples
+#' library(rotio)
+#' trk <- Track("V1", kind = "Video")
+#' append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+#' append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+#' clip_a <- children(trk)[[1]]
+#' ripple(clip_a, RationalTime(0, 24), RationalTime(-12, 24))
 #' @export
 ripple <- function(item, delta_in, delta_out) {
     cpp_algo_ripple(item, delta_in, delta_out)
@@ -131,6 +182,13 @@ ripple <- function(item, delta_in, delta_out) {
 #' @param delta_in \code{RationalTime} added to the start time.
 #' @param delta_out \code{RationalTime} added to the exclusive end time.
 #' @return \code{item}, invisibly.
+#' @examples
+#' library(rotio)
+#' trk <- Track("V1", kind = "Video")
+#' append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+#' append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+#' clip_a <- children(trk)[[1]]
+#' roll(clip_a, RationalTime(0, 24), RationalTime(12, 24))
 #' @export
 roll <- function(item, delta_in, delta_out) {
     cpp_algo_roll(item, delta_in, delta_out)
@@ -145,6 +203,14 @@ roll <- function(item, delta_in, delta_out) {
 #' @param reference_point One of \code{"Source"}, \code{"Sequence"}, or
 #'   \code{"Fit"}, controlling the transform for 4-point editing.
 #' @return \code{track}, invisibly.
+#' @examples
+#' library(rotio)
+#' trk <- Track("V1", kind = "Video")
+#' append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24))))
+#' append_child(trk, Gap(RationalTime(24, 24)))
+#' append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24))))
+#' new_clip <- Clip("C", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
+#' fill(new_clip, trk, RationalTime(24, 24))
 #' @export
 fill <- function(item, track, track_time, reference_point = "Source") {
     cpp_algo_fill(item, track, track_time, reference_point)
@@ -162,6 +228,12 @@ fill <- function(item, track, track_time, reference_point = "Source") {
 #'   if \code{FALSE} concatenate the neighbours.
 #' @param fill_template Optional \code{Item} to fill with; \code{NULL} uses a gap.
 #' @return \code{composition}, invisibly.
+#' @examples
+#' library(rotio)
+#' trk <- Track("V1", kind = "Video")
+#' append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+#' append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+#' rotio::remove(trk, RationalTime(60, 24))
 #' @export
 remove <- function(composition, time, fill = TRUE, fill_template = NULL) {
     cpp_algo_remove(composition, time, fill, fill_template)
@@ -175,6 +247,12 @@ remove <- function(composition, time, fill = TRUE, fill_template = NULL) {
 #' @param in_track The source \code{Track} (not modified).
 #' @param trim_range The \code{TimeRange} to trim to.
 #' @return A new \code{Track}.
+#' @examples
+#' library(rotio)
+#' trk <- Track("V1", kind = "Video")
+#' append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+#' append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+#' trimmed <- track_trimmed_to_range(trk, TimeRange(RationalTime(24, 24), RationalTime(48, 24)))
 #' @export
 track_trimmed_to_range <- function(in_track, trim_range) {
     cpp_track_trimmed_to_range(in_track, trim_range)
@@ -184,6 +262,16 @@ track_trimmed_to_range <- function(in_track, trim_range) {
 #'
 #' @param x A \code{Stack}, or a list of \code{Track} objects.
 #' @return A new \code{Track} with the layers composited top-down.
+#' @examples
+#' library(rotio)
+#' trk1 <- Track("V1", kind = "Video")
+#' append_child(trk1, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+#' trk2 <- Track("V2", kind = "Video")
+#' append_child(trk2, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
+#' st <- Stack("root")
+#' append_child(st, trk1)
+#' append_child(st, trk2)
+#' flat <- flatten_stack(st)
 #' @export
 flatten_stack <- function(x) {
     if (inherits(x, "Stack")) cpp_flatten_stack(x)

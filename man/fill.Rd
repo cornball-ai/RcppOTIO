@@ -21,3 +21,12 @@ fill(item, track, track_time, reference_point = "Source")
 \description{
 Fill an item into a track at a time (3/4-point edit)
 }
+\examples{
+library(rotio)
+trk <- Track("V1", kind = "Video")
+append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24))))
+append_child(trk, Gap(RationalTime(24, 24)))
+append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24))))
+new_clip <- Clip("C", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
+fill(new_clip, trk, RationalTime(24, 24))
+}

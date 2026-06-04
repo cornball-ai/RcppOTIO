@@ -19,3 +19,8 @@ The color string; the setter returns \code{x}.
 \description{
 Marker color
 }
+\examples{
+m <- Marker("m", marked_range = TimeRange(RationalTime(0, 24), RationalTime(1, 24)),
+  color = "RED")
+color(m)
+}

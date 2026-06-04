@@ -13,6 +13,11 @@
 #' @param value Numeric sample value (e.g. frame count).
 #' @param rate Numeric sample rate (e.g. frames per second).
 #' @return A \code{RationalTime} object.
+#' @examples
+#' rt <- RationalTime(48, 24)   # 48 frames at 24 fps
+#' value(rt)
+#' rate(rt)
+#' to_seconds(rt)
 #' @export
 RationalTime <- function(value = 0, rate = 1) {
     structure(c(value = as.numeric(value), rate = as.numeric(rate)),
@@ -30,6 +35,9 @@ print.RationalTime <- function(x, ...) {
 #' @param x A \code{RationalTime}, \code{TimeTransform}, or other OTIO
 #'   object carrying a \code{value} or \code{rate} field.
 #' @return A numeric scalar.
+#' @examples
+#' value(RationalTime(48, 24))
+#' rate(RationalTime(48, 24))
 #' @export
 value <- function(x) UseMethod("value")
 
@@ -49,6 +57,8 @@ rate.TimeTransform <- function(x) x[["rate"]]
 #' Convert a RationalTime to seconds
 #' @param rt A \code{RationalTime}.
 #' @return Numeric seconds.
+#' @examples
+#' to_seconds(RationalTime(48, 24))
 #' @export
 to_seconds <- function(rt) cpp_rt_to_seconds(rt)
 
@@ -56,12 +66,16 @@ to_seconds <- function(rt) cpp_rt_to_seconds(rt)
 #' @param seconds Numeric seconds.
 #' @param rate Target sample rate.
 #' @return A \code{RationalTime}.
+#' @examples
+#' from_seconds(2, 24)
 #' @export
 from_seconds <- function(seconds, rate = 1) cpp_rt_from_seconds(seconds, rate)
 
 #' Convert a RationalTime to a frame number
 #' @param rt A \code{RationalTime}.
 #' @return Integer frame number at the time's own rate.
+#' @examples
+#' to_frames(RationalTime(48, 24))
 #' @export
 to_frames <- function(rt) cpp_rt_to_frames(rt)
 
@@ -69,6 +83,8 @@ to_frames <- function(rt) cpp_rt_to_frames(rt)
 #' @param frame Frame number.
 #' @param rate Frame rate.
 #' @return A \code{RationalTime}.
+#' @examples
+#' from_frames(48, 24)
 #' @export
 from_frames <- function(frame, rate) cpp_rt_from_frames(frame, rate)
 
@@ -76,6 +92,8 @@ from_frames <- function(frame, rate) cpp_rt_from_frames(frame, rate)
 #' @param rt A \code{RationalTime}.
 #' @param new_rate Target rate.
 #' @return A \code{RationalTime} at \code{new_rate}.
+#' @examples
+#' rescaled_to(RationalTime(24, 24), 48)
 #' @export
 rescaled_to <- function(rt, new_rate) cpp_rt_rescaled_to(rt, new_rate)
 
@@ -85,6 +103,10 @@ rescaled_to <- function(rt, new_rate) cpp_rt_rescaled_to(rt, new_rate)
 #' @param rate Timecode rate.
 #' @param drop_frame -1 infer, 0 force non-drop, 1 force drop-frame.
 #' @return A timecode string.
+#' @examples
+#' tc <- to_timecode(RationalTime(48, 24), 24)
+#' tc
+#' from_timecode(tc, 24)
 #' @export
 to_timecode <- function(rt, rate, drop_frame = -1L) {
     cpp_rt_to_timecode(rt, rate, as.integer(drop_frame))
@@ -98,6 +120,10 @@ from_timecode <- function(timecode, rate) cpp_rt_from_timecode(timecode, rate)
 #' Time-string conversions (HH:MM:SS.s)
 #' @param rt A \code{RationalTime}.
 #' @return A time string.
+#' @examples
+#' ts <- to_time_string(RationalTime(48, 24))
+#' ts
+#' from_time_string(ts, 24)
 #' @export
 to_time_string <- function(rt) cpp_rt_to_time_string(rt)
 
@@ -111,9 +137,21 @@ from_time_string <- function(time_string, rate) cpp_rt_from_time_string(time_str
 #' @param a,b \code{RationalTime} objects.
 #' @param delta Tolerance in value units after rescaling.
 #' @return Logical.
+#' @examples
+#' almost_equal(RationalTime(24, 24), RationalTime(24, 24))
 #' @export
 almost_equal <- function(a, b, delta = 0) cpp_rt_almost_equal(a, b, delta)
 
+#' Arithmetic and comparison on RationalTime
+#'
+#' \code{RationalTime} supports \code{+} and \code{-} (returning a
+#' \code{RationalTime}) and the comparison operators (returning a logical).
+#'
+#' @param e1,e2 \code{RationalTime} objects.
+#' @return A \code{RationalTime} for \code{+}/\code{-}, otherwise logical.
+#' @examples
+#' RationalTime(10, 24) + RationalTime(5, 24)
+#' RationalTime(10, 24) < RationalTime(20, 24)
 #' @export
 Ops.RationalTime <- function(e1, e2) {
     if (.Generic %in% c("+", "-")) {
@@ -142,6 +180,10 @@ Ops.RationalTime <- function(e1, e2) {
 #' @param start_time A \code{RationalTime}.
 #' @param duration A \code{RationalTime}.
 #' @return A \code{TimeRange}.
+#' @examples
+#' tr <- TimeRange(RationalTime(0, 24), RationalTime(48, 24))
+#' start_time(tr)
+#' end_time_exclusive(tr)
 #' @export
 TimeRange <- function(start_time = RationalTime(), duration = RationalTime()) {
     structure(list(start_time = start_time, duration = duration),
@@ -159,12 +201,18 @@ print.TimeRange <- function(x, ...) {
 #' TimeRange start and duration accessors
 #' @param tr A \code{TimeRange}.
 #' @return A \code{RationalTime}.
+#' @examples
+#' start_time(TimeRange(RationalTime(12, 24), RationalTime(24, 24)))
 #' @export
 start_time <- function(tr) tr$start_time
 
 #' Exclusive and inclusive end times of a TimeRange
 #' @param tr A \code{TimeRange}.
 #' @return A \code{RationalTime}.
+#' @examples
+#' tr <- TimeRange(RationalTime(0, 24), RationalTime(48, 24))
+#' end_time_exclusive(tr)
+#' end_time_inclusive(tr)
 #' @export
 end_time_exclusive <- function(tr) cpp_tr_end_time_exclusive(tr)
 
@@ -175,12 +223,20 @@ end_time_inclusive <- function(tr) cpp_tr_end_time_inclusive(tr)
 #' Extend a TimeRange to cover another
 #' @param tr,other \code{TimeRange} objects.
 #' @return A \code{TimeRange}.
+#' @examples
+#' a <- TimeRange(RationalTime(0, 24), RationalTime(24, 24))
+#' b <- TimeRange(RationalTime(24, 24), RationalTime(24, 24))
+#' extended_by(a, b)
 #' @export
 extended_by <- function(tr, other) cpp_tr_extended_by(tr, other)
 
 #' Clamp one TimeRange to another
 #' @param tr,other \code{TimeRange} objects.
 #' @return A \code{TimeRange}.
+#' @examples
+#' bounds <- TimeRange(RationalTime(0, 24), RationalTime(48, 24))
+#' wide   <- TimeRange(RationalTime(-12, 24), RationalTime(96, 24))
+#' clamped(bounds, wide)
 #' @export
 clamped <- function(tr, other) cpp_tr_clamped_range(tr, other)
 
@@ -195,6 +251,10 @@ clamped <- function(tr, other) cpp_tr_clamped_range(tr, other)
 #' @param other A \code{RationalTime} or \code{TimeRange}.
 #' @param epsilon_s Tolerance in seconds (range comparison only).
 #' @return Logical.
+#' @examples
+#' tr <- TimeRange(RationalTime(0, 24), RationalTime(48, 24))
+#' contains(tr, RationalTime(24, 24))
+#' contains(tr, TimeRange(RationalTime(12, 24), RationalTime(12, 24)))
 #' @export
 contains <- function(tr, other, epsilon_s = 1 / 384000) {
     if (inherits(other, "TimeRange")) cpp_tr_contains_range(tr, other, epsilon_s)
@@ -205,6 +265,10 @@ contains <- function(tr, other, epsilon_s = 1 / 384000) {
 #' @param tr,other \code{TimeRange} objects.
 #' @param epsilon_s Tolerance in seconds.
 #' @return Logical.
+#' @examples
+#' a <- TimeRange(RationalTime(0, 24), RationalTime(48, 24))
+#' b <- TimeRange(RationalTime(24, 24), RationalTime(48, 24))
+#' overlaps(a, b)
 #' @export
 overlaps <- function(tr, other, epsilon_s = 1 / 384000) {
     cpp_tr_overlaps_range(tr, other, epsilon_s)
@@ -214,6 +278,10 @@ overlaps <- function(tr, other, epsilon_s = 1 / 384000) {
 #' @param tr,other \code{TimeRange} objects.
 #' @param epsilon_s Tolerance in seconds.
 #' @return Logical.
+#' @examples
+#' a <- TimeRange(RationalTime(0, 24), RationalTime(48, 24))
+#' b <- TimeRange(RationalTime(24, 24), RationalTime(48, 24))
+#' intersects(a, b)
 #' @export
 intersects <- function(tr, other, epsilon_s = 1 / 384000) {
     cpp_tr_intersects(tr, other, epsilon_s)
@@ -222,6 +290,8 @@ intersects <- function(tr, other, epsilon_s = 1 / 384000) {
 #' Build a TimeRange from start and exclusive end times
 #' @param start_time,end_time_exclusive \code{RationalTime} objects.
 #' @return A \code{TimeRange}.
+#' @examples
+#' range_from_start_end_time(RationalTime(0, 24), RationalTime(48, 24))
 #' @export
 range_from_start_end_time <- function(start_time, end_time_exclusive) {
     cpp_tr_range_from_start_end_time(start_time, end_time_exclusive)
@@ -239,6 +309,8 @@ range_from_start_end_time <- function(start_time, end_time_exclusive) {
 #' @param scale Numeric scale factor.
 #' @param rate Numeric rate (-1 leaves the rate unchanged).
 #' @return A \code{TimeTransform}.
+#' @examples
+#' TimeTransform(RationalTime(0, 24), scale = 2, rate = 24)
 #' @export
 TimeTransform <- function(offset = RationalTime(), scale = 1, rate = -1) {
     structure(list(offset = offset, scale = as.numeric(scale), rate = as.numeric(rate)),

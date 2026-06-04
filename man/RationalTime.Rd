@@ -18,3 +18,9 @@ A time expressed as a value at a sample rate (e.g. a frame number at a
 frame rate). Stored as a classed numeric vector with elements
 \code{value} and \code{rate}.
 }
+\examples{
+rt <- RationalTime(48, 24)   # 48 frames at 24 fps
+value(rt)
+rate(rt)
+to_seconds(rt)
+}

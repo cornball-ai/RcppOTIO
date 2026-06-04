@@ -18,3 +18,6 @@ A \code{TimeEffect}.
 \description{
 TimeEffect
 }
+\examples{
+te <- TimeEffect("retime", effect_name = "Retime")
+}

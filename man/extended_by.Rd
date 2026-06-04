@@ -14,3 +14,8 @@ A \code{TimeRange}.
 \description{
 Extend a TimeRange to cover another
 }
+\examples{
+a <- TimeRange(RationalTime(0, 24), RationalTime(24, 24))
+b <- TimeRange(RationalTime(24, 24), RationalTime(24, 24))
+extended_by(a, b)
+}
