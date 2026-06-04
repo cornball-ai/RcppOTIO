@@ -15,10 +15,19 @@
 # layer expects, or pass NULL through unchanged.
 .as_schema_versions <- function(x) {
     if (is.null(x)) return(NULL)
-    if (is.null(names(x)) || any(!nzchar(names(x))))
+    nm <- names(x)
+    if (is.null(nm) || anyNA(nm) || any(!nzchar(nm)))
         stop("target_schema_versions must be a named integer vector (schema -> version)")
+    if (anyDuplicated(nm))
+        stop("target_schema_versions has duplicate schema names")
+    if (!is.numeric(x))
+        stop("target_schema_versions versions must be whole numbers")
+    if (anyNA(x))
+        stop("target_schema_versions versions must not be NA")
+    if (any(x != floor(x)))
+        stop("target_schema_versions versions must be whole numbers")
     v <- as.integer(x)
-    names(v) <- names(x)
+    names(v) <- nm
     v
 }
 

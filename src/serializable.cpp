@@ -19,7 +19,10 @@ static otio::schema_version_map as_schema_version_map(SEXP x) {
     for (R_xlen_t i = 0; i < v.size(); ++i) {
         if (Rcpp::CharacterVector::is_na(nms[i]))
             Rcpp::stop("target_schema_versions names must not be NA");
-        m[Rcpp::as<std::string>(nms[i])] = static_cast<int64_t>(v[i]);
+        std::string key = Rcpp::as<std::string>(nms[i]);
+        if (m.count(key))                 // backstop: don't silently collapse dupes
+            Rcpp::stop("duplicate target_schema_versions name '%s'", key);
+        m[key] = static_cast<int64_t>(v[i]);
     }
     return m;
 }

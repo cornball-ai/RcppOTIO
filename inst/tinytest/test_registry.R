@@ -45,8 +45,15 @@ clip2 <- from_json_string(js2)
 expect_equal(schema_version(clip2), 2L)                # upgraded back on read
 expect_true(is_equivalent_to(clip, clip2))
 
-## target_schema_versions must be a named integer vector
+## target_schema_versions is validated strictly before reaching OTIO:
+## must be named, whole-number, non-NA, non-duplicate, non-character.
 expect_error(to_json_string(m, target_schema_versions = 1L), "named")
+expect_error(to_json_string(m, target_schema_versions = c(Clip = NA_integer_)), "NA")
+expect_error(to_json_string(m, target_schema_versions = c(Clip = 1.9)), "whole")
+expect_error(to_json_string(m, target_schema_versions = c(Clip = "1")), "whole")
+expect_error(to_json_string(m, target_schema_versions = c(Clip = 1L, Clip = 2L)), "duplicate")
+## a clean whole-number double is accepted (coerced to integer)
+expect_true(is.character(to_json_string(m, target_schema_versions = c(Marker = 1))))
 
 ## const char* metadata values survive the AnyDictionary -> R conversion
 ## (OTIO can store C-string literals; they must not be dropped). Exercised
