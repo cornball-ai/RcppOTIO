@@ -1,3 +1,8 @@
+# rotio 0.0.0.5
+
+* Add a getting-started vignette (`vignette("rotio")`) built with
+  simplermarkdown.
+
 # rotio 0.0.0.4
 
 * Every exported function now has a runnable `\examples` block, executed by
