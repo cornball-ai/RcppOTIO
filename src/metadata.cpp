@@ -68,6 +68,7 @@ SEXP any_to_r(std::any const& a) {
     if (t == typeid(uint64_t))    return Rcpp::wrap((double) otio::safely_cast_uint64_any(a));
     if (t == typeid(double))      return Rcpp::wrap(otio::safely_cast_double_any(a));
     if (t == typeid(std::string)) return Rcpp::wrap(otio::safely_cast_string_any(a));
+    if (t == typeid(char const*)) return Rcpp::wrap(std::string(std::any_cast<char const*>(a)));
     if (t == typeid(ot::RationalTime))
         return wrap_rational_time(otio::safely_cast_rational_time_any(a));
     if (t == typeid(ot::TimeRange))

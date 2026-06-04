@@ -1305,28 +1305,66 @@ BEGIN_RCPP
     return R_NilValue;
 END_RCPP
 }
+// cpp_register_upgrade_function
+bool cpp_register_upgrade_function(std::string schema_name, int version_to_upgrade_to, Rcpp::Function fn);
+RcppExport SEXP _rotio_cpp_register_upgrade_function(SEXP schema_nameSEXP, SEXP version_to_upgrade_toSEXP, SEXP fnSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::string >::type schema_name(schema_nameSEXP);
+    Rcpp::traits::input_parameter< int >::type version_to_upgrade_to(version_to_upgrade_toSEXP);
+    Rcpp::traits::input_parameter< Rcpp::Function >::type fn(fnSEXP);
+    rcpp_result_gen = Rcpp::wrap(cpp_register_upgrade_function(schema_name, version_to_upgrade_to, fn));
+    return rcpp_result_gen;
+END_RCPP
+}
+// cpp_register_downgrade_function
+bool cpp_register_downgrade_function(std::string schema_name, int version_to_downgrade_from, Rcpp::Function fn);
+RcppExport SEXP _rotio_cpp_register_downgrade_function(SEXP schema_nameSEXP, SEXP version_to_downgrade_fromSEXP, SEXP fnSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::string >::type schema_name(schema_nameSEXP);
+    Rcpp::traits::input_parameter< int >::type version_to_downgrade_from(version_to_downgrade_fromSEXP);
+    Rcpp::traits::input_parameter< Rcpp::Function >::type fn(fnSEXP);
+    rcpp_result_gen = Rcpp::wrap(cpp_register_downgrade_function(schema_name, version_to_downgrade_from, fn));
+    return rcpp_result_gen;
+END_RCPP
+}
+// cpp_type_version_map
+SEXP cpp_type_version_map();
+RcppExport SEXP _rotio_cpp_type_version_map() {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    rcpp_result_gen = Rcpp::wrap(cpp_type_version_map());
+    return rcpp_result_gen;
+END_RCPP
+}
 // cpp_to_json_string
-std::string cpp_to_json_string(SEXP x, int indent);
-RcppExport SEXP _rotio_cpp_to_json_string(SEXP xSEXP, SEXP indentSEXP) {
+std::string cpp_to_json_string(SEXP x, int indent, SEXP target_schema_versions);
+RcppExport SEXP _rotio_cpp_to_json_string(SEXP xSEXP, SEXP indentSEXP, SEXP target_schema_versionsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
     Rcpp::traits::input_parameter< int >::type indent(indentSEXP);
-    rcpp_result_gen = Rcpp::wrap(cpp_to_json_string(x, indent));
+    Rcpp::traits::input_parameter< SEXP >::type target_schema_versions(target_schema_versionsSEXP);
+    rcpp_result_gen = Rcpp::wrap(cpp_to_json_string(x, indent, target_schema_versions));
     return rcpp_result_gen;
 END_RCPP
 }
 // cpp_to_json_file
-bool cpp_to_json_file(SEXP x, std::string file_name, int indent);
-RcppExport SEXP _rotio_cpp_to_json_file(SEXP xSEXP, SEXP file_nameSEXP, SEXP indentSEXP) {
+bool cpp_to_json_file(SEXP x, std::string file_name, int indent, SEXP target_schema_versions);
+RcppExport SEXP _rotio_cpp_to_json_file(SEXP xSEXP, SEXP file_nameSEXP, SEXP indentSEXP, SEXP target_schema_versionsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
     Rcpp::traits::input_parameter< std::string >::type file_name(file_nameSEXP);
     Rcpp::traits::input_parameter< int >::type indent(indentSEXP);
-    rcpp_result_gen = Rcpp::wrap(cpp_to_json_file(x, file_name, indent));
+    Rcpp::traits::input_parameter< SEXP >::type target_schema_versions(target_schema_versionsSEXP);
+    rcpp_result_gen = Rcpp::wrap(cpp_to_json_file(x, file_name, indent, target_schema_versions));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -1939,8 +1977,11 @@ static const R_CallMethodDef CallEntries[] = {
     {"_rotio_cpp_genref_set_generator_kind", (DL_FUNC) &_rotio_cpp_genref_set_generator_kind, 2},
     {"_rotio_cpp_genref_parameters", (DL_FUNC) &_rotio_cpp_genref_parameters, 1},
     {"_rotio_cpp_genref_set_parameters", (DL_FUNC) &_rotio_cpp_genref_set_parameters, 2},
-    {"_rotio_cpp_to_json_string", (DL_FUNC) &_rotio_cpp_to_json_string, 2},
-    {"_rotio_cpp_to_json_file", (DL_FUNC) &_rotio_cpp_to_json_file, 3},
+    {"_rotio_cpp_register_upgrade_function", (DL_FUNC) &_rotio_cpp_register_upgrade_function, 3},
+    {"_rotio_cpp_register_downgrade_function", (DL_FUNC) &_rotio_cpp_register_downgrade_function, 3},
+    {"_rotio_cpp_type_version_map", (DL_FUNC) &_rotio_cpp_type_version_map, 0},
+    {"_rotio_cpp_to_json_string", (DL_FUNC) &_rotio_cpp_to_json_string, 3},
+    {"_rotio_cpp_to_json_file", (DL_FUNC) &_rotio_cpp_to_json_file, 4},
     {"_rotio_cpp_from_json_string", (DL_FUNC) &_rotio_cpp_from_json_string, 1},
     {"_rotio_cpp_from_json_file", (DL_FUNC) &_rotio_cpp_from_json_file, 1},
     {"_rotio_cpp_clone", (DL_FUNC) &_rotio_cpp_clone, 1},

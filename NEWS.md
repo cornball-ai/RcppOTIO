@@ -1,3 +1,13 @@
+# rotio 0.0.0.3
+
+* Wrap the `TypeRegistry` schema upgrade/downgrade hooks:
+  `register_upgrade_function()` and `register_downgrade_function()` take R
+  callbacks over the schema dictionary, `to_json_string()` /
+  `to_json_file()` gain a `target_schema_versions` argument to downgrade on
+  write, and `type_version_map()` reports registered schema versions.
+* Preserve `const char*` metadata values in the `AnyDictionary` -> R
+  conversion instead of dropping them.
+
 # rotio 0.0.0.2
 
 * `Clip` now exposes the full `media_references` map: `media_references()`

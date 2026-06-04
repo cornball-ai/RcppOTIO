@@ -2,20 +2,30 @@
 # schema identity, name/metadata, and a print method.
 
 #' Serialize an OTIO object to a JSON string
+#'
 #' @param x An OTIO object.
 #' @param indent Indentation width (spaces).
+#' @param target_schema_versions Optional named integer vector mapping
+#'   schema names to target versions (e.g. \code{c(Clip = 1L)}). When
+#'   supplied, OTIO downgrades each object to the requested version using
+#'   the registered downgrade functions.
 #' @return A JSON string in OTIO's vocabulary.
 #' @export
-to_json_string <- function(x, indent = 4L) cpp_to_json_string(x, as.integer(indent))
+to_json_string <- function(x, indent = 4L, target_schema_versions = NULL) {
+    cpp_to_json_string(x, as.integer(indent), .as_schema_versions(target_schema_versions))
+}
 
 #' Write an OTIO object to a JSON file
 #' @param x An OTIO object.
 #' @param file_name Destination path.
 #' @param indent Indentation width (spaces).
+#' @param target_schema_versions Optional named integer vector of schema
+#'   downgrade targets; see \code{\link{to_json_string}}.
 #' @return \code{TRUE} on success (invisibly).
 #' @export
-to_json_file <- function(x, file_name, indent = 4L) {
-    invisible(cpp_to_json_file(x, file_name, as.integer(indent)))
+to_json_file <- function(x, file_name, indent = 4L, target_schema_versions = NULL) {
+    invisible(cpp_to_json_file(x, file_name, as.integer(indent),
+                               .as_schema_versions(target_schema_versions)))
 }
 
 #' Read an OTIO object from a JSON string
