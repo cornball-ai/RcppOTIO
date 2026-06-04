@@ -1,6 +1,6 @@
 # rotio
 
-R bindings for [OpenTimelineIO](https://opentimeline.io) (OTIO), built as
+R bindings for [OpenTimelineIO](https://github.com/AcademySoftwareFoundation/OpenTimelineIO) (OTIO), built as
 an Rcpp wrapper over the OTIO C++ library (0.18.x).
 
 It covers the time types, the schema classes, tree construction, JSON

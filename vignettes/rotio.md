@@ -6,7 +6,7 @@
 title: "Getting started with rotio"
 ---
 
-`rotio` is an R binding for [OpenTimelineIO](https://opentimeline.io)
+`rotio` is an R binding for [OpenTimelineIO](https://github.com/AcademySoftwareFoundation/OpenTimelineIO)
 (OTIO), the editorial timeline interchange format. It wraps the OTIO C++
 library with Rcpp, so you build and edit real OTIO objects from R and read
 or write `.otio` JSON that other tools understand.

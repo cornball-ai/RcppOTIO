@@ -1,3 +1,9 @@
+# rotio 0.0.0.6
+
+* Add GitHub Actions CI (r-ci) on Ubuntu and macOS, building
+  OpenTimelineIO from source once per runner and caching the install.
+* `src/Makevars` now honours an exported `OTIO_HOME` (via `?=`).
+
 # rotio 0.0.0.5
 
 * Add a getting-started vignette (`vignette("rotio")`) built with

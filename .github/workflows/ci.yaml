@@ -1,0 +1,80 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+env:
+  _R_CHECK_FORCE_SUGGESTS_: "false"
+
+jobs:
+  ci:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {os: ubuntu-latest}
+          - {os: macos-latest}
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # OpenTimelineIO is not packaged for apt/brew as a C++ library, so we
+      # build it from source. The INSTALLED tree (~/otio) is cached per OS +
+      # version, so the compile happens exactly once per OS; later runs just
+      # restore the files. Everything lives OUTSIDE the package working
+      # directory so R CMD build/check never sees the clone or build trees.
+      # Imath and RapidJSON come from OTIO's bundled submodules.
+      - name: Cache OpenTimelineIO (built once, then reused)
+        id: otio-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/otio
+          key: otio-v0.18.1-${{ matrix.os }}-2
+
+      - name: Build OpenTimelineIO (only on a cache miss)
+        if: steps.otio-cache.outputs.cache-hit != 'true'
+        run: |
+          set -e
+          git clone --recursive --depth 1 --branch v0.18.1 \
+            https://github.com/AcademySoftwareFoundation/OpenTimelineIO.git "$RUNNER_TEMP/otio-src"
+          cmake -S "$RUNNER_TEMP/otio-src" -B "$RUNNER_TEMP/otio-build" \
+            -DCMAKE_BUILD_TYPE=Release \
+            -DCMAKE_INSTALL_PREFIX="$HOME/otio" \
+            -DOTIO_CXX_INSTALL=ON \
+            -DOTIO_PYTHON_INSTALL=OFF \
+            -DOTIO_DEPENDENCIES_INSTALL=ON \
+            -DOTIO_FIND_IMATH=OFF \
+            -DOTIO_SHARED_LIBS=ON
+          cmake --build "$RUNNER_TEMP/otio-build" --parallel 3
+          cmake --install "$RUNNER_TEMP/otio-build"
+
+      # Point the package build (and runtime loader) at the cached tree.
+      - name: Point the build at OpenTimelineIO
+        run: |
+          echo "OTIO_HOME=$HOME/otio" >> "$GITHUB_ENV"
+          echo "LD_LIBRARY_PATH=$HOME/otio/lib:$LD_LIBRARY_PATH" >> "$GITHUB_ENV"
+          echo "DYLD_FALLBACK_LIBRARY_PATH=$HOME/otio/lib:$DYLD_FALLBACK_LIBRARY_PATH" >> "$GITHUB_ENV"
+
+      - name: Setup r-ci
+        uses: eddelbuettel/github-actions/r-ci@master
+
+      - name: Install dependencies
+        run: ./run.sh install_deps
+
+      # simplermarkdown builds the vignette during R CMD build; it is a
+      # Suggests, which install_deps may skip.
+      - name: Install vignette builder
+        run: Rscript -e 'if (!requireNamespace("simplermarkdown", quietly = TRUE)) install.packages("simplermarkdown")'
+
+      # Build and check explicitly rather than ./run.sh run_tests: r-ci's
+      # run_tests passes --no-build-vignettes, which leaves inst/doc empty
+      # and makes R CMD check warn about the orphaned vignettes/ directory.
+      # We want the vignette built and its code run as part of the check.
+      - name: Build
+        run: R CMD build .
+
+      - name: Check
+        run: R CMD check rotio_*.tar.gz --no-manual --as-cran --install-args=--install-tests
