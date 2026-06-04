@@ -32,6 +32,62 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// cpp_collection_set_children
+void cpp_collection_set_children(SEXP x, Rcpp::List children);
+RcppExport SEXP _rotio_cpp_collection_set_children(SEXP xSEXP, SEXP childrenSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
+    Rcpp::traits::input_parameter< Rcpp::List >::type children(childrenSEXP);
+    cpp_collection_set_children(x, children);
+    return R_NilValue;
+END_RCPP
+}
+// cpp_collection_clear_children
+void cpp_collection_clear_children(SEXP x);
+RcppExport SEXP _rotio_cpp_collection_clear_children(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
+    cpp_collection_clear_children(x);
+    return R_NilValue;
+END_RCPP
+}
+// cpp_collection_insert_child
+void cpp_collection_insert_child(SEXP x, int index, SEXP child);
+RcppExport SEXP _rotio_cpp_collection_insert_child(SEXP xSEXP, SEXP indexSEXP, SEXP childSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
+    Rcpp::traits::input_parameter< int >::type index(indexSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type child(childSEXP);
+    cpp_collection_insert_child(x, index, child);
+    return R_NilValue;
+END_RCPP
+}
+// cpp_collection_set_child
+void cpp_collection_set_child(SEXP x, int index, SEXP child);
+RcppExport SEXP _rotio_cpp_collection_set_child(SEXP xSEXP, SEXP indexSEXP, SEXP childSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
+    Rcpp::traits::input_parameter< int >::type index(indexSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type child(childSEXP);
+    cpp_collection_set_child(x, index, child);
+    return R_NilValue;
+END_RCPP
+}
+// cpp_collection_remove_child
+void cpp_collection_remove_child(SEXP x, int index);
+RcppExport SEXP _rotio_cpp_collection_remove_child(SEXP xSEXP, SEXP indexSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
+    Rcpp::traits::input_parameter< int >::type index(indexSEXP);
+    cpp_collection_remove_child(x, index);
+    return R_NilValue;
+END_RCPP
+}
 // cpp_append_child
 void cpp_append_child(SEXP x, SEXP child);
 RcppExport SEXP _rotio_cpp_append_child(SEXP xSEXP, SEXP childSEXP) {
@@ -1592,6 +1648,11 @@ END_RCPP
 static const R_CallMethodDef CallEntries[] = {
     {"_rotio_cpp_children", (DL_FUNC) &_rotio_cpp_children, 1},
     {"_rotio_cpp_collection_children", (DL_FUNC) &_rotio_cpp_collection_children, 1},
+    {"_rotio_cpp_collection_set_children", (DL_FUNC) &_rotio_cpp_collection_set_children, 2},
+    {"_rotio_cpp_collection_clear_children", (DL_FUNC) &_rotio_cpp_collection_clear_children, 1},
+    {"_rotio_cpp_collection_insert_child", (DL_FUNC) &_rotio_cpp_collection_insert_child, 3},
+    {"_rotio_cpp_collection_set_child", (DL_FUNC) &_rotio_cpp_collection_set_child, 3},
+    {"_rotio_cpp_collection_remove_child", (DL_FUNC) &_rotio_cpp_collection_remove_child, 2},
     {"_rotio_cpp_append_child", (DL_FUNC) &_rotio_cpp_append_child, 2},
     {"_rotio_cpp_insert_child", (DL_FUNC) &_rotio_cpp_insert_child, 3},
     {"_rotio_cpp_set_child", (DL_FUNC) &_rotio_cpp_set_child, 3},

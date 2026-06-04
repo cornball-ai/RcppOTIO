@@ -6,7 +6,7 @@
 clear_children(x)
 }
 \arguments{
-\item{x}{A \code{Composition}.}
+\item{x}{A \code{Composition} or \code{SerializableCollection}.}
 }
 \value{
 \code{x}, invisibly.

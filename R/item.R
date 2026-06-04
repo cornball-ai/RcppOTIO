@@ -91,8 +91,8 @@ visible_range <- function(x) cpp_visible_range(x)
 #' timeline position. There is no separately stored "in" point.
 #'
 #' @param x An \code{Item} or \code{Transition}.
-#' @return A \code{TimeRange}. For a \code{Transition} this is
-#'   \code{NULL} when it has no parent (an \code{Item} always has a range).
+#' @return A \code{TimeRange}. An object with no parent has no range there,
+#'   so OTIO raises an error in that case (for both items and transitions).
 #' @export
 range_in_parent <- function(x) {
     if (inherits(x, "Transition")) cpp_transition_range_in_parent(x)

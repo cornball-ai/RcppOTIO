@@ -22,43 +22,57 @@ append_child <- function(x, child) {
 }
 
 #' Insert a child at a position
-#' @param x A \code{Composition}.
+#' @param x A \code{Composition} or \code{SerializableCollection}.
 #' @param index 1-based position at which to insert.
-#' @param child A \code{Composable}.
+#' @param child A \code{Composable} (Composition) or any OTIO object
+#'   (SerializableCollection).
 #' @return \code{x}, invisibly.
 #' @export
 insert_child <- function(x, index, child) {
-    cpp_insert_child(x, .to_otio_index(index), child)
+    if (inherits(x, "SerializableCollection")) {
+        cpp_collection_insert_child(x, .to_otio_index(index), child)
+    } else {
+        cpp_insert_child(x, .to_otio_index(index), child)
+    }
     invisible(x)
 }
 
 #' Replace the child at a position
-#' @param x A \code{Composition}.
+#' @param x A \code{Composition} or \code{SerializableCollection}.
 #' @param index 1-based position to replace.
-#' @param child A \code{Composable}.
+#' @param child A \code{Composable} or OTIO object (see \code{insert_child}).
 #' @return \code{x}, invisibly.
 #' @export
 set_child <- function(x, index, child) {
-    cpp_set_child(x, .to_otio_index(index), child)
+    if (inherits(x, "SerializableCollection")) {
+        cpp_collection_set_child(x, .to_otio_index(index), child)
+    } else {
+        cpp_set_child(x, .to_otio_index(index), child)
+    }
     invisible(x)
 }
 
 #' Remove the child at a position
-#' @param x A \code{Composition}.
+#' @param x A \code{Composition} or \code{SerializableCollection}.
 #' @param index 1-based position to remove.
 #' @return \code{x}, invisibly.
 #' @export
 remove_child <- function(x, index) {
-    cpp_remove_child(x, .to_otio_index(index))
+    if (inherits(x, "SerializableCollection")) {
+        cpp_collection_remove_child(x, .to_otio_index(index))
+    } else {
+        cpp_remove_child(x, .to_otio_index(index))
+    }
     invisible(x)
 }
 
 #' Remove all children of a composition
-#' @param x A \code{Composition}.
+#' @param x A \code{Composition} or \code{SerializableCollection}.
 #' @return \code{x}, invisibly.
 #' @export
 clear_children <- function(x) {
-    cpp_clear_children(x)
+    if (inherits(x, "SerializableCollection")) cpp_collection_clear_children(x)
+    else cpp_clear_children(x)
     invisible(x)
 }
 
@@ -67,20 +81,21 @@ clear_children <- function(x) {
 #' Available both as a function, \code{set_children(x, kids)}, and as a
 #' replacement, \code{set_children(x) <- kids}.
 #'
-#' @param x A \code{Composition}.
-#' @param children,value A list of \code{Composable} objects.
+#' @param x A \code{Composition} or \code{SerializableCollection}.
+#' @param children,value A list of OTIO objects (\code{Composable} for a
+#'   Composition; any OTIO object for a SerializableCollection).
 #' @return \code{x} (invisibly from the function form).
 #' @export
 set_children <- function(x, children) {
-    cpp_set_children(x, children)
+    if (inherits(x, "SerializableCollection")) cpp_collection_set_children(x, children)
+    else cpp_set_children(x, children)
     invisible(x)
 }
 
 #' @rdname set_children
 #' @export
 `set_children<-` <- function(x, value) {
-    cpp_set_children(x, value)
-    x
+    set_children(x, value)
 }
 
 #' Position of a child within a composition
