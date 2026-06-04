@@ -64,10 +64,17 @@ jobs:
       - name: Install dependencies
         run: ./run.sh install_deps
 
-      # The vignette is built by simplermarkdown during R CMD build, so it
-      # must be present (it is a Suggests, which install_deps may skip).
+      # simplermarkdown builds the vignette during R CMD build; it is a
+      # Suggests, which install_deps may skip.
       - name: Install vignette builder
         run: Rscript -e 'if (!requireNamespace("simplermarkdown", quietly = TRUE)) install.packages("simplermarkdown")'
 
-      - name: Run tests
-        run: ./run.sh run_tests
+      # Build and check explicitly rather than ./run.sh run_tests: r-ci's
+      # run_tests passes --no-build-vignettes, which leaves inst/doc empty
+      # and makes R CMD check warn about the orphaned vignettes/ directory.
+      # We want the vignette built and its code run as part of the check.
+      - name: Build
+        run: R CMD build .
+
+      - name: Check
+        run: R CMD check rotio_*.tar.gz --no-manual --as-cran --install-args=--install-tests
