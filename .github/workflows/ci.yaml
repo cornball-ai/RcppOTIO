@@ -61,13 +61,8 @@ jobs:
       - name: Setup r-ci
         uses: eddelbuettel/github-actions/r-ci@master
 
-      - name: Install dependencies
-        run: ./run.sh install_deps
-
-      # simplermarkdown builds the vignette during R CMD build; it is a
-      # Suggests, which install_deps may skip.
-      - name: Install vignette builder
-        run: Rscript -e 'if (!requireNamespace("simplermarkdown", quietly = TRUE)) install.packages("simplermarkdown")'
+      - name: Install all dependencies (including Suggests)
+        run: ./run.sh install_all
 
       # Build and check explicitly rather than ./run.sh run_tests: r-ci's
       # run_tests passes --no-build-vignettes, which leaves inst/doc empty
