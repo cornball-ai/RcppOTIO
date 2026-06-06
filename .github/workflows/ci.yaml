@@ -69,12 +69,9 @@ jobs:
       - name: Install vignette builder
         run: Rscript -e 'if (!requireNamespace("simplermarkdown", quietly = TRUE)) install.packages("simplermarkdown")'
 
-      # Build and check explicitly rather than ./run.sh run_tests: r-ci's
-      # run_tests passes --no-build-vignettes, which leaves inst/doc empty
-      # and makes R CMD check warn about the orphaned vignettes/ directory.
-      # We want the vignette built and its code run as part of the check.
-      - name: Build
-        run: R CMD build .
-
-      - name: Check
-        run: R CMD check rotio_*.tar.gz --no-manual --as-cran --install-args=--install-tests
+      # Alter build and check args to exclude --no-build-vignettes
+      - name: Test
+        run: ./run.sh run_tests
+        env:
+          R_BUILD_ARGS: "--no-manual"
+          R_CHECK_ARGS: "--no-manual --as-cran"
