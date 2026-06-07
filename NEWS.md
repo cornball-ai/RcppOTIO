@@ -1,3 +1,9 @@
+# rotio 0.0.0.7
+
+* `to_timecode()` `rate` now defaults to the `RationalTime`'s own rate (OTIO's
+  no-rate `to_timecode` overload), e.g. `to_timecode(RationalTime(17982, 30000/1001))`
+  infers drop-frame and returns `"00:10:00;00"`.
+
 # rotio 0.0.0.6
 
 * Add GitHub Actions CI (r-ci) on Ubuntu and macOS, building
