@@ -1,4 +1,4 @@
-library(rotio)
+library(RcppOTIO)
 
 ## A child fetched from a parent must stay alive independently of the
 ## original R handle and of garbage collection, because OTIO's intrusive

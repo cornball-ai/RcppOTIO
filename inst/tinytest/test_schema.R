@@ -1,4 +1,4 @@
-library(rotio)
+library(RcppOTIO)
 
 ## Construction and schema identity
 tl <- Timeline("my timeline")

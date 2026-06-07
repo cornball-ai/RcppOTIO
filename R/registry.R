@@ -46,7 +46,7 @@
 #'   registered for this \code{(schema_name, version)} pair or the schema is
 #'   not registered.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' # Register an identity upgrade for Timeline to version 9.
 #' # Returns TRUE on the first call; FALSE if already registered.
 #' result <- register_upgrade_function("Timeline", 9L, function(d) d)
@@ -71,7 +71,7 @@ register_upgrade_function <- function(schema_name, version_to_upgrade_to, fn) {
 #'   registered for this \code{(schema_name, version)} pair or the schema is
 #'   not registered.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' # Register an identity downgrade for Gap from version 9.
 #' result <- register_downgrade_function("Gap", 9L, function(d) d)
 #' is.logical(result)
@@ -84,7 +84,7 @@ register_downgrade_function <- function(schema_name, version_to_downgrade_from, 
 #'
 #' @return A named integer vector mapping schema name to current version.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' tvm <- type_version_map()
 #' is.integer(tvm)
 #' tvm[["Clip"]]

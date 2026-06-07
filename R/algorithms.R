@@ -9,7 +9,7 @@
 #
 # Note: overwrite, insert, slice, fill, trim, and remove are collision-
 # prone names, and remove in particular masks base::remove (alias of rm)
-# when the package is attached. Use rotio::remove / base::remove to
+# when the package is attached. Use RcppOTIO::remove / base::remove to
 # disambiguate. See ?`rotio-package`.
 
 #' Overwrite a span of a composition with an item
@@ -25,7 +25,7 @@
 #'   uses OTIO's default gap synthesis.
 #' @return \code{composition}, invisibly.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1", kind = "Video")
 #' append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
 #' append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
@@ -49,7 +49,7 @@ overwrite <- function(item, composition, range,
 #'   is past the composition's end; \code{NULL} uses OTIO's default.
 #' @return \code{composition}, invisibly.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1", kind = "Video")
 #' append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
 #' append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
@@ -74,7 +74,7 @@ insert <- function(item, composition, time,
 #' @param fill_template Optional \code{Item} to fill with; \code{NULL} uses a gap.
 #' @return \code{item}, invisibly.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1", kind = "Video")
 #' append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
 #' append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
@@ -95,7 +95,7 @@ trim <- function(item, delta_in, delta_out, fill_template = NULL) {
 #' @param remove_transitions Whether to drop transitions at \code{time}.
 #' @return \code{composition}, invisibly.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1", kind = "Video")
 #' append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
 #' append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
@@ -116,7 +116,7 @@ slice <- function(composition, time, remove_transitions = TRUE) {
 #' @param delta \code{RationalTime} to slip by (positive or negative).
 #' @return \code{item}, invisibly.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' ref <- ExternalReference("a.mov",
 #'   available_range = TimeRange(RationalTime(0, 24), RationalTime(96, 24)))
 #' clip <- Clip("A", media_reference = ref,
@@ -139,7 +139,7 @@ slip <- function(item, delta) {
 #' @param delta \code{RationalTime} to slide by.
 #' @return \code{item}, invisibly.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1", kind = "Video")
 #' append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
 #' append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
@@ -161,7 +161,7 @@ slide <- function(item, delta) {
 #' @param delta_out \code{RationalTime} added to the exclusive end time.
 #' @return \code{item}, invisibly.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1", kind = "Video")
 #' append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
 #' append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
@@ -183,7 +183,7 @@ ripple <- function(item, delta_in, delta_out) {
 #' @param delta_out \code{RationalTime} added to the exclusive end time.
 #' @return \code{item}, invisibly.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1", kind = "Video")
 #' append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
 #' append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
@@ -204,7 +204,7 @@ roll <- function(item, delta_in, delta_out) {
 #'   \code{"Fit"}, controlling the transform for 4-point editing.
 #' @return \code{track}, invisibly.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1", kind = "Video")
 #' append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24))))
 #' append_child(trk, Gap(RationalTime(24, 24)))
@@ -219,7 +219,7 @@ fill <- function(item, track, track_time, reference_point = "Source") {
 
 #' Remove the item at a time, optionally leaving a gap
 #'
-#' Masks \code{base::remove}; use \code{rotio::remove} / \code{base::remove}
+#' Masks \code{base::remove}; use \code{RcppOTIO::remove} / \code{base::remove}
 #' to disambiguate.
 #'
 #' @param composition The \code{Composition} to remove from.
@@ -229,11 +229,11 @@ fill <- function(item, track, track_time, reference_point = "Source") {
 #' @param fill_template Optional \code{Item} to fill with; \code{NULL} uses a gap.
 #' @return \code{composition}, invisibly.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1", kind = "Video")
 #' append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
 #' append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
-#' rotio::remove(trk, RationalTime(60, 24))
+#' RcppOTIO::remove(trk, RationalTime(60, 24))
 #' @export
 remove <- function(composition, time, fill = TRUE, fill_template = NULL) {
     cpp_algo_remove(composition, time, fill, fill_template)
@@ -248,7 +248,7 @@ remove <- function(composition, time, fill = TRUE, fill_template = NULL) {
 #' @param trim_range The \code{TimeRange} to trim to.
 #' @return A new \code{Track}.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1", kind = "Video")
 #' append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
 #' append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
@@ -263,7 +263,7 @@ track_trimmed_to_range <- function(in_track, trim_range) {
 #' @param x A \code{Stack}, or a list of \code{Track} objects.
 #' @return A new \code{Track} with the layers composited top-down.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk1 <- Track("V1", kind = "Video")
 #' append_child(trk1, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
 #' trk2 <- Track("V2", kind = "Video")

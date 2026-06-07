@@ -2,638 +2,638 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 cpp_algo_overwrite <- function(item, composition, range, remove_transitions, fill_template) {
-    invisible(.Call(`_rotio_cpp_algo_overwrite`, item, composition, range, remove_transitions, fill_template))
+    invisible(.Call(`_RcppOTIO_cpp_algo_overwrite`, item, composition, range, remove_transitions, fill_template))
 }
 
 cpp_algo_insert <- function(item, composition, time, remove_transitions, fill_template) {
-    invisible(.Call(`_rotio_cpp_algo_insert`, item, composition, time, remove_transitions, fill_template))
+    invisible(.Call(`_RcppOTIO_cpp_algo_insert`, item, composition, time, remove_transitions, fill_template))
 }
 
 cpp_algo_trim <- function(item, delta_in, delta_out, fill_template) {
-    invisible(.Call(`_rotio_cpp_algo_trim`, item, delta_in, delta_out, fill_template))
+    invisible(.Call(`_RcppOTIO_cpp_algo_trim`, item, delta_in, delta_out, fill_template))
 }
 
 cpp_algo_slice <- function(composition, time, remove_transitions) {
-    invisible(.Call(`_rotio_cpp_algo_slice`, composition, time, remove_transitions))
+    invisible(.Call(`_RcppOTIO_cpp_algo_slice`, composition, time, remove_transitions))
 }
 
 cpp_algo_slip <- function(item, delta) {
-    invisible(.Call(`_rotio_cpp_algo_slip`, item, delta))
+    invisible(.Call(`_RcppOTIO_cpp_algo_slip`, item, delta))
 }
 
 cpp_algo_slide <- function(item, delta) {
-    invisible(.Call(`_rotio_cpp_algo_slide`, item, delta))
+    invisible(.Call(`_RcppOTIO_cpp_algo_slide`, item, delta))
 }
 
 cpp_algo_ripple <- function(item, delta_in, delta_out) {
-    invisible(.Call(`_rotio_cpp_algo_ripple`, item, delta_in, delta_out))
+    invisible(.Call(`_RcppOTIO_cpp_algo_ripple`, item, delta_in, delta_out))
 }
 
 cpp_algo_roll <- function(item, delta_in, delta_out) {
-    invisible(.Call(`_rotio_cpp_algo_roll`, item, delta_in, delta_out))
+    invisible(.Call(`_RcppOTIO_cpp_algo_roll`, item, delta_in, delta_out))
 }
 
 cpp_algo_fill <- function(item, track, track_time, reference_point) {
-    invisible(.Call(`_rotio_cpp_algo_fill`, item, track, track_time, reference_point))
+    invisible(.Call(`_RcppOTIO_cpp_algo_fill`, item, track, track_time, reference_point))
 }
 
 cpp_algo_remove <- function(composition, time, fill, fill_template) {
-    invisible(.Call(`_rotio_cpp_algo_remove`, composition, time, fill, fill_template))
+    invisible(.Call(`_RcppOTIO_cpp_algo_remove`, composition, time, fill, fill_template))
 }
 
 cpp_track_trimmed_to_range <- function(track, trim_range) {
-    .Call(`_rotio_cpp_track_trimmed_to_range`, track, trim_range)
+    .Call(`_RcppOTIO_cpp_track_trimmed_to_range`, track, trim_range)
 }
 
 cpp_flatten_stack <- function(stack) {
-    .Call(`_rotio_cpp_flatten_stack`, stack)
+    .Call(`_RcppOTIO_cpp_flatten_stack`, stack)
 }
 
 cpp_flatten_stack_tracks <- function(tracks) {
-    .Call(`_rotio_cpp_flatten_stack_tracks`, tracks)
+    .Call(`_RcppOTIO_cpp_flatten_stack_tracks`, tracks)
 }
 
 cpp_children <- function(x) {
-    .Call(`_rotio_cpp_children`, x)
+    .Call(`_RcppOTIO_cpp_children`, x)
 }
 
 cpp_collection_children <- function(x) {
-    .Call(`_rotio_cpp_collection_children`, x)
+    .Call(`_RcppOTIO_cpp_collection_children`, x)
 }
 
 cpp_collection_set_children <- function(x, children) {
-    invisible(.Call(`_rotio_cpp_collection_set_children`, x, children))
+    invisible(.Call(`_RcppOTIO_cpp_collection_set_children`, x, children))
 }
 
 cpp_collection_clear_children <- function(x) {
-    invisible(.Call(`_rotio_cpp_collection_clear_children`, x))
+    invisible(.Call(`_RcppOTIO_cpp_collection_clear_children`, x))
 }
 
 cpp_collection_insert_child <- function(x, index, child) {
-    invisible(.Call(`_rotio_cpp_collection_insert_child`, x, index, child))
+    invisible(.Call(`_RcppOTIO_cpp_collection_insert_child`, x, index, child))
 }
 
 cpp_collection_set_child <- function(x, index, child) {
-    invisible(.Call(`_rotio_cpp_collection_set_child`, x, index, child))
+    invisible(.Call(`_RcppOTIO_cpp_collection_set_child`, x, index, child))
 }
 
 cpp_collection_remove_child <- function(x, index) {
-    invisible(.Call(`_rotio_cpp_collection_remove_child`, x, index))
+    invisible(.Call(`_RcppOTIO_cpp_collection_remove_child`, x, index))
 }
 
 cpp_append_child <- function(x, child) {
-    invisible(.Call(`_rotio_cpp_append_child`, x, child))
+    invisible(.Call(`_RcppOTIO_cpp_append_child`, x, child))
 }
 
 cpp_insert_child <- function(x, index, child) {
-    invisible(.Call(`_rotio_cpp_insert_child`, x, index, child))
+    invisible(.Call(`_RcppOTIO_cpp_insert_child`, x, index, child))
 }
 
 cpp_set_child <- function(x, index, child) {
-    invisible(.Call(`_rotio_cpp_set_child`, x, index, child))
+    invisible(.Call(`_RcppOTIO_cpp_set_child`, x, index, child))
 }
 
 cpp_remove_child <- function(x, index) {
-    invisible(.Call(`_rotio_cpp_remove_child`, x, index))
+    invisible(.Call(`_RcppOTIO_cpp_remove_child`, x, index))
 }
 
 cpp_clear_children <- function(x) {
-    invisible(.Call(`_rotio_cpp_clear_children`, x))
+    invisible(.Call(`_RcppOTIO_cpp_clear_children`, x))
 }
 
 cpp_set_children <- function(x, children) {
-    invisible(.Call(`_rotio_cpp_set_children`, x, children))
+    invisible(.Call(`_RcppOTIO_cpp_set_children`, x, children))
 }
 
 cpp_index_of_child <- function(x, child) {
-    .Call(`_rotio_cpp_index_of_child`, x, child)
+    .Call(`_RcppOTIO_cpp_index_of_child`, x, child)
 }
 
 cpp_is_parent_of <- function(x, other) {
-    .Call(`_rotio_cpp_is_parent_of`, x, other)
+    .Call(`_RcppOTIO_cpp_is_parent_of`, x, other)
 }
 
 cpp_has_child <- function(x, child) {
-    .Call(`_rotio_cpp_has_child`, x, child)
+    .Call(`_RcppOTIO_cpp_has_child`, x, child)
 }
 
 cpp_has_clips <- function(x) {
-    .Call(`_rotio_cpp_has_clips`, x)
+    .Call(`_RcppOTIO_cpp_has_clips`, x)
 }
 
 cpp_find_clips <- function(x) {
-    .Call(`_rotio_cpp_find_clips`, x)
+    .Call(`_RcppOTIO_cpp_find_clips`, x)
 }
 
 cpp_collection_find_clips <- function(x) {
-    .Call(`_rotio_cpp_collection_find_clips`, x)
+    .Call(`_RcppOTIO_cpp_collection_find_clips`, x)
 }
 
 cpp_new_timeline <- function(name, global_start_time, metadata) {
-    .Call(`_rotio_cpp_new_timeline`, name, global_start_time, metadata)
+    .Call(`_RcppOTIO_cpp_new_timeline`, name, global_start_time, metadata)
 }
 
 cpp_new_stack <- function(name, source_range, metadata) {
-    .Call(`_rotio_cpp_new_stack`, name, source_range, metadata)
+    .Call(`_RcppOTIO_cpp_new_stack`, name, source_range, metadata)
 }
 
 cpp_new_track <- function(name, source_range, kind, metadata) {
-    .Call(`_rotio_cpp_new_track`, name, source_range, kind, metadata)
+    .Call(`_RcppOTIO_cpp_new_track`, name, source_range, kind, metadata)
 }
 
 cpp_new_clip <- function(name, media_reference, source_range, metadata) {
-    .Call(`_rotio_cpp_new_clip`, name, media_reference, source_range, metadata)
+    .Call(`_RcppOTIO_cpp_new_clip`, name, media_reference, source_range, metadata)
 }
 
 cpp_new_gap <- function(duration, name, metadata) {
-    .Call(`_rotio_cpp_new_gap`, duration, name, metadata)
+    .Call(`_RcppOTIO_cpp_new_gap`, duration, name, metadata)
 }
 
 cpp_new_transition <- function(name, transition_type, in_offset, out_offset, metadata) {
-    .Call(`_rotio_cpp_new_transition`, name, transition_type, in_offset, out_offset, metadata)
+    .Call(`_RcppOTIO_cpp_new_transition`, name, transition_type, in_offset, out_offset, metadata)
 }
 
 cpp_new_marker <- function(name, marked_range, color, metadata, comment) {
-    .Call(`_rotio_cpp_new_marker`, name, marked_range, color, metadata, comment)
+    .Call(`_RcppOTIO_cpp_new_marker`, name, marked_range, color, metadata, comment)
 }
 
 cpp_new_effect <- function(name, effect_name, metadata, enabled) {
-    .Call(`_rotio_cpp_new_effect`, name, effect_name, metadata, enabled)
+    .Call(`_RcppOTIO_cpp_new_effect`, name, effect_name, metadata, enabled)
 }
 
 cpp_new_time_effect <- function(name, effect_name, metadata) {
-    .Call(`_rotio_cpp_new_time_effect`, name, effect_name, metadata)
+    .Call(`_RcppOTIO_cpp_new_time_effect`, name, effect_name, metadata)
 }
 
 cpp_new_linear_time_warp <- function(name, effect_name, time_scalar, metadata) {
-    .Call(`_rotio_cpp_new_linear_time_warp`, name, effect_name, time_scalar, metadata)
+    .Call(`_RcppOTIO_cpp_new_linear_time_warp`, name, effect_name, time_scalar, metadata)
 }
 
 cpp_new_freeze_frame <- function(name, metadata) {
-    .Call(`_rotio_cpp_new_freeze_frame`, name, metadata)
+    .Call(`_RcppOTIO_cpp_new_freeze_frame`, name, metadata)
 }
 
 cpp_new_media_reference <- function(name, available_range, metadata) {
-    .Call(`_rotio_cpp_new_media_reference`, name, available_range, metadata)
+    .Call(`_RcppOTIO_cpp_new_media_reference`, name, available_range, metadata)
 }
 
 cpp_new_external_reference <- function(target_url, available_range, metadata) {
-    .Call(`_rotio_cpp_new_external_reference`, target_url, available_range, metadata)
+    .Call(`_RcppOTIO_cpp_new_external_reference`, target_url, available_range, metadata)
 }
 
 cpp_new_image_sequence_reference <- function(target_url_base, name_prefix, name_suffix, start_frame, frame_step, rate, frame_zero_padding, missing_frame_policy, available_range, metadata) {
-    .Call(`_rotio_cpp_new_image_sequence_reference`, target_url_base, name_prefix, name_suffix, start_frame, frame_step, rate, frame_zero_padding, missing_frame_policy, available_range, metadata)
+    .Call(`_RcppOTIO_cpp_new_image_sequence_reference`, target_url_base, name_prefix, name_suffix, start_frame, frame_step, rate, frame_zero_padding, missing_frame_policy, available_range, metadata)
 }
 
 cpp_new_generator_reference <- function(name, generator_kind, available_range, parameters, metadata) {
-    .Call(`_rotio_cpp_new_generator_reference`, name, generator_kind, available_range, parameters, metadata)
+    .Call(`_RcppOTIO_cpp_new_generator_reference`, name, generator_kind, available_range, parameters, metadata)
 }
 
 cpp_new_missing_reference <- function(name, available_range, metadata) {
-    .Call(`_rotio_cpp_new_missing_reference`, name, available_range, metadata)
+    .Call(`_RcppOTIO_cpp_new_missing_reference`, name, available_range, metadata)
 }
 
 cpp_new_serializable_collection <- function(name, children, metadata) {
-    .Call(`_rotio_cpp_new_serializable_collection`, name, children, metadata)
+    .Call(`_RcppOTIO_cpp_new_serializable_collection`, name, children, metadata)
 }
 
 cpp_effect_name <- function(x) {
-    .Call(`_rotio_cpp_effect_name`, x)
+    .Call(`_RcppOTIO_cpp_effect_name`, x)
 }
 
 cpp_effect_set_effect_name <- function(x, effect_name) {
-    invisible(.Call(`_rotio_cpp_effect_set_effect_name`, x, effect_name))
+    invisible(.Call(`_RcppOTIO_cpp_effect_set_effect_name`, x, effect_name))
 }
 
 cpp_effect_enabled <- function(x) {
-    .Call(`_rotio_cpp_effect_enabled`, x)
+    .Call(`_RcppOTIO_cpp_effect_enabled`, x)
 }
 
 cpp_effect_set_enabled <- function(x, enabled) {
-    invisible(.Call(`_rotio_cpp_effect_set_enabled`, x, enabled))
+    invisible(.Call(`_RcppOTIO_cpp_effect_set_enabled`, x, enabled))
 }
 
 cpp_ltw_time_scalar <- function(x) {
-    .Call(`_rotio_cpp_ltw_time_scalar`, x)
+    .Call(`_RcppOTIO_cpp_ltw_time_scalar`, x)
 }
 
 cpp_ltw_set_time_scalar <- function(x, time_scalar) {
-    invisible(.Call(`_rotio_cpp_ltw_set_time_scalar`, x, time_scalar))
+    invisible(.Call(`_RcppOTIO_cpp_ltw_set_time_scalar`, x, time_scalar))
 }
 
 cpp_transition_type <- function(x) {
-    .Call(`_rotio_cpp_transition_type`, x)
+    .Call(`_RcppOTIO_cpp_transition_type`, x)
 }
 
 cpp_transition_set_type <- function(x, transition_type) {
-    invisible(.Call(`_rotio_cpp_transition_set_type`, x, transition_type))
+    invisible(.Call(`_RcppOTIO_cpp_transition_set_type`, x, transition_type))
 }
 
 cpp_transition_in_offset <- function(x) {
-    .Call(`_rotio_cpp_transition_in_offset`, x)
+    .Call(`_RcppOTIO_cpp_transition_in_offset`, x)
 }
 
 cpp_transition_set_in_offset <- function(x, in_offset) {
-    invisible(.Call(`_rotio_cpp_transition_set_in_offset`, x, in_offset))
+    invisible(.Call(`_RcppOTIO_cpp_transition_set_in_offset`, x, in_offset))
 }
 
 cpp_transition_out_offset <- function(x) {
-    .Call(`_rotio_cpp_transition_out_offset`, x)
+    .Call(`_RcppOTIO_cpp_transition_out_offset`, x)
 }
 
 cpp_transition_set_out_offset <- function(x, out_offset) {
-    invisible(.Call(`_rotio_cpp_transition_set_out_offset`, x, out_offset))
+    invisible(.Call(`_RcppOTIO_cpp_transition_set_out_offset`, x, out_offset))
 }
 
 cpp_transition_range_in_parent <- function(x) {
-    .Call(`_rotio_cpp_transition_range_in_parent`, x)
+    .Call(`_RcppOTIO_cpp_transition_range_in_parent`, x)
 }
 
 cpp_transition_trimmed_range_in_parent <- function(x) {
-    .Call(`_rotio_cpp_transition_trimmed_range_in_parent`, x)
+    .Call(`_RcppOTIO_cpp_transition_trimmed_range_in_parent`, x)
 }
 
 cpp_marker_color <- function(x) {
-    .Call(`_rotio_cpp_marker_color`, x)
+    .Call(`_RcppOTIO_cpp_marker_color`, x)
 }
 
 cpp_marker_set_color <- function(x, color) {
-    invisible(.Call(`_rotio_cpp_marker_set_color`, x, color))
+    invisible(.Call(`_RcppOTIO_cpp_marker_set_color`, x, color))
 }
 
 cpp_marker_marked_range <- function(x) {
-    .Call(`_rotio_cpp_marker_marked_range`, x)
+    .Call(`_RcppOTIO_cpp_marker_marked_range`, x)
 }
 
 cpp_marker_set_marked_range <- function(x, marked_range) {
-    invisible(.Call(`_rotio_cpp_marker_set_marked_range`, x, marked_range))
+    invisible(.Call(`_RcppOTIO_cpp_marker_set_marked_range`, x, marked_range))
 }
 
 cpp_marker_comment <- function(x) {
-    .Call(`_rotio_cpp_marker_comment`, x)
+    .Call(`_RcppOTIO_cpp_marker_comment`, x)
 }
 
 cpp_marker_set_comment <- function(x, comment) {
-    invisible(.Call(`_rotio_cpp_marker_set_comment`, x, comment))
+    invisible(.Call(`_RcppOTIO_cpp_marker_set_comment`, x, comment))
 }
 
 cpp_visible <- function(x) {
-    .Call(`_rotio_cpp_visible`, x)
+    .Call(`_RcppOTIO_cpp_visible`, x)
 }
 
 cpp_overlapping <- function(x) {
-    .Call(`_rotio_cpp_overlapping`, x)
+    .Call(`_RcppOTIO_cpp_overlapping`, x)
 }
 
 cpp_parent <- function(x) {
-    .Call(`_rotio_cpp_parent`, x)
+    .Call(`_RcppOTIO_cpp_parent`, x)
 }
 
 cpp_duration <- function(x) {
-    .Call(`_rotio_cpp_duration`, x)
+    .Call(`_RcppOTIO_cpp_duration`, x)
 }
 
 cpp_source_range <- function(x) {
-    .Call(`_rotio_cpp_source_range`, x)
+    .Call(`_RcppOTIO_cpp_source_range`, x)
 }
 
 cpp_set_source_range <- function(x, source_range) {
-    invisible(.Call(`_rotio_cpp_set_source_range`, x, source_range))
+    invisible(.Call(`_RcppOTIO_cpp_set_source_range`, x, source_range))
 }
 
 cpp_enabled <- function(x) {
-    .Call(`_rotio_cpp_enabled`, x)
+    .Call(`_RcppOTIO_cpp_enabled`, x)
 }
 
 cpp_set_enabled <- function(x, enabled) {
-    invisible(.Call(`_rotio_cpp_set_enabled`, x, enabled))
+    invisible(.Call(`_RcppOTIO_cpp_set_enabled`, x, enabled))
 }
 
 cpp_available_range <- function(x) {
-    .Call(`_rotio_cpp_available_range`, x)
+    .Call(`_RcppOTIO_cpp_available_range`, x)
 }
 
 cpp_trimmed_range <- function(x) {
-    .Call(`_rotio_cpp_trimmed_range`, x)
+    .Call(`_RcppOTIO_cpp_trimmed_range`, x)
 }
 
 cpp_visible_range <- function(x) {
-    .Call(`_rotio_cpp_visible_range`, x)
+    .Call(`_RcppOTIO_cpp_visible_range`, x)
 }
 
 cpp_range_in_parent <- function(x) {
-    .Call(`_rotio_cpp_range_in_parent`, x)
+    .Call(`_RcppOTIO_cpp_range_in_parent`, x)
 }
 
 cpp_trimmed_range_in_parent <- function(x) {
-    .Call(`_rotio_cpp_trimmed_range_in_parent`, x)
+    .Call(`_RcppOTIO_cpp_trimmed_range_in_parent`, x)
 }
 
 cpp_clip_media_reference <- function(x) {
-    .Call(`_rotio_cpp_clip_media_reference`, x)
+    .Call(`_RcppOTIO_cpp_clip_media_reference`, x)
 }
 
 cpp_clip_set_media_reference <- function(x, media_reference) {
-    invisible(.Call(`_rotio_cpp_clip_set_media_reference`, x, media_reference))
+    invisible(.Call(`_RcppOTIO_cpp_clip_set_media_reference`, x, media_reference))
 }
 
 cpp_clip_active_media_reference_key <- function(x) {
-    .Call(`_rotio_cpp_clip_active_media_reference_key`, x)
+    .Call(`_RcppOTIO_cpp_clip_active_media_reference_key`, x)
 }
 
 cpp_clip_set_active_media_reference_key <- function(x, key) {
-    invisible(.Call(`_rotio_cpp_clip_set_active_media_reference_key`, x, key))
+    invisible(.Call(`_RcppOTIO_cpp_clip_set_active_media_reference_key`, x, key))
 }
 
 cpp_clip_default_media_key <- function() {
-    .Call(`_rotio_cpp_clip_default_media_key`)
+    .Call(`_RcppOTIO_cpp_clip_default_media_key`)
 }
 
 cpp_clip_media_references <- function(x) {
-    .Call(`_rotio_cpp_clip_media_references`, x)
+    .Call(`_RcppOTIO_cpp_clip_media_references`, x)
 }
 
 cpp_clip_set_media_references <- function(x, media_references, new_active_key) {
-    invisible(.Call(`_rotio_cpp_clip_set_media_references`, x, media_references, new_active_key))
+    invisible(.Call(`_RcppOTIO_cpp_clip_set_media_references`, x, media_references, new_active_key))
 }
 
 cpp_mediaref_available_range <- function(x) {
-    .Call(`_rotio_cpp_mediaref_available_range`, x)
+    .Call(`_RcppOTIO_cpp_mediaref_available_range`, x)
 }
 
 cpp_mediaref_set_available_range <- function(x, available_range) {
-    invisible(.Call(`_rotio_cpp_mediaref_set_available_range`, x, available_range))
+    invisible(.Call(`_RcppOTIO_cpp_mediaref_set_available_range`, x, available_range))
 }
 
 cpp_mediaref_is_missing_reference <- function(x) {
-    .Call(`_rotio_cpp_mediaref_is_missing_reference`, x)
+    .Call(`_RcppOTIO_cpp_mediaref_is_missing_reference`, x)
 }
 
 cpp_extref_target_url <- function(x) {
-    .Call(`_rotio_cpp_extref_target_url`, x)
+    .Call(`_RcppOTIO_cpp_extref_target_url`, x)
 }
 
 cpp_extref_set_target_url <- function(x, target_url) {
-    invisible(.Call(`_rotio_cpp_extref_set_target_url`, x, target_url))
+    invisible(.Call(`_RcppOTIO_cpp_extref_set_target_url`, x, target_url))
 }
 
 cpp_imgseq_target_url_base <- function(x) {
-    .Call(`_rotio_cpp_imgseq_target_url_base`, x)
+    .Call(`_RcppOTIO_cpp_imgseq_target_url_base`, x)
 }
 
 cpp_imgseq_set_target_url_base <- function(x, v) {
-    invisible(.Call(`_rotio_cpp_imgseq_set_target_url_base`, x, v))
+    invisible(.Call(`_RcppOTIO_cpp_imgseq_set_target_url_base`, x, v))
 }
 
 cpp_imgseq_name_prefix <- function(x) {
-    .Call(`_rotio_cpp_imgseq_name_prefix`, x)
+    .Call(`_RcppOTIO_cpp_imgseq_name_prefix`, x)
 }
 
 cpp_imgseq_name_suffix <- function(x) {
-    .Call(`_rotio_cpp_imgseq_name_suffix`, x)
+    .Call(`_RcppOTIO_cpp_imgseq_name_suffix`, x)
 }
 
 cpp_imgseq_start_frame <- function(x) {
-    .Call(`_rotio_cpp_imgseq_start_frame`, x)
+    .Call(`_RcppOTIO_cpp_imgseq_start_frame`, x)
 }
 
 cpp_imgseq_frame_step <- function(x) {
-    .Call(`_rotio_cpp_imgseq_frame_step`, x)
+    .Call(`_RcppOTIO_cpp_imgseq_frame_step`, x)
 }
 
 cpp_imgseq_rate <- function(x) {
-    .Call(`_rotio_cpp_imgseq_rate`, x)
+    .Call(`_RcppOTIO_cpp_imgseq_rate`, x)
 }
 
 cpp_imgseq_frame_zero_padding <- function(x) {
-    .Call(`_rotio_cpp_imgseq_frame_zero_padding`, x)
+    .Call(`_RcppOTIO_cpp_imgseq_frame_zero_padding`, x)
 }
 
 cpp_imgseq_end_frame <- function(x) {
-    .Call(`_rotio_cpp_imgseq_end_frame`, x)
+    .Call(`_RcppOTIO_cpp_imgseq_end_frame`, x)
 }
 
 cpp_imgseq_number_of_images_in_sequence <- function(x) {
-    .Call(`_rotio_cpp_imgseq_number_of_images_in_sequence`, x)
+    .Call(`_RcppOTIO_cpp_imgseq_number_of_images_in_sequence`, x)
 }
 
 cpp_imgseq_frame_for_time <- function(x, time) {
-    .Call(`_rotio_cpp_imgseq_frame_for_time`, x, time)
+    .Call(`_RcppOTIO_cpp_imgseq_frame_for_time`, x, time)
 }
 
 cpp_imgseq_target_url_for_image_number <- function(x, image_number) {
-    .Call(`_rotio_cpp_imgseq_target_url_for_image_number`, x, image_number)
+    .Call(`_RcppOTIO_cpp_imgseq_target_url_for_image_number`, x, image_number)
 }
 
 cpp_imgseq_presentation_time_for_image_number <- function(x, image_number) {
-    .Call(`_rotio_cpp_imgseq_presentation_time_for_image_number`, x, image_number)
+    .Call(`_RcppOTIO_cpp_imgseq_presentation_time_for_image_number`, x, image_number)
 }
 
 cpp_genref_generator_kind <- function(x) {
-    .Call(`_rotio_cpp_genref_generator_kind`, x)
+    .Call(`_RcppOTIO_cpp_genref_generator_kind`, x)
 }
 
 cpp_genref_set_generator_kind <- function(x, generator_kind) {
-    invisible(.Call(`_rotio_cpp_genref_set_generator_kind`, x, generator_kind))
+    invisible(.Call(`_RcppOTIO_cpp_genref_set_generator_kind`, x, generator_kind))
 }
 
 cpp_genref_parameters <- function(x) {
-    .Call(`_rotio_cpp_genref_parameters`, x)
+    .Call(`_RcppOTIO_cpp_genref_parameters`, x)
 }
 
 cpp_genref_set_parameters <- function(x, parameters) {
-    invisible(.Call(`_rotio_cpp_genref_set_parameters`, x, parameters))
+    invisible(.Call(`_RcppOTIO_cpp_genref_set_parameters`, x, parameters))
 }
 
 cpp_register_upgrade_function <- function(schema_name, version_to_upgrade_to, fn) {
-    .Call(`_rotio_cpp_register_upgrade_function`, schema_name, version_to_upgrade_to, fn)
+    .Call(`_RcppOTIO_cpp_register_upgrade_function`, schema_name, version_to_upgrade_to, fn)
 }
 
 cpp_register_downgrade_function <- function(schema_name, version_to_downgrade_from, fn) {
-    .Call(`_rotio_cpp_register_downgrade_function`, schema_name, version_to_downgrade_from, fn)
+    .Call(`_RcppOTIO_cpp_register_downgrade_function`, schema_name, version_to_downgrade_from, fn)
 }
 
 cpp_type_version_map <- function() {
-    .Call(`_rotio_cpp_type_version_map`)
+    .Call(`_RcppOTIO_cpp_type_version_map`)
 }
 
 cpp_to_json_string <- function(x, indent, target_schema_versions) {
-    .Call(`_rotio_cpp_to_json_string`, x, indent, target_schema_versions)
+    .Call(`_RcppOTIO_cpp_to_json_string`, x, indent, target_schema_versions)
 }
 
 cpp_to_json_file <- function(x, file_name, indent, target_schema_versions) {
-    .Call(`_rotio_cpp_to_json_file`, x, file_name, indent, target_schema_versions)
+    .Call(`_RcppOTIO_cpp_to_json_file`, x, file_name, indent, target_schema_versions)
 }
 
 cpp_from_json_string <- function(input) {
-    .Call(`_rotio_cpp_from_json_string`, input)
+    .Call(`_RcppOTIO_cpp_from_json_string`, input)
 }
 
 cpp_from_json_file <- function(file_name) {
-    .Call(`_rotio_cpp_from_json_file`, file_name)
+    .Call(`_RcppOTIO_cpp_from_json_file`, file_name)
 }
 
 cpp_clone <- function(x) {
-    .Call(`_rotio_cpp_clone`, x)
+    .Call(`_RcppOTIO_cpp_clone`, x)
 }
 
 cpp_schema_name <- function(x) {
-    .Call(`_rotio_cpp_schema_name`, x)
+    .Call(`_RcppOTIO_cpp_schema_name`, x)
 }
 
 cpp_schema_version <- function(x) {
-    .Call(`_rotio_cpp_schema_version`, x)
+    .Call(`_RcppOTIO_cpp_schema_version`, x)
 }
 
 cpp_is_equivalent_to <- function(x, other) {
-    .Call(`_rotio_cpp_is_equivalent_to`, x, other)
+    .Call(`_RcppOTIO_cpp_is_equivalent_to`, x, other)
 }
 
 cpp_is_unknown_schema <- function(x) {
-    .Call(`_rotio_cpp_is_unknown_schema`, x)
+    .Call(`_RcppOTIO_cpp_is_unknown_schema`, x)
 }
 
 cpp_name <- function(x) {
-    .Call(`_rotio_cpp_name`, x)
+    .Call(`_RcppOTIO_cpp_name`, x)
 }
 
 cpp_set_name <- function(x, name) {
-    invisible(.Call(`_rotio_cpp_set_name`, x, name))
+    invisible(.Call(`_RcppOTIO_cpp_set_name`, x, name))
 }
 
 cpp_metadata <- function(x) {
-    .Call(`_rotio_cpp_metadata`, x)
+    .Call(`_RcppOTIO_cpp_metadata`, x)
 }
 
 cpp_set_metadata <- function(x, value) {
-    invisible(.Call(`_rotio_cpp_set_metadata`, x, value))
+    invisible(.Call(`_RcppOTIO_cpp_set_metadata`, x, value))
 }
 
 cpp_rt_to_seconds <- function(rt) {
-    .Call(`_rotio_cpp_rt_to_seconds`, rt)
+    .Call(`_RcppOTIO_cpp_rt_to_seconds`, rt)
 }
 
 cpp_rt_from_seconds <- function(seconds, rate) {
-    .Call(`_rotio_cpp_rt_from_seconds`, seconds, rate)
+    .Call(`_RcppOTIO_cpp_rt_from_seconds`, seconds, rate)
 }
 
 cpp_rt_to_frames <- function(rt) {
-    .Call(`_rotio_cpp_rt_to_frames`, rt)
+    .Call(`_RcppOTIO_cpp_rt_to_frames`, rt)
 }
 
 cpp_rt_from_frames <- function(frame, rate) {
-    .Call(`_rotio_cpp_rt_from_frames`, frame, rate)
+    .Call(`_RcppOTIO_cpp_rt_from_frames`, frame, rate)
 }
 
 cpp_rt_rescaled_to <- function(rt, new_rate) {
-    .Call(`_rotio_cpp_rt_rescaled_to`, rt, new_rate)
+    .Call(`_RcppOTIO_cpp_rt_rescaled_to`, rt, new_rate)
 }
 
 cpp_rt_to_timecode <- function(rt, rate, drop_frame) {
-    .Call(`_rotio_cpp_rt_to_timecode`, rt, rate, drop_frame)
+    .Call(`_RcppOTIO_cpp_rt_to_timecode`, rt, rate, drop_frame)
 }
 
 cpp_rt_from_timecode <- function(timecode, rate) {
-    .Call(`_rotio_cpp_rt_from_timecode`, timecode, rate)
+    .Call(`_RcppOTIO_cpp_rt_from_timecode`, timecode, rate)
 }
 
 cpp_rt_to_time_string <- function(rt) {
-    .Call(`_rotio_cpp_rt_to_time_string`, rt)
+    .Call(`_RcppOTIO_cpp_rt_to_time_string`, rt)
 }
 
 cpp_rt_from_time_string <- function(time_string, rate) {
-    .Call(`_rotio_cpp_rt_from_time_string`, time_string, rate)
+    .Call(`_RcppOTIO_cpp_rt_from_time_string`, time_string, rate)
 }
 
 cpp_rt_almost_equal <- function(a, b, delta) {
-    .Call(`_rotio_cpp_rt_almost_equal`, a, b, delta)
+    .Call(`_RcppOTIO_cpp_rt_almost_equal`, a, b, delta)
 }
 
 cpp_rt_add <- function(a, b) {
-    .Call(`_rotio_cpp_rt_add`, a, b)
+    .Call(`_RcppOTIO_cpp_rt_add`, a, b)
 }
 
 cpp_rt_subtract <- function(a, b) {
-    .Call(`_rotio_cpp_rt_subtract`, a, b)
+    .Call(`_RcppOTIO_cpp_rt_subtract`, a, b)
 }
 
 cpp_rt_compare <- function(a, b) {
-    .Call(`_rotio_cpp_rt_compare`, a, b)
+    .Call(`_RcppOTIO_cpp_rt_compare`, a, b)
 }
 
 cpp_tr_end_time_exclusive <- function(tr) {
-    .Call(`_rotio_cpp_tr_end_time_exclusive`, tr)
+    .Call(`_RcppOTIO_cpp_tr_end_time_exclusive`, tr)
 }
 
 cpp_tr_end_time_inclusive <- function(tr) {
-    .Call(`_rotio_cpp_tr_end_time_inclusive`, tr)
+    .Call(`_RcppOTIO_cpp_tr_end_time_inclusive`, tr)
 }
 
 cpp_tr_extended_by <- function(tr, other) {
-    .Call(`_rotio_cpp_tr_extended_by`, tr, other)
+    .Call(`_RcppOTIO_cpp_tr_extended_by`, tr, other)
 }
 
 cpp_tr_clamped_range <- function(tr, other) {
-    .Call(`_rotio_cpp_tr_clamped_range`, tr, other)
+    .Call(`_RcppOTIO_cpp_tr_clamped_range`, tr, other)
 }
 
 cpp_tr_contains_time <- function(tr, rt) {
-    .Call(`_rotio_cpp_tr_contains_time`, tr, rt)
+    .Call(`_RcppOTIO_cpp_tr_contains_time`, tr, rt)
 }
 
 cpp_tr_contains_range <- function(tr, other, epsilon_s) {
-    .Call(`_rotio_cpp_tr_contains_range`, tr, other, epsilon_s)
+    .Call(`_RcppOTIO_cpp_tr_contains_range`, tr, other, epsilon_s)
 }
 
 cpp_tr_overlaps_range <- function(tr, other, epsilon_s) {
-    .Call(`_rotio_cpp_tr_overlaps_range`, tr, other, epsilon_s)
+    .Call(`_RcppOTIO_cpp_tr_overlaps_range`, tr, other, epsilon_s)
 }
 
 cpp_tr_intersects <- function(tr, other, epsilon_s) {
-    .Call(`_rotio_cpp_tr_intersects`, tr, other, epsilon_s)
+    .Call(`_RcppOTIO_cpp_tr_intersects`, tr, other, epsilon_s)
 }
 
 cpp_tr_range_from_start_end_time <- function(start_time, end_time_exclusive) {
-    .Call(`_rotio_cpp_tr_range_from_start_end_time`, start_time, end_time_exclusive)
+    .Call(`_RcppOTIO_cpp_tr_range_from_start_end_time`, start_time, end_time_exclusive)
 }
 
 cpp_timeline_tracks <- function(x) {
-    .Call(`_rotio_cpp_timeline_tracks`, x)
+    .Call(`_RcppOTIO_cpp_timeline_tracks`, x)
 }
 
 cpp_timeline_set_tracks <- function(x, stack) {
-    invisible(.Call(`_rotio_cpp_timeline_set_tracks`, x, stack))
+    invisible(.Call(`_RcppOTIO_cpp_timeline_set_tracks`, x, stack))
 }
 
 cpp_timeline_global_start_time <- function(x) {
-    .Call(`_rotio_cpp_timeline_global_start_time`, x)
+    .Call(`_RcppOTIO_cpp_timeline_global_start_time`, x)
 }
 
 cpp_timeline_set_global_start_time <- function(x, global_start_time) {
-    invisible(.Call(`_rotio_cpp_timeline_set_global_start_time`, x, global_start_time))
+    invisible(.Call(`_RcppOTIO_cpp_timeline_set_global_start_time`, x, global_start_time))
 }
 
 cpp_timeline_duration <- function(x) {
-    .Call(`_rotio_cpp_timeline_duration`, x)
+    .Call(`_RcppOTIO_cpp_timeline_duration`, x)
 }
 
 cpp_timeline_video_tracks <- function(x) {
-    .Call(`_rotio_cpp_timeline_video_tracks`, x)
+    .Call(`_RcppOTIO_cpp_timeline_video_tracks`, x)
 }
 
 cpp_timeline_audio_tracks <- function(x) {
-    .Call(`_rotio_cpp_timeline_audio_tracks`, x)
+    .Call(`_RcppOTIO_cpp_timeline_audio_tracks`, x)
 }
 
 cpp_timeline_find_clips <- function(x) {
-    .Call(`_rotio_cpp_timeline_find_clips`, x)
+    .Call(`_RcppOTIO_cpp_timeline_find_clips`, x)
 }
 
 cpp_track_kind <- function(x) {
-    .Call(`_rotio_cpp_track_kind`, x)
+    .Call(`_RcppOTIO_cpp_track_kind`, x)
 }
 
 cpp_track_set_kind <- function(x, kind) {
-    invisible(.Call(`_rotio_cpp_track_set_kind`, x, kind))
+    invisible(.Call(`_RcppOTIO_cpp_track_set_kind`, x, kind))
 }
 

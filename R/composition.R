@@ -6,7 +6,7 @@
 #' @param x A \code{Composition} (Track, Stack) or \code{SerializableCollection}.
 #' @return A list of child OTIO objects, in order.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1")
 #' a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
 #' append_child(trk, a)
@@ -23,7 +23,7 @@ children <- function(x) {
 #' @param child A \code{Composable} to append.
 #' @return \code{x}, invisibly.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1")
 #' a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
 #' append_child(trk, a)
@@ -41,7 +41,7 @@ append_child <- function(x, child) {
 #'   (SerializableCollection).
 #' @return \code{x}, invisibly.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1")
 #' a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
 #' b <- Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(12, 24)))
@@ -64,7 +64,7 @@ insert_child <- function(x, index, child) {
 #' @param child A \code{Composable} or OTIO object (see \code{insert_child}).
 #' @return \code{x}, invisibly.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1")
 #' a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
 #' b <- Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(12, 24)))
@@ -87,7 +87,7 @@ set_child <- function(x, index, child) {
 #' @param index 1-based position to remove.
 #' @return \code{x}, invisibly.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1")
 #' a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
 #' b <- Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(12, 24)))
@@ -108,7 +108,7 @@ remove_child <- function(x, index) {
 #' @param x A \code{Composition} or \code{SerializableCollection}.
 #' @return \code{x}, invisibly.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1")
 #' a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
 #' append_child(trk, a)
@@ -131,7 +131,7 @@ clear_children <- function(x) {
 #'   Composition; any OTIO object for a SerializableCollection).
 #' @return \code{x} (invisibly from the function form).
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1")
 #' a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
 #' b <- Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(12, 24)))
@@ -155,7 +155,7 @@ set_children <- function(x, children) {
 #' @param child A \code{Composable}.
 #' @return The 1-based index, or \code{NA} if not a child.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1")
 #' a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
 #' b <- Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(12, 24)))
@@ -171,7 +171,7 @@ index_of_child <- function(x, child) {
 #' @param other A \code{Composable}.
 #' @return Logical.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1")
 #' a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
 #' append_child(trk, a)
@@ -184,7 +184,7 @@ is_parent_of <- function(x, other) cpp_is_parent_of(x, other)
 #' @param child A \code{Composable}.
 #' @return Logical.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1")
 #' a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
 #' b <- Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(12, 24)))
@@ -198,7 +198,7 @@ has_child <- function(x, child) cpp_has_child(x, child)
 #' @param x A \code{Composition}.
 #' @return Logical.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1")
 #' has_clips(trk)
 #' a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
@@ -211,7 +211,7 @@ has_clips <- function(x) cpp_has_clips(x)
 #' @param x A \code{Composition}, \code{Timeline}, or \code{SerializableCollection}.
 #' @return A list of \code{Clip} objects.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1")
 #' a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
 #' b <- Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(12, 24)))

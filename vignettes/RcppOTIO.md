@@ -1,17 +1,17 @@
 <!--
 %\VignetteEngine{simplermarkdown::mdweave_to_html}
-%\VignetteIndexEntry{Getting started with rotio}
+%\VignetteIndexEntry{Getting started with RcppOTIO}
 -->
 ---
-title: "Getting started with rotio"
+title: "Getting started with RcppOTIO"
 ---
 
-`rotio` is an R binding for [OpenTimelineIO](https://github.com/AcademySoftwareFoundation/OpenTimelineIO)
+`RcppOTIO` is an R binding for [OpenTimelineIO](https://github.com/AcademySoftwareFoundation/OpenTimelineIO)
 (OTIO), the editorial timeline interchange format. It wraps the OTIO C++
 library with Rcpp, so you build and edit real OTIO objects from R and read
 or write `.otio` JSON that other tools understand.
 
-Two kinds of thing live in `rotio`:
+Two kinds of thing live in `RcppOTIO`:
 
 - **Time values** (`RationalTime`, `TimeRange`, `TimeTransform`) are plain
   classed R values. They print, compare, and copy like ordinary R objects.
@@ -23,7 +23,7 @@ Names follow OTIO exactly, so `source_range`, `range_in_parent`, and
 `append_child` mean what they do in the OTIO docs.
 
 ``` {.R}
-library(rotio)
+library(RcppOTIO)
 ```
 
 ## Time
@@ -123,7 +123,7 @@ overwrite(over, edit, TimeRange(RationalTime(24, 24), RationalTime(24, 24)))
 vapply(children(edit), name, character(1))
 ```
 
-`rotio` also wraps `insert`, `trim`, `slip`, `slide`, `ripple`, `roll`,
+`RcppOTIO` also wraps `insert`, `trim`, `slip`, `slide`, `ripple`, `roll`,
 `fill`, `remove`, plus `track_trimmed_to_range` and `flatten_stack`.
 
 ## JSON round-trips

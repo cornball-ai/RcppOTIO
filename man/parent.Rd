@@ -15,7 +15,7 @@ The parent \code{Composition}, or \code{NULL} if unparented.
 Parent composition of a Composable
 }
 \examples{
-library(rotio)
+library(RcppOTIO)
 trk <- Track("V1")
 a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
 append_child(trk, a)

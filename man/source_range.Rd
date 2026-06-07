@@ -22,7 +22,7 @@ unset. This is the item's own extent, not its position in a parent
 (use \code{range_in_parent}).
 }
 \examples{
-library(rotio)
+library(RcppOTIO)
 clip <- Clip("A")
 source_range(clip) <- TimeRange(RationalTime(0, 24), RationalTime(24, 24))
 source_range(clip)

@@ -1,4 +1,4 @@
-library(rotio)
+library(RcppOTIO)
 
 ## Build a small timeline
 tl <- Timeline("show")

@@ -1,4 +1,4 @@
-library(rotio)
+library(RcppOTIO)
 
 clip <- Clip("c")
 

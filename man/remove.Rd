@@ -19,13 +19,13 @@ if \code{FALSE} concatenate the neighbours.}
 \code{composition}, invisibly.
 }
 \description{
-Masks \code{base::remove}; use \code{rotio::remove} / \code{base::remove}
+Masks \code{base::remove}; use \code{RcppOTIO::remove} / \code{base::remove}
 to disambiguate.
 }
 \examples{
-library(rotio)
+library(RcppOTIO)
 trk <- Track("V1", kind = "Video")
 append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
 append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
-rotio::remove(trk, RationalTime(60, 24))
+RcppOTIO::remove(trk, RationalTime(60, 24))
 }

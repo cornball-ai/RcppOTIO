@@ -1,4 +1,4 @@
-library(rotio)
+library(RcppOTIO)
 
 ## ---- Media references: all four subtypes ----
 ext <- ExternalReference("a.mov")

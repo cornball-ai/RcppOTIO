@@ -1,4 +1,4 @@
-library(rotio)
+library(RcppOTIO)
 
 ## RationalTime construction and accessors
 rt <- RationalTime(24, 24)

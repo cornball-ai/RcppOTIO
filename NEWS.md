@@ -1,3 +1,8 @@
+# RcppOTIO 0.0.0.8
+
+* Renamed the package from rotio to RcppOTIO. The pure-R OpenTimelineIO
+  package now owns the rotio name; this Rcpp/C++ binding becomes RcppOTIO.
+
 # rotio 0.0.0.7
 
 * `to_timecode()` `rate` now defaults to the `RationalTime`'s own rate (OTIO's

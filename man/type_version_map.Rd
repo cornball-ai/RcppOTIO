@@ -12,7 +12,7 @@ A named integer vector mapping schema name to current version.
 Registered schema names and their current versions
 }
 \examples{
-library(rotio)
+library(RcppOTIO)
 tvm <- type_version_map()
 is.integer(tvm)
 tvm[["Clip"]]

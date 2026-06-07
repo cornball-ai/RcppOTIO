@@ -1,4 +1,4 @@
-library(rotio)
+library(RcppOTIO)
 
 ## type_version_map: registered schemas and their current versions
 tvm <- type_version_map()
