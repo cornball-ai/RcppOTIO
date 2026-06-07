@@ -15,7 +15,7 @@ A \code{TimeRange}: the source_range if set, else available_range.
 Trimmed range of an Item
 }
 \examples{
-library(rotio)
+library(RcppOTIO)
 clip <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
 trimmed_range(clip)
 }

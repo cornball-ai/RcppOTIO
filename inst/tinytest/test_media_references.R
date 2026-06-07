@@ -1,4 +1,4 @@
-library(rotio)
+library(RcppOTIO)
 
 ## A clip can hold several media references under string keys, one active.
 proxy <- ExternalReference("proxy.mov",

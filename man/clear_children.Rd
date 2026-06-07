@@ -15,7 +15,7 @@ clear_children(x)
 Remove all children of a composition
 }
 \examples{
-library(rotio)
+library(RcppOTIO)
 trk <- Track("V1")
 a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
 append_child(trk, a)

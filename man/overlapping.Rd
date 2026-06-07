@@ -15,6 +15,6 @@ Logical.
 Does a Composable overlap its neighbours? (TRUE for transitions)
 }
 \examples{
-library(rotio)
+library(RcppOTIO)
 overlapping(Clip("A"))
 }

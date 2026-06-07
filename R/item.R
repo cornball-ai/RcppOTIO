@@ -11,7 +11,7 @@
 #' @param value A \code{TimeRange} or \code{NULL}.
 #' @return A \code{TimeRange} or \code{NULL}; the setter returns \code{x}.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' clip <- Clip("A")
 #' source_range(clip) <- TimeRange(RationalTime(0, 24), RationalTime(24, 24))
 #' source_range(clip)
@@ -30,7 +30,7 @@ source_range <- function(x) cpp_source_range(x)
 #' @param value Logical.
 #' @return Logical; the setter returns \code{x}.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' clip <- Clip("A")
 #' enabled(clip)
 #' enabled(clip) <- FALSE
@@ -55,7 +55,7 @@ enabled <- function(x) {
 #' @param x A \code{TimeRange}, \code{Timeline}, or \code{Composable}.
 #' @return A \code{RationalTime}.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' clip <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24)))
 #' to_seconds(duration(clip))
 #' @export
@@ -75,7 +75,7 @@ duration <- function(x) {
 #' @return A \code{TimeRange} (or \code{NULL} for an unset media range);
 #'   the setter returns \code{x}.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' ref <- ExternalReference("a.mov",
 #'     available_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24)))
 #' available_range(ref)
@@ -96,7 +96,7 @@ available_range <- function(x) {
 #' @param x An \code{Item}.
 #' @return A \code{TimeRange}: the source_range if set, else available_range.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' clip <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
 #' trimmed_range(clip)
 #' @export
@@ -106,7 +106,7 @@ trimmed_range <- function(x) cpp_trimmed_range(x)
 #' @param x An \code{Item}.
 #' @return A \code{TimeRange}.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1")
 #' a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
 #' append_child(trk, a)
@@ -123,7 +123,7 @@ visible_range <- function(x) cpp_visible_range(x)
 #' @return A \code{TimeRange}. An object with no parent has no range there,
 #'   so OTIO raises an error in that case (for both items and transitions).
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1")
 #' a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
 #' append_child(trk, a)
@@ -138,7 +138,7 @@ range_in_parent <- function(x) {
 #' @param x An \code{Item} or \code{Transition}.
 #' @return A \code{TimeRange} or \code{NULL}.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1")
 #' a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
 #' append_child(trk, a)
@@ -153,7 +153,7 @@ trimmed_range_in_parent <- function(x) {
 #' @param x A \code{Composable}.
 #' @return Logical.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' visible(Clip("A"))
 #' visible(Gap(RationalTime(6, 24)))
 #' @export
@@ -163,7 +163,7 @@ visible <- function(x) cpp_visible(x)
 #' @param x A \code{Composable}.
 #' @return Logical.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' overlapping(Clip("A"))
 #' @export
 overlapping <- function(x) cpp_overlapping(x)
@@ -172,7 +172,7 @@ overlapping <- function(x) cpp_overlapping(x)
 #' @param x A \code{Composable}.
 #' @return The parent \code{Composition}, or \code{NULL} if unparented.
 #' @examples
-#' library(rotio)
+#' library(RcppOTIO)
 #' trk <- Track("V1")
 #' a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
 #' append_child(trk, a)

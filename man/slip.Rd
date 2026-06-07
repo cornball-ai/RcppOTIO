@@ -18,7 +18,7 @@ Shifts which part of the media is shown; clamped to the available range
 when known. Other items are unaffected.
 }
 \examples{
-library(rotio)
+library(RcppOTIO)
 ref <- ExternalReference("a.mov",
   available_range = TimeRange(RationalTime(0, 24), RationalTime(96, 24)))
 clip <- Clip("A", media_reference = ref,

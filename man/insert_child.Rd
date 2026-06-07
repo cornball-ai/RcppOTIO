@@ -20,7 +20,7 @@ insert_child(x, index, child)
 Insert a child at a position
 }
 \examples{
-library(rotio)
+library(RcppOTIO)
 trk <- Track("V1")
 a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
 b <- Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(12, 24)))

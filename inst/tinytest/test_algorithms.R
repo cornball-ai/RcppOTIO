@@ -1,4 +1,4 @@
-library(rotio)
+library(RcppOTIO)
 
 # Expected values below were verified against OTIO 0.18.1 behavior, not
 # assumed from the header diagrams.

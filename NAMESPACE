@@ -159,4 +159,4 @@ S3method(value,RationalTime)
 
 importFrom(Rcpp,evalCpp)
 
-useDynLib(rotio, .registration = TRUE)
+useDynLib(RcppOTIO, .registration = TRUE)

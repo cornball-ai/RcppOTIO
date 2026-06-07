@@ -1,4 +1,4 @@
-#' rotio: R Bindings for OpenTimelineIO
+#' RcppOTIO: R Bindings for OpenTimelineIO
 #'
 #' An Rcpp wrapper over the OpenTimelineIO (OTIO) C++ library. The OTIO
 #' time value types (\code{RationalTime}, \code{TimeRange},
@@ -12,14 +12,14 @@
 #' and object reference, never by name.
 #'
 #' Because the names are faithful to OTIO, attaching the package with
-#' \code{library(rotio)} masks a few base functions: \code{comment} and
+#' \code{library(RcppOTIO)} masks a few base functions: \code{comment} and
 #' \code{comment<-} (the \code{Marker} comment accessors) and
 #' \code{remove} (the edit algorithm; base \code{remove} is the alias of
-#' \code{rm}). Use \code{rotio::} / \code{base::} to disambiguate if you
+#' \code{rm}). Use \code{RcppOTIO::} / \code{base::} to disambiguate if you
 #' need both.
 #'
-#' @useDynLib rotio, .registration = TRUE
+#' @useDynLib RcppOTIO, .registration = TRUE
 #' @importFrom Rcpp evalCpp
-#' @name rotio-package
+#' @name RcppOTIO-package
 #' @keywords internal
 "_PACKAGE"

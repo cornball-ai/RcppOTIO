@@ -20,7 +20,7 @@ Adjusts \code{item}'s \code{source_range}; later items move to stay
 adjacent (no new items created).
 }
 \examples{
-library(rotio)
+library(RcppOTIO)
 trk <- Track("V1", kind = "Video")
 append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
 append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))

@@ -23,7 +23,7 @@ the now-empty time is filled with a gap (or \code{fill_template}), or an
 adjacent gap is grown.
 }
 \examples{
-library(rotio)
+library(RcppOTIO)
 trk <- Track("V1", kind = "Video")
 append_child(trk, Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))
 append_child(trk, Clip("B", source_range = TimeRange(RationalTime(0, 24), RationalTime(48, 24))))

@@ -25,7 +25,7 @@ Each upgrade function should bring the dictionary from the version just
 below \code{version_to_upgrade_to} up to it.
 }
 \examples{
-library(rotio)
+library(RcppOTIO)
 # Register an identity upgrade for Timeline to version 9.
 # Returns TRUE on the first call; FALSE if already registered.
 result <- register_upgrade_function("Timeline", 9L, function(d) d)

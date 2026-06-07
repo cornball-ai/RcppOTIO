@@ -12,7 +12,7 @@ Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 
 // cpp_algo_overwrite
 void cpp_algo_overwrite(SEXP item, SEXP composition, SEXP range, bool remove_transitions, SEXP fill_template);
-RcppExport SEXP _rotio_cpp_algo_overwrite(SEXP itemSEXP, SEXP compositionSEXP, SEXP rangeSEXP, SEXP remove_transitionsSEXP, SEXP fill_templateSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_algo_overwrite(SEXP itemSEXP, SEXP compositionSEXP, SEXP rangeSEXP, SEXP remove_transitionsSEXP, SEXP fill_templateSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type item(itemSEXP);
@@ -26,7 +26,7 @@ END_RCPP
 }
 // cpp_algo_insert
 void cpp_algo_insert(SEXP item, SEXP composition, SEXP time, bool remove_transitions, SEXP fill_template);
-RcppExport SEXP _rotio_cpp_algo_insert(SEXP itemSEXP, SEXP compositionSEXP, SEXP timeSEXP, SEXP remove_transitionsSEXP, SEXP fill_templateSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_algo_insert(SEXP itemSEXP, SEXP compositionSEXP, SEXP timeSEXP, SEXP remove_transitionsSEXP, SEXP fill_templateSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type item(itemSEXP);
@@ -40,7 +40,7 @@ END_RCPP
 }
 // cpp_algo_trim
 void cpp_algo_trim(SEXP item, SEXP delta_in, SEXP delta_out, SEXP fill_template);
-RcppExport SEXP _rotio_cpp_algo_trim(SEXP itemSEXP, SEXP delta_inSEXP, SEXP delta_outSEXP, SEXP fill_templateSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_algo_trim(SEXP itemSEXP, SEXP delta_inSEXP, SEXP delta_outSEXP, SEXP fill_templateSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type item(itemSEXP);
@@ -53,7 +53,7 @@ END_RCPP
 }
 // cpp_algo_slice
 void cpp_algo_slice(SEXP composition, SEXP time, bool remove_transitions);
-RcppExport SEXP _rotio_cpp_algo_slice(SEXP compositionSEXP, SEXP timeSEXP, SEXP remove_transitionsSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_algo_slice(SEXP compositionSEXP, SEXP timeSEXP, SEXP remove_transitionsSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type composition(compositionSEXP);
@@ -65,7 +65,7 @@ END_RCPP
 }
 // cpp_algo_slip
 void cpp_algo_slip(SEXP item, SEXP delta);
-RcppExport SEXP _rotio_cpp_algo_slip(SEXP itemSEXP, SEXP deltaSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_algo_slip(SEXP itemSEXP, SEXP deltaSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type item(itemSEXP);
@@ -76,7 +76,7 @@ END_RCPP
 }
 // cpp_algo_slide
 void cpp_algo_slide(SEXP item, SEXP delta);
-RcppExport SEXP _rotio_cpp_algo_slide(SEXP itemSEXP, SEXP deltaSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_algo_slide(SEXP itemSEXP, SEXP deltaSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type item(itemSEXP);
@@ -87,7 +87,7 @@ END_RCPP
 }
 // cpp_algo_ripple
 void cpp_algo_ripple(SEXP item, SEXP delta_in, SEXP delta_out);
-RcppExport SEXP _rotio_cpp_algo_ripple(SEXP itemSEXP, SEXP delta_inSEXP, SEXP delta_outSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_algo_ripple(SEXP itemSEXP, SEXP delta_inSEXP, SEXP delta_outSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type item(itemSEXP);
@@ -99,7 +99,7 @@ END_RCPP
 }
 // cpp_algo_roll
 void cpp_algo_roll(SEXP item, SEXP delta_in, SEXP delta_out);
-RcppExport SEXP _rotio_cpp_algo_roll(SEXP itemSEXP, SEXP delta_inSEXP, SEXP delta_outSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_algo_roll(SEXP itemSEXP, SEXP delta_inSEXP, SEXP delta_outSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type item(itemSEXP);
@@ -111,7 +111,7 @@ END_RCPP
 }
 // cpp_algo_fill
 void cpp_algo_fill(SEXP item, SEXP track, SEXP track_time, std::string reference_point);
-RcppExport SEXP _rotio_cpp_algo_fill(SEXP itemSEXP, SEXP trackSEXP, SEXP track_timeSEXP, SEXP reference_pointSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_algo_fill(SEXP itemSEXP, SEXP trackSEXP, SEXP track_timeSEXP, SEXP reference_pointSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type item(itemSEXP);
@@ -124,7 +124,7 @@ END_RCPP
 }
 // cpp_algo_remove
 void cpp_algo_remove(SEXP composition, SEXP time, bool fill, SEXP fill_template);
-RcppExport SEXP _rotio_cpp_algo_remove(SEXP compositionSEXP, SEXP timeSEXP, SEXP fillSEXP, SEXP fill_templateSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_algo_remove(SEXP compositionSEXP, SEXP timeSEXP, SEXP fillSEXP, SEXP fill_templateSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type composition(compositionSEXP);
@@ -137,7 +137,7 @@ END_RCPP
 }
 // cpp_track_trimmed_to_range
 SEXP cpp_track_trimmed_to_range(SEXP track, SEXP trim_range);
-RcppExport SEXP _rotio_cpp_track_trimmed_to_range(SEXP trackSEXP, SEXP trim_rangeSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_track_trimmed_to_range(SEXP trackSEXP, SEXP trim_rangeSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -149,7 +149,7 @@ END_RCPP
 }
 // cpp_flatten_stack
 SEXP cpp_flatten_stack(SEXP stack);
-RcppExport SEXP _rotio_cpp_flatten_stack(SEXP stackSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_flatten_stack(SEXP stackSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -160,7 +160,7 @@ END_RCPP
 }
 // cpp_flatten_stack_tracks
 SEXP cpp_flatten_stack_tracks(Rcpp::List tracks);
-RcppExport SEXP _rotio_cpp_flatten_stack_tracks(SEXP tracksSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_flatten_stack_tracks(SEXP tracksSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -171,7 +171,7 @@ END_RCPP
 }
 // cpp_children
 Rcpp::List cpp_children(SEXP x);
-RcppExport SEXP _rotio_cpp_children(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_children(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -182,7 +182,7 @@ END_RCPP
 }
 // cpp_collection_children
 Rcpp::List cpp_collection_children(SEXP x);
-RcppExport SEXP _rotio_cpp_collection_children(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_collection_children(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -193,7 +193,7 @@ END_RCPP
 }
 // cpp_collection_set_children
 void cpp_collection_set_children(SEXP x, Rcpp::List children);
-RcppExport SEXP _rotio_cpp_collection_set_children(SEXP xSEXP, SEXP childrenSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_collection_set_children(SEXP xSEXP, SEXP childrenSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -204,7 +204,7 @@ END_RCPP
 }
 // cpp_collection_clear_children
 void cpp_collection_clear_children(SEXP x);
-RcppExport SEXP _rotio_cpp_collection_clear_children(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_collection_clear_children(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -214,7 +214,7 @@ END_RCPP
 }
 // cpp_collection_insert_child
 void cpp_collection_insert_child(SEXP x, int index, SEXP child);
-RcppExport SEXP _rotio_cpp_collection_insert_child(SEXP xSEXP, SEXP indexSEXP, SEXP childSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_collection_insert_child(SEXP xSEXP, SEXP indexSEXP, SEXP childSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -226,7 +226,7 @@ END_RCPP
 }
 // cpp_collection_set_child
 void cpp_collection_set_child(SEXP x, int index, SEXP child);
-RcppExport SEXP _rotio_cpp_collection_set_child(SEXP xSEXP, SEXP indexSEXP, SEXP childSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_collection_set_child(SEXP xSEXP, SEXP indexSEXP, SEXP childSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -238,7 +238,7 @@ END_RCPP
 }
 // cpp_collection_remove_child
 void cpp_collection_remove_child(SEXP x, int index);
-RcppExport SEXP _rotio_cpp_collection_remove_child(SEXP xSEXP, SEXP indexSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_collection_remove_child(SEXP xSEXP, SEXP indexSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -249,7 +249,7 @@ END_RCPP
 }
 // cpp_append_child
 void cpp_append_child(SEXP x, SEXP child);
-RcppExport SEXP _rotio_cpp_append_child(SEXP xSEXP, SEXP childSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_append_child(SEXP xSEXP, SEXP childSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -260,7 +260,7 @@ END_RCPP
 }
 // cpp_insert_child
 void cpp_insert_child(SEXP x, int index, SEXP child);
-RcppExport SEXP _rotio_cpp_insert_child(SEXP xSEXP, SEXP indexSEXP, SEXP childSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_insert_child(SEXP xSEXP, SEXP indexSEXP, SEXP childSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -272,7 +272,7 @@ END_RCPP
 }
 // cpp_set_child
 void cpp_set_child(SEXP x, int index, SEXP child);
-RcppExport SEXP _rotio_cpp_set_child(SEXP xSEXP, SEXP indexSEXP, SEXP childSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_set_child(SEXP xSEXP, SEXP indexSEXP, SEXP childSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -284,7 +284,7 @@ END_RCPP
 }
 // cpp_remove_child
 void cpp_remove_child(SEXP x, int index);
-RcppExport SEXP _rotio_cpp_remove_child(SEXP xSEXP, SEXP indexSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_remove_child(SEXP xSEXP, SEXP indexSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -295,7 +295,7 @@ END_RCPP
 }
 // cpp_clear_children
 void cpp_clear_children(SEXP x);
-RcppExport SEXP _rotio_cpp_clear_children(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_clear_children(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -305,7 +305,7 @@ END_RCPP
 }
 // cpp_set_children
 void cpp_set_children(SEXP x, Rcpp::List children);
-RcppExport SEXP _rotio_cpp_set_children(SEXP xSEXP, SEXP childrenSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_set_children(SEXP xSEXP, SEXP childrenSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -316,7 +316,7 @@ END_RCPP
 }
 // cpp_index_of_child
 int cpp_index_of_child(SEXP x, SEXP child);
-RcppExport SEXP _rotio_cpp_index_of_child(SEXP xSEXP, SEXP childSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_index_of_child(SEXP xSEXP, SEXP childSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -328,7 +328,7 @@ END_RCPP
 }
 // cpp_is_parent_of
 bool cpp_is_parent_of(SEXP x, SEXP other);
-RcppExport SEXP _rotio_cpp_is_parent_of(SEXP xSEXP, SEXP otherSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_is_parent_of(SEXP xSEXP, SEXP otherSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -340,7 +340,7 @@ END_RCPP
 }
 // cpp_has_child
 bool cpp_has_child(SEXP x, SEXP child);
-RcppExport SEXP _rotio_cpp_has_child(SEXP xSEXP, SEXP childSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_has_child(SEXP xSEXP, SEXP childSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -352,7 +352,7 @@ END_RCPP
 }
 // cpp_has_clips
 bool cpp_has_clips(SEXP x);
-RcppExport SEXP _rotio_cpp_has_clips(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_has_clips(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -363,7 +363,7 @@ END_RCPP
 }
 // cpp_find_clips
 Rcpp::List cpp_find_clips(SEXP x);
-RcppExport SEXP _rotio_cpp_find_clips(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_find_clips(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -374,7 +374,7 @@ END_RCPP
 }
 // cpp_collection_find_clips
 Rcpp::List cpp_collection_find_clips(SEXP x);
-RcppExport SEXP _rotio_cpp_collection_find_clips(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_collection_find_clips(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -385,7 +385,7 @@ END_RCPP
 }
 // cpp_new_timeline
 SEXP cpp_new_timeline(std::string name, SEXP global_start_time, SEXP metadata);
-RcppExport SEXP _rotio_cpp_new_timeline(SEXP nameSEXP, SEXP global_start_timeSEXP, SEXP metadataSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_new_timeline(SEXP nameSEXP, SEXP global_start_timeSEXP, SEXP metadataSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -398,7 +398,7 @@ END_RCPP
 }
 // cpp_new_stack
 SEXP cpp_new_stack(std::string name, SEXP source_range, SEXP metadata);
-RcppExport SEXP _rotio_cpp_new_stack(SEXP nameSEXP, SEXP source_rangeSEXP, SEXP metadataSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_new_stack(SEXP nameSEXP, SEXP source_rangeSEXP, SEXP metadataSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -411,7 +411,7 @@ END_RCPP
 }
 // cpp_new_track
 SEXP cpp_new_track(std::string name, SEXP source_range, std::string kind, SEXP metadata);
-RcppExport SEXP _rotio_cpp_new_track(SEXP nameSEXP, SEXP source_rangeSEXP, SEXP kindSEXP, SEXP metadataSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_new_track(SEXP nameSEXP, SEXP source_rangeSEXP, SEXP kindSEXP, SEXP metadataSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -425,7 +425,7 @@ END_RCPP
 }
 // cpp_new_clip
 SEXP cpp_new_clip(std::string name, SEXP media_reference, SEXP source_range, SEXP metadata);
-RcppExport SEXP _rotio_cpp_new_clip(SEXP nameSEXP, SEXP media_referenceSEXP, SEXP source_rangeSEXP, SEXP metadataSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_new_clip(SEXP nameSEXP, SEXP media_referenceSEXP, SEXP source_rangeSEXP, SEXP metadataSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -439,7 +439,7 @@ END_RCPP
 }
 // cpp_new_gap
 SEXP cpp_new_gap(SEXP duration, std::string name, SEXP metadata);
-RcppExport SEXP _rotio_cpp_new_gap(SEXP durationSEXP, SEXP nameSEXP, SEXP metadataSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_new_gap(SEXP durationSEXP, SEXP nameSEXP, SEXP metadataSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -452,7 +452,7 @@ END_RCPP
 }
 // cpp_new_transition
 SEXP cpp_new_transition(std::string name, std::string transition_type, SEXP in_offset, SEXP out_offset, SEXP metadata);
-RcppExport SEXP _rotio_cpp_new_transition(SEXP nameSEXP, SEXP transition_typeSEXP, SEXP in_offsetSEXP, SEXP out_offsetSEXP, SEXP metadataSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_new_transition(SEXP nameSEXP, SEXP transition_typeSEXP, SEXP in_offsetSEXP, SEXP out_offsetSEXP, SEXP metadataSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -467,7 +467,7 @@ END_RCPP
 }
 // cpp_new_marker
 SEXP cpp_new_marker(std::string name, SEXP marked_range, std::string color, SEXP metadata, std::string comment);
-RcppExport SEXP _rotio_cpp_new_marker(SEXP nameSEXP, SEXP marked_rangeSEXP, SEXP colorSEXP, SEXP metadataSEXP, SEXP commentSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_new_marker(SEXP nameSEXP, SEXP marked_rangeSEXP, SEXP colorSEXP, SEXP metadataSEXP, SEXP commentSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -482,7 +482,7 @@ END_RCPP
 }
 // cpp_new_effect
 SEXP cpp_new_effect(std::string name, std::string effect_name, SEXP metadata, bool enabled);
-RcppExport SEXP _rotio_cpp_new_effect(SEXP nameSEXP, SEXP effect_nameSEXP, SEXP metadataSEXP, SEXP enabledSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_new_effect(SEXP nameSEXP, SEXP effect_nameSEXP, SEXP metadataSEXP, SEXP enabledSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -496,7 +496,7 @@ END_RCPP
 }
 // cpp_new_time_effect
 SEXP cpp_new_time_effect(std::string name, std::string effect_name, SEXP metadata);
-RcppExport SEXP _rotio_cpp_new_time_effect(SEXP nameSEXP, SEXP effect_nameSEXP, SEXP metadataSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_new_time_effect(SEXP nameSEXP, SEXP effect_nameSEXP, SEXP metadataSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -509,7 +509,7 @@ END_RCPP
 }
 // cpp_new_linear_time_warp
 SEXP cpp_new_linear_time_warp(std::string name, std::string effect_name, double time_scalar, SEXP metadata);
-RcppExport SEXP _rotio_cpp_new_linear_time_warp(SEXP nameSEXP, SEXP effect_nameSEXP, SEXP time_scalarSEXP, SEXP metadataSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_new_linear_time_warp(SEXP nameSEXP, SEXP effect_nameSEXP, SEXP time_scalarSEXP, SEXP metadataSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -523,7 +523,7 @@ END_RCPP
 }
 // cpp_new_freeze_frame
 SEXP cpp_new_freeze_frame(std::string name, SEXP metadata);
-RcppExport SEXP _rotio_cpp_new_freeze_frame(SEXP nameSEXP, SEXP metadataSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_new_freeze_frame(SEXP nameSEXP, SEXP metadataSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -535,7 +535,7 @@ END_RCPP
 }
 // cpp_new_media_reference
 SEXP cpp_new_media_reference(std::string name, SEXP available_range, SEXP metadata);
-RcppExport SEXP _rotio_cpp_new_media_reference(SEXP nameSEXP, SEXP available_rangeSEXP, SEXP metadataSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_new_media_reference(SEXP nameSEXP, SEXP available_rangeSEXP, SEXP metadataSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -548,7 +548,7 @@ END_RCPP
 }
 // cpp_new_external_reference
 SEXP cpp_new_external_reference(std::string target_url, SEXP available_range, SEXP metadata);
-RcppExport SEXP _rotio_cpp_new_external_reference(SEXP target_urlSEXP, SEXP available_rangeSEXP, SEXP metadataSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_new_external_reference(SEXP target_urlSEXP, SEXP available_rangeSEXP, SEXP metadataSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -561,7 +561,7 @@ END_RCPP
 }
 // cpp_new_image_sequence_reference
 SEXP cpp_new_image_sequence_reference(std::string target_url_base, std::string name_prefix, std::string name_suffix, int start_frame, int frame_step, double rate, int frame_zero_padding, int missing_frame_policy, SEXP available_range, SEXP metadata);
-RcppExport SEXP _rotio_cpp_new_image_sequence_reference(SEXP target_url_baseSEXP, SEXP name_prefixSEXP, SEXP name_suffixSEXP, SEXP start_frameSEXP, SEXP frame_stepSEXP, SEXP rateSEXP, SEXP frame_zero_paddingSEXP, SEXP missing_frame_policySEXP, SEXP available_rangeSEXP, SEXP metadataSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_new_image_sequence_reference(SEXP target_url_baseSEXP, SEXP name_prefixSEXP, SEXP name_suffixSEXP, SEXP start_frameSEXP, SEXP frame_stepSEXP, SEXP rateSEXP, SEXP frame_zero_paddingSEXP, SEXP missing_frame_policySEXP, SEXP available_rangeSEXP, SEXP metadataSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -581,7 +581,7 @@ END_RCPP
 }
 // cpp_new_generator_reference
 SEXP cpp_new_generator_reference(std::string name, std::string generator_kind, SEXP available_range, SEXP parameters, SEXP metadata);
-RcppExport SEXP _rotio_cpp_new_generator_reference(SEXP nameSEXP, SEXP generator_kindSEXP, SEXP available_rangeSEXP, SEXP parametersSEXP, SEXP metadataSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_new_generator_reference(SEXP nameSEXP, SEXP generator_kindSEXP, SEXP available_rangeSEXP, SEXP parametersSEXP, SEXP metadataSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -596,7 +596,7 @@ END_RCPP
 }
 // cpp_new_missing_reference
 SEXP cpp_new_missing_reference(std::string name, SEXP available_range, SEXP metadata);
-RcppExport SEXP _rotio_cpp_new_missing_reference(SEXP nameSEXP, SEXP available_rangeSEXP, SEXP metadataSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_new_missing_reference(SEXP nameSEXP, SEXP available_rangeSEXP, SEXP metadataSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -609,7 +609,7 @@ END_RCPP
 }
 // cpp_new_serializable_collection
 SEXP cpp_new_serializable_collection(std::string name, Rcpp::List children, SEXP metadata);
-RcppExport SEXP _rotio_cpp_new_serializable_collection(SEXP nameSEXP, SEXP childrenSEXP, SEXP metadataSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_new_serializable_collection(SEXP nameSEXP, SEXP childrenSEXP, SEXP metadataSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -622,7 +622,7 @@ END_RCPP
 }
 // cpp_effect_name
 std::string cpp_effect_name(SEXP x);
-RcppExport SEXP _rotio_cpp_effect_name(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_effect_name(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -633,7 +633,7 @@ END_RCPP
 }
 // cpp_effect_set_effect_name
 void cpp_effect_set_effect_name(SEXP x, std::string effect_name);
-RcppExport SEXP _rotio_cpp_effect_set_effect_name(SEXP xSEXP, SEXP effect_nameSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_effect_set_effect_name(SEXP xSEXP, SEXP effect_nameSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -644,7 +644,7 @@ END_RCPP
 }
 // cpp_effect_enabled
 bool cpp_effect_enabled(SEXP x);
-RcppExport SEXP _rotio_cpp_effect_enabled(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_effect_enabled(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -655,7 +655,7 @@ END_RCPP
 }
 // cpp_effect_set_enabled
 void cpp_effect_set_enabled(SEXP x, bool enabled);
-RcppExport SEXP _rotio_cpp_effect_set_enabled(SEXP xSEXP, SEXP enabledSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_effect_set_enabled(SEXP xSEXP, SEXP enabledSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -666,7 +666,7 @@ END_RCPP
 }
 // cpp_ltw_time_scalar
 double cpp_ltw_time_scalar(SEXP x);
-RcppExport SEXP _rotio_cpp_ltw_time_scalar(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_ltw_time_scalar(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -677,7 +677,7 @@ END_RCPP
 }
 // cpp_ltw_set_time_scalar
 void cpp_ltw_set_time_scalar(SEXP x, double time_scalar);
-RcppExport SEXP _rotio_cpp_ltw_set_time_scalar(SEXP xSEXP, SEXP time_scalarSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_ltw_set_time_scalar(SEXP xSEXP, SEXP time_scalarSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -688,7 +688,7 @@ END_RCPP
 }
 // cpp_transition_type
 std::string cpp_transition_type(SEXP x);
-RcppExport SEXP _rotio_cpp_transition_type(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_transition_type(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -699,7 +699,7 @@ END_RCPP
 }
 // cpp_transition_set_type
 void cpp_transition_set_type(SEXP x, std::string transition_type);
-RcppExport SEXP _rotio_cpp_transition_set_type(SEXP xSEXP, SEXP transition_typeSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_transition_set_type(SEXP xSEXP, SEXP transition_typeSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -710,7 +710,7 @@ END_RCPP
 }
 // cpp_transition_in_offset
 SEXP cpp_transition_in_offset(SEXP x);
-RcppExport SEXP _rotio_cpp_transition_in_offset(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_transition_in_offset(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -721,7 +721,7 @@ END_RCPP
 }
 // cpp_transition_set_in_offset
 void cpp_transition_set_in_offset(SEXP x, SEXP in_offset);
-RcppExport SEXP _rotio_cpp_transition_set_in_offset(SEXP xSEXP, SEXP in_offsetSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_transition_set_in_offset(SEXP xSEXP, SEXP in_offsetSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -732,7 +732,7 @@ END_RCPP
 }
 // cpp_transition_out_offset
 SEXP cpp_transition_out_offset(SEXP x);
-RcppExport SEXP _rotio_cpp_transition_out_offset(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_transition_out_offset(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -743,7 +743,7 @@ END_RCPP
 }
 // cpp_transition_set_out_offset
 void cpp_transition_set_out_offset(SEXP x, SEXP out_offset);
-RcppExport SEXP _rotio_cpp_transition_set_out_offset(SEXP xSEXP, SEXP out_offsetSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_transition_set_out_offset(SEXP xSEXP, SEXP out_offsetSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -754,7 +754,7 @@ END_RCPP
 }
 // cpp_transition_range_in_parent
 SEXP cpp_transition_range_in_parent(SEXP x);
-RcppExport SEXP _rotio_cpp_transition_range_in_parent(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_transition_range_in_parent(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -765,7 +765,7 @@ END_RCPP
 }
 // cpp_transition_trimmed_range_in_parent
 SEXP cpp_transition_trimmed_range_in_parent(SEXP x);
-RcppExport SEXP _rotio_cpp_transition_trimmed_range_in_parent(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_transition_trimmed_range_in_parent(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -776,7 +776,7 @@ END_RCPP
 }
 // cpp_marker_color
 std::string cpp_marker_color(SEXP x);
-RcppExport SEXP _rotio_cpp_marker_color(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_marker_color(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -787,7 +787,7 @@ END_RCPP
 }
 // cpp_marker_set_color
 void cpp_marker_set_color(SEXP x, std::string color);
-RcppExport SEXP _rotio_cpp_marker_set_color(SEXP xSEXP, SEXP colorSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_marker_set_color(SEXP xSEXP, SEXP colorSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -798,7 +798,7 @@ END_RCPP
 }
 // cpp_marker_marked_range
 SEXP cpp_marker_marked_range(SEXP x);
-RcppExport SEXP _rotio_cpp_marker_marked_range(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_marker_marked_range(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -809,7 +809,7 @@ END_RCPP
 }
 // cpp_marker_set_marked_range
 void cpp_marker_set_marked_range(SEXP x, SEXP marked_range);
-RcppExport SEXP _rotio_cpp_marker_set_marked_range(SEXP xSEXP, SEXP marked_rangeSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_marker_set_marked_range(SEXP xSEXP, SEXP marked_rangeSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -820,7 +820,7 @@ END_RCPP
 }
 // cpp_marker_comment
 std::string cpp_marker_comment(SEXP x);
-RcppExport SEXP _rotio_cpp_marker_comment(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_marker_comment(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -831,7 +831,7 @@ END_RCPP
 }
 // cpp_marker_set_comment
 void cpp_marker_set_comment(SEXP x, std::string comment);
-RcppExport SEXP _rotio_cpp_marker_set_comment(SEXP xSEXP, SEXP commentSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_marker_set_comment(SEXP xSEXP, SEXP commentSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -842,7 +842,7 @@ END_RCPP
 }
 // cpp_visible
 bool cpp_visible(SEXP x);
-RcppExport SEXP _rotio_cpp_visible(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_visible(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -853,7 +853,7 @@ END_RCPP
 }
 // cpp_overlapping
 bool cpp_overlapping(SEXP x);
-RcppExport SEXP _rotio_cpp_overlapping(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_overlapping(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -864,7 +864,7 @@ END_RCPP
 }
 // cpp_parent
 SEXP cpp_parent(SEXP x);
-RcppExport SEXP _rotio_cpp_parent(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_parent(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -875,7 +875,7 @@ END_RCPP
 }
 // cpp_duration
 SEXP cpp_duration(SEXP x);
-RcppExport SEXP _rotio_cpp_duration(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_duration(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -886,7 +886,7 @@ END_RCPP
 }
 // cpp_source_range
 SEXP cpp_source_range(SEXP x);
-RcppExport SEXP _rotio_cpp_source_range(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_source_range(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -897,7 +897,7 @@ END_RCPP
 }
 // cpp_set_source_range
 void cpp_set_source_range(SEXP x, SEXP source_range);
-RcppExport SEXP _rotio_cpp_set_source_range(SEXP xSEXP, SEXP source_rangeSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_set_source_range(SEXP xSEXP, SEXP source_rangeSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -908,7 +908,7 @@ END_RCPP
 }
 // cpp_enabled
 bool cpp_enabled(SEXP x);
-RcppExport SEXP _rotio_cpp_enabled(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_enabled(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -919,7 +919,7 @@ END_RCPP
 }
 // cpp_set_enabled
 void cpp_set_enabled(SEXP x, bool enabled);
-RcppExport SEXP _rotio_cpp_set_enabled(SEXP xSEXP, SEXP enabledSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_set_enabled(SEXP xSEXP, SEXP enabledSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -930,7 +930,7 @@ END_RCPP
 }
 // cpp_available_range
 SEXP cpp_available_range(SEXP x);
-RcppExport SEXP _rotio_cpp_available_range(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_available_range(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -941,7 +941,7 @@ END_RCPP
 }
 // cpp_trimmed_range
 SEXP cpp_trimmed_range(SEXP x);
-RcppExport SEXP _rotio_cpp_trimmed_range(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_trimmed_range(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -952,7 +952,7 @@ END_RCPP
 }
 // cpp_visible_range
 SEXP cpp_visible_range(SEXP x);
-RcppExport SEXP _rotio_cpp_visible_range(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_visible_range(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -963,7 +963,7 @@ END_RCPP
 }
 // cpp_range_in_parent
 SEXP cpp_range_in_parent(SEXP x);
-RcppExport SEXP _rotio_cpp_range_in_parent(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_range_in_parent(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -974,7 +974,7 @@ END_RCPP
 }
 // cpp_trimmed_range_in_parent
 SEXP cpp_trimmed_range_in_parent(SEXP x);
-RcppExport SEXP _rotio_cpp_trimmed_range_in_parent(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_trimmed_range_in_parent(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -985,7 +985,7 @@ END_RCPP
 }
 // cpp_clip_media_reference
 SEXP cpp_clip_media_reference(SEXP x);
-RcppExport SEXP _rotio_cpp_clip_media_reference(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_clip_media_reference(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -996,7 +996,7 @@ END_RCPP
 }
 // cpp_clip_set_media_reference
 void cpp_clip_set_media_reference(SEXP x, SEXP media_reference);
-RcppExport SEXP _rotio_cpp_clip_set_media_reference(SEXP xSEXP, SEXP media_referenceSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_clip_set_media_reference(SEXP xSEXP, SEXP media_referenceSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -1007,7 +1007,7 @@ END_RCPP
 }
 // cpp_clip_active_media_reference_key
 std::string cpp_clip_active_media_reference_key(SEXP x);
-RcppExport SEXP _rotio_cpp_clip_active_media_reference_key(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_clip_active_media_reference_key(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1018,7 +1018,7 @@ END_RCPP
 }
 // cpp_clip_set_active_media_reference_key
 void cpp_clip_set_active_media_reference_key(SEXP x, std::string key);
-RcppExport SEXP _rotio_cpp_clip_set_active_media_reference_key(SEXP xSEXP, SEXP keySEXP) {
+RcppExport SEXP _RcppOTIO_cpp_clip_set_active_media_reference_key(SEXP xSEXP, SEXP keySEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -1029,7 +1029,7 @@ END_RCPP
 }
 // cpp_clip_default_media_key
 std::string cpp_clip_default_media_key();
-RcppExport SEXP _rotio_cpp_clip_default_media_key() {
+RcppExport SEXP _RcppOTIO_cpp_clip_default_media_key() {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1039,7 +1039,7 @@ END_RCPP
 }
 // cpp_clip_media_references
 SEXP cpp_clip_media_references(SEXP x);
-RcppExport SEXP _rotio_cpp_clip_media_references(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_clip_media_references(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1050,7 +1050,7 @@ END_RCPP
 }
 // cpp_clip_set_media_references
 void cpp_clip_set_media_references(SEXP x, Rcpp::List media_references, SEXP new_active_key);
-RcppExport SEXP _rotio_cpp_clip_set_media_references(SEXP xSEXP, SEXP media_referencesSEXP, SEXP new_active_keySEXP) {
+RcppExport SEXP _RcppOTIO_cpp_clip_set_media_references(SEXP xSEXP, SEXP media_referencesSEXP, SEXP new_active_keySEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -1062,7 +1062,7 @@ END_RCPP
 }
 // cpp_mediaref_available_range
 SEXP cpp_mediaref_available_range(SEXP x);
-RcppExport SEXP _rotio_cpp_mediaref_available_range(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_mediaref_available_range(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1073,7 +1073,7 @@ END_RCPP
 }
 // cpp_mediaref_set_available_range
 void cpp_mediaref_set_available_range(SEXP x, SEXP available_range);
-RcppExport SEXP _rotio_cpp_mediaref_set_available_range(SEXP xSEXP, SEXP available_rangeSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_mediaref_set_available_range(SEXP xSEXP, SEXP available_rangeSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -1084,7 +1084,7 @@ END_RCPP
 }
 // cpp_mediaref_is_missing_reference
 bool cpp_mediaref_is_missing_reference(SEXP x);
-RcppExport SEXP _rotio_cpp_mediaref_is_missing_reference(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_mediaref_is_missing_reference(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1095,7 +1095,7 @@ END_RCPP
 }
 // cpp_extref_target_url
 std::string cpp_extref_target_url(SEXP x);
-RcppExport SEXP _rotio_cpp_extref_target_url(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_extref_target_url(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1106,7 +1106,7 @@ END_RCPP
 }
 // cpp_extref_set_target_url
 void cpp_extref_set_target_url(SEXP x, std::string target_url);
-RcppExport SEXP _rotio_cpp_extref_set_target_url(SEXP xSEXP, SEXP target_urlSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_extref_set_target_url(SEXP xSEXP, SEXP target_urlSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -1117,7 +1117,7 @@ END_RCPP
 }
 // cpp_imgseq_target_url_base
 std::string cpp_imgseq_target_url_base(SEXP x);
-RcppExport SEXP _rotio_cpp_imgseq_target_url_base(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_imgseq_target_url_base(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1128,7 +1128,7 @@ END_RCPP
 }
 // cpp_imgseq_set_target_url_base
 void cpp_imgseq_set_target_url_base(SEXP x, std::string v);
-RcppExport SEXP _rotio_cpp_imgseq_set_target_url_base(SEXP xSEXP, SEXP vSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_imgseq_set_target_url_base(SEXP xSEXP, SEXP vSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -1139,7 +1139,7 @@ END_RCPP
 }
 // cpp_imgseq_name_prefix
 std::string cpp_imgseq_name_prefix(SEXP x);
-RcppExport SEXP _rotio_cpp_imgseq_name_prefix(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_imgseq_name_prefix(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1150,7 +1150,7 @@ END_RCPP
 }
 // cpp_imgseq_name_suffix
 std::string cpp_imgseq_name_suffix(SEXP x);
-RcppExport SEXP _rotio_cpp_imgseq_name_suffix(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_imgseq_name_suffix(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1161,7 +1161,7 @@ END_RCPP
 }
 // cpp_imgseq_start_frame
 int cpp_imgseq_start_frame(SEXP x);
-RcppExport SEXP _rotio_cpp_imgseq_start_frame(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_imgseq_start_frame(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1172,7 +1172,7 @@ END_RCPP
 }
 // cpp_imgseq_frame_step
 int cpp_imgseq_frame_step(SEXP x);
-RcppExport SEXP _rotio_cpp_imgseq_frame_step(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_imgseq_frame_step(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1183,7 +1183,7 @@ END_RCPP
 }
 // cpp_imgseq_rate
 double cpp_imgseq_rate(SEXP x);
-RcppExport SEXP _rotio_cpp_imgseq_rate(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_imgseq_rate(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1194,7 +1194,7 @@ END_RCPP
 }
 // cpp_imgseq_frame_zero_padding
 int cpp_imgseq_frame_zero_padding(SEXP x);
-RcppExport SEXP _rotio_cpp_imgseq_frame_zero_padding(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_imgseq_frame_zero_padding(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1205,7 +1205,7 @@ END_RCPP
 }
 // cpp_imgseq_end_frame
 int cpp_imgseq_end_frame(SEXP x);
-RcppExport SEXP _rotio_cpp_imgseq_end_frame(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_imgseq_end_frame(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1216,7 +1216,7 @@ END_RCPP
 }
 // cpp_imgseq_number_of_images_in_sequence
 int cpp_imgseq_number_of_images_in_sequence(SEXP x);
-RcppExport SEXP _rotio_cpp_imgseq_number_of_images_in_sequence(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_imgseq_number_of_images_in_sequence(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1227,7 +1227,7 @@ END_RCPP
 }
 // cpp_imgseq_frame_for_time
 int cpp_imgseq_frame_for_time(SEXP x, SEXP time);
-RcppExport SEXP _rotio_cpp_imgseq_frame_for_time(SEXP xSEXP, SEXP timeSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_imgseq_frame_for_time(SEXP xSEXP, SEXP timeSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1239,7 +1239,7 @@ END_RCPP
 }
 // cpp_imgseq_target_url_for_image_number
 std::string cpp_imgseq_target_url_for_image_number(SEXP x, int image_number);
-RcppExport SEXP _rotio_cpp_imgseq_target_url_for_image_number(SEXP xSEXP, SEXP image_numberSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_imgseq_target_url_for_image_number(SEXP xSEXP, SEXP image_numberSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1251,7 +1251,7 @@ END_RCPP
 }
 // cpp_imgseq_presentation_time_for_image_number
 SEXP cpp_imgseq_presentation_time_for_image_number(SEXP x, int image_number);
-RcppExport SEXP _rotio_cpp_imgseq_presentation_time_for_image_number(SEXP xSEXP, SEXP image_numberSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_imgseq_presentation_time_for_image_number(SEXP xSEXP, SEXP image_numberSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1263,7 +1263,7 @@ END_RCPP
 }
 // cpp_genref_generator_kind
 std::string cpp_genref_generator_kind(SEXP x);
-RcppExport SEXP _rotio_cpp_genref_generator_kind(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_genref_generator_kind(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1274,7 +1274,7 @@ END_RCPP
 }
 // cpp_genref_set_generator_kind
 void cpp_genref_set_generator_kind(SEXP x, std::string generator_kind);
-RcppExport SEXP _rotio_cpp_genref_set_generator_kind(SEXP xSEXP, SEXP generator_kindSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_genref_set_generator_kind(SEXP xSEXP, SEXP generator_kindSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -1285,7 +1285,7 @@ END_RCPP
 }
 // cpp_genref_parameters
 SEXP cpp_genref_parameters(SEXP x);
-RcppExport SEXP _rotio_cpp_genref_parameters(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_genref_parameters(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1296,7 +1296,7 @@ END_RCPP
 }
 // cpp_genref_set_parameters
 void cpp_genref_set_parameters(SEXP x, SEXP parameters);
-RcppExport SEXP _rotio_cpp_genref_set_parameters(SEXP xSEXP, SEXP parametersSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_genref_set_parameters(SEXP xSEXP, SEXP parametersSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -1307,7 +1307,7 @@ END_RCPP
 }
 // cpp_register_upgrade_function
 bool cpp_register_upgrade_function(std::string schema_name, int version_to_upgrade_to, Rcpp::Function fn);
-RcppExport SEXP _rotio_cpp_register_upgrade_function(SEXP schema_nameSEXP, SEXP version_to_upgrade_toSEXP, SEXP fnSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_register_upgrade_function(SEXP schema_nameSEXP, SEXP version_to_upgrade_toSEXP, SEXP fnSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1320,7 +1320,7 @@ END_RCPP
 }
 // cpp_register_downgrade_function
 bool cpp_register_downgrade_function(std::string schema_name, int version_to_downgrade_from, Rcpp::Function fn);
-RcppExport SEXP _rotio_cpp_register_downgrade_function(SEXP schema_nameSEXP, SEXP version_to_downgrade_fromSEXP, SEXP fnSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_register_downgrade_function(SEXP schema_nameSEXP, SEXP version_to_downgrade_fromSEXP, SEXP fnSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1333,7 +1333,7 @@ END_RCPP
 }
 // cpp_type_version_map
 SEXP cpp_type_version_map();
-RcppExport SEXP _rotio_cpp_type_version_map() {
+RcppExport SEXP _RcppOTIO_cpp_type_version_map() {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1343,7 +1343,7 @@ END_RCPP
 }
 // cpp_to_json_string
 std::string cpp_to_json_string(SEXP x, int indent, SEXP target_schema_versions);
-RcppExport SEXP _rotio_cpp_to_json_string(SEXP xSEXP, SEXP indentSEXP, SEXP target_schema_versionsSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_to_json_string(SEXP xSEXP, SEXP indentSEXP, SEXP target_schema_versionsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1356,7 +1356,7 @@ END_RCPP
 }
 // cpp_to_json_file
 bool cpp_to_json_file(SEXP x, std::string file_name, int indent, SEXP target_schema_versions);
-RcppExport SEXP _rotio_cpp_to_json_file(SEXP xSEXP, SEXP file_nameSEXP, SEXP indentSEXP, SEXP target_schema_versionsSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_to_json_file(SEXP xSEXP, SEXP file_nameSEXP, SEXP indentSEXP, SEXP target_schema_versionsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1370,7 +1370,7 @@ END_RCPP
 }
 // cpp_from_json_string
 SEXP cpp_from_json_string(std::string input);
-RcppExport SEXP _rotio_cpp_from_json_string(SEXP inputSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_from_json_string(SEXP inputSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1381,7 +1381,7 @@ END_RCPP
 }
 // cpp_from_json_file
 SEXP cpp_from_json_file(std::string file_name);
-RcppExport SEXP _rotio_cpp_from_json_file(SEXP file_nameSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_from_json_file(SEXP file_nameSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1392,7 +1392,7 @@ END_RCPP
 }
 // cpp_clone
 SEXP cpp_clone(SEXP x);
-RcppExport SEXP _rotio_cpp_clone(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_clone(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1403,7 +1403,7 @@ END_RCPP
 }
 // cpp_schema_name
 std::string cpp_schema_name(SEXP x);
-RcppExport SEXP _rotio_cpp_schema_name(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_schema_name(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1414,7 +1414,7 @@ END_RCPP
 }
 // cpp_schema_version
 int cpp_schema_version(SEXP x);
-RcppExport SEXP _rotio_cpp_schema_version(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_schema_version(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1425,7 +1425,7 @@ END_RCPP
 }
 // cpp_is_equivalent_to
 bool cpp_is_equivalent_to(SEXP x, SEXP other);
-RcppExport SEXP _rotio_cpp_is_equivalent_to(SEXP xSEXP, SEXP otherSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_is_equivalent_to(SEXP xSEXP, SEXP otherSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1437,7 +1437,7 @@ END_RCPP
 }
 // cpp_is_unknown_schema
 bool cpp_is_unknown_schema(SEXP x);
-RcppExport SEXP _rotio_cpp_is_unknown_schema(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_is_unknown_schema(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1448,7 +1448,7 @@ END_RCPP
 }
 // cpp_name
 std::string cpp_name(SEXP x);
-RcppExport SEXP _rotio_cpp_name(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_name(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1459,7 +1459,7 @@ END_RCPP
 }
 // cpp_set_name
 void cpp_set_name(SEXP x, std::string name);
-RcppExport SEXP _rotio_cpp_set_name(SEXP xSEXP, SEXP nameSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_set_name(SEXP xSEXP, SEXP nameSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -1470,7 +1470,7 @@ END_RCPP
 }
 // cpp_metadata
 SEXP cpp_metadata(SEXP x);
-RcppExport SEXP _rotio_cpp_metadata(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_metadata(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1481,7 +1481,7 @@ END_RCPP
 }
 // cpp_set_metadata
 void cpp_set_metadata(SEXP x, SEXP value);
-RcppExport SEXP _rotio_cpp_set_metadata(SEXP xSEXP, SEXP valueSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_set_metadata(SEXP xSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -1492,7 +1492,7 @@ END_RCPP
 }
 // cpp_rt_to_seconds
 double cpp_rt_to_seconds(SEXP rt);
-RcppExport SEXP _rotio_cpp_rt_to_seconds(SEXP rtSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_rt_to_seconds(SEXP rtSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1503,7 +1503,7 @@ END_RCPP
 }
 // cpp_rt_from_seconds
 SEXP cpp_rt_from_seconds(double seconds, double rate);
-RcppExport SEXP _rotio_cpp_rt_from_seconds(SEXP secondsSEXP, SEXP rateSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_rt_from_seconds(SEXP secondsSEXP, SEXP rateSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1515,7 +1515,7 @@ END_RCPP
 }
 // cpp_rt_to_frames
 int cpp_rt_to_frames(SEXP rt);
-RcppExport SEXP _rotio_cpp_rt_to_frames(SEXP rtSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_rt_to_frames(SEXP rtSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1526,7 +1526,7 @@ END_RCPP
 }
 // cpp_rt_from_frames
 SEXP cpp_rt_from_frames(double frame, double rate);
-RcppExport SEXP _rotio_cpp_rt_from_frames(SEXP frameSEXP, SEXP rateSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_rt_from_frames(SEXP frameSEXP, SEXP rateSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1538,7 +1538,7 @@ END_RCPP
 }
 // cpp_rt_rescaled_to
 SEXP cpp_rt_rescaled_to(SEXP rt, double new_rate);
-RcppExport SEXP _rotio_cpp_rt_rescaled_to(SEXP rtSEXP, SEXP new_rateSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_rt_rescaled_to(SEXP rtSEXP, SEXP new_rateSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1550,7 +1550,7 @@ END_RCPP
 }
 // cpp_rt_to_timecode
 std::string cpp_rt_to_timecode(SEXP rt, double rate, int drop_frame);
-RcppExport SEXP _rotio_cpp_rt_to_timecode(SEXP rtSEXP, SEXP rateSEXP, SEXP drop_frameSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_rt_to_timecode(SEXP rtSEXP, SEXP rateSEXP, SEXP drop_frameSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1563,7 +1563,7 @@ END_RCPP
 }
 // cpp_rt_from_timecode
 SEXP cpp_rt_from_timecode(std::string timecode, double rate);
-RcppExport SEXP _rotio_cpp_rt_from_timecode(SEXP timecodeSEXP, SEXP rateSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_rt_from_timecode(SEXP timecodeSEXP, SEXP rateSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1575,7 +1575,7 @@ END_RCPP
 }
 // cpp_rt_to_time_string
 std::string cpp_rt_to_time_string(SEXP rt);
-RcppExport SEXP _rotio_cpp_rt_to_time_string(SEXP rtSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_rt_to_time_string(SEXP rtSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1586,7 +1586,7 @@ END_RCPP
 }
 // cpp_rt_from_time_string
 SEXP cpp_rt_from_time_string(std::string time_string, double rate);
-RcppExport SEXP _rotio_cpp_rt_from_time_string(SEXP time_stringSEXP, SEXP rateSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_rt_from_time_string(SEXP time_stringSEXP, SEXP rateSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1598,7 +1598,7 @@ END_RCPP
 }
 // cpp_rt_almost_equal
 bool cpp_rt_almost_equal(SEXP a, SEXP b, double delta);
-RcppExport SEXP _rotio_cpp_rt_almost_equal(SEXP aSEXP, SEXP bSEXP, SEXP deltaSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_rt_almost_equal(SEXP aSEXP, SEXP bSEXP, SEXP deltaSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1611,7 +1611,7 @@ END_RCPP
 }
 // cpp_rt_add
 SEXP cpp_rt_add(SEXP a, SEXP b);
-RcppExport SEXP _rotio_cpp_rt_add(SEXP aSEXP, SEXP bSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_rt_add(SEXP aSEXP, SEXP bSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1623,7 +1623,7 @@ END_RCPP
 }
 // cpp_rt_subtract
 SEXP cpp_rt_subtract(SEXP a, SEXP b);
-RcppExport SEXP _rotio_cpp_rt_subtract(SEXP aSEXP, SEXP bSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_rt_subtract(SEXP aSEXP, SEXP bSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1635,7 +1635,7 @@ END_RCPP
 }
 // cpp_rt_compare
 int cpp_rt_compare(SEXP a, SEXP b);
-RcppExport SEXP _rotio_cpp_rt_compare(SEXP aSEXP, SEXP bSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_rt_compare(SEXP aSEXP, SEXP bSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1647,7 +1647,7 @@ END_RCPP
 }
 // cpp_tr_end_time_exclusive
 SEXP cpp_tr_end_time_exclusive(SEXP tr);
-RcppExport SEXP _rotio_cpp_tr_end_time_exclusive(SEXP trSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_tr_end_time_exclusive(SEXP trSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1658,7 +1658,7 @@ END_RCPP
 }
 // cpp_tr_end_time_inclusive
 SEXP cpp_tr_end_time_inclusive(SEXP tr);
-RcppExport SEXP _rotio_cpp_tr_end_time_inclusive(SEXP trSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_tr_end_time_inclusive(SEXP trSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1669,7 +1669,7 @@ END_RCPP
 }
 // cpp_tr_extended_by
 SEXP cpp_tr_extended_by(SEXP tr, SEXP other);
-RcppExport SEXP _rotio_cpp_tr_extended_by(SEXP trSEXP, SEXP otherSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_tr_extended_by(SEXP trSEXP, SEXP otherSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1681,7 +1681,7 @@ END_RCPP
 }
 // cpp_tr_clamped_range
 SEXP cpp_tr_clamped_range(SEXP tr, SEXP other);
-RcppExport SEXP _rotio_cpp_tr_clamped_range(SEXP trSEXP, SEXP otherSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_tr_clamped_range(SEXP trSEXP, SEXP otherSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1693,7 +1693,7 @@ END_RCPP
 }
 // cpp_tr_contains_time
 bool cpp_tr_contains_time(SEXP tr, SEXP rt);
-RcppExport SEXP _rotio_cpp_tr_contains_time(SEXP trSEXP, SEXP rtSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_tr_contains_time(SEXP trSEXP, SEXP rtSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1705,7 +1705,7 @@ END_RCPP
 }
 // cpp_tr_contains_range
 bool cpp_tr_contains_range(SEXP tr, SEXP other, double epsilon_s);
-RcppExport SEXP _rotio_cpp_tr_contains_range(SEXP trSEXP, SEXP otherSEXP, SEXP epsilon_sSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_tr_contains_range(SEXP trSEXP, SEXP otherSEXP, SEXP epsilon_sSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1718,7 +1718,7 @@ END_RCPP
 }
 // cpp_tr_overlaps_range
 bool cpp_tr_overlaps_range(SEXP tr, SEXP other, double epsilon_s);
-RcppExport SEXP _rotio_cpp_tr_overlaps_range(SEXP trSEXP, SEXP otherSEXP, SEXP epsilon_sSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_tr_overlaps_range(SEXP trSEXP, SEXP otherSEXP, SEXP epsilon_sSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1731,7 +1731,7 @@ END_RCPP
 }
 // cpp_tr_intersects
 bool cpp_tr_intersects(SEXP tr, SEXP other, double epsilon_s);
-RcppExport SEXP _rotio_cpp_tr_intersects(SEXP trSEXP, SEXP otherSEXP, SEXP epsilon_sSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_tr_intersects(SEXP trSEXP, SEXP otherSEXP, SEXP epsilon_sSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1744,7 +1744,7 @@ END_RCPP
 }
 // cpp_tr_range_from_start_end_time
 SEXP cpp_tr_range_from_start_end_time(SEXP start_time, SEXP end_time_exclusive);
-RcppExport SEXP _rotio_cpp_tr_range_from_start_end_time(SEXP start_timeSEXP, SEXP end_time_exclusiveSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_tr_range_from_start_end_time(SEXP start_timeSEXP, SEXP end_time_exclusiveSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1756,7 +1756,7 @@ END_RCPP
 }
 // cpp_timeline_tracks
 SEXP cpp_timeline_tracks(SEXP x);
-RcppExport SEXP _rotio_cpp_timeline_tracks(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_timeline_tracks(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1767,7 +1767,7 @@ END_RCPP
 }
 // cpp_timeline_set_tracks
 void cpp_timeline_set_tracks(SEXP x, SEXP stack);
-RcppExport SEXP _rotio_cpp_timeline_set_tracks(SEXP xSEXP, SEXP stackSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_timeline_set_tracks(SEXP xSEXP, SEXP stackSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -1778,7 +1778,7 @@ END_RCPP
 }
 // cpp_timeline_global_start_time
 SEXP cpp_timeline_global_start_time(SEXP x);
-RcppExport SEXP _rotio_cpp_timeline_global_start_time(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_timeline_global_start_time(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1789,7 +1789,7 @@ END_RCPP
 }
 // cpp_timeline_set_global_start_time
 void cpp_timeline_set_global_start_time(SEXP x, SEXP global_start_time);
-RcppExport SEXP _rotio_cpp_timeline_set_global_start_time(SEXP xSEXP, SEXP global_start_timeSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_timeline_set_global_start_time(SEXP xSEXP, SEXP global_start_timeSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -1800,7 +1800,7 @@ END_RCPP
 }
 // cpp_timeline_duration
 SEXP cpp_timeline_duration(SEXP x);
-RcppExport SEXP _rotio_cpp_timeline_duration(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_timeline_duration(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1811,7 +1811,7 @@ END_RCPP
 }
 // cpp_timeline_video_tracks
 Rcpp::List cpp_timeline_video_tracks(SEXP x);
-RcppExport SEXP _rotio_cpp_timeline_video_tracks(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_timeline_video_tracks(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1822,7 +1822,7 @@ END_RCPP
 }
 // cpp_timeline_audio_tracks
 Rcpp::List cpp_timeline_audio_tracks(SEXP x);
-RcppExport SEXP _rotio_cpp_timeline_audio_tracks(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_timeline_audio_tracks(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1833,7 +1833,7 @@ END_RCPP
 }
 // cpp_timeline_find_clips
 Rcpp::List cpp_timeline_find_clips(SEXP x);
-RcppExport SEXP _rotio_cpp_timeline_find_clips(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_timeline_find_clips(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1844,7 +1844,7 @@ END_RCPP
 }
 // cpp_track_kind
 std::string cpp_track_kind(SEXP x);
-RcppExport SEXP _rotio_cpp_track_kind(SEXP xSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_track_kind(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1855,7 +1855,7 @@ END_RCPP
 }
 // cpp_track_set_kind
 void cpp_track_set_kind(SEXP x, std::string kind);
-RcppExport SEXP _rotio_cpp_track_set_kind(SEXP xSEXP, SEXP kindSEXP) {
+RcppExport SEXP _RcppOTIO_cpp_track_set_kind(SEXP xSEXP, SEXP kindSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
@@ -1866,169 +1866,169 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_rotio_cpp_algo_overwrite", (DL_FUNC) &_rotio_cpp_algo_overwrite, 5},
-    {"_rotio_cpp_algo_insert", (DL_FUNC) &_rotio_cpp_algo_insert, 5},
-    {"_rotio_cpp_algo_trim", (DL_FUNC) &_rotio_cpp_algo_trim, 4},
-    {"_rotio_cpp_algo_slice", (DL_FUNC) &_rotio_cpp_algo_slice, 3},
-    {"_rotio_cpp_algo_slip", (DL_FUNC) &_rotio_cpp_algo_slip, 2},
-    {"_rotio_cpp_algo_slide", (DL_FUNC) &_rotio_cpp_algo_slide, 2},
-    {"_rotio_cpp_algo_ripple", (DL_FUNC) &_rotio_cpp_algo_ripple, 3},
-    {"_rotio_cpp_algo_roll", (DL_FUNC) &_rotio_cpp_algo_roll, 3},
-    {"_rotio_cpp_algo_fill", (DL_FUNC) &_rotio_cpp_algo_fill, 4},
-    {"_rotio_cpp_algo_remove", (DL_FUNC) &_rotio_cpp_algo_remove, 4},
-    {"_rotio_cpp_track_trimmed_to_range", (DL_FUNC) &_rotio_cpp_track_trimmed_to_range, 2},
-    {"_rotio_cpp_flatten_stack", (DL_FUNC) &_rotio_cpp_flatten_stack, 1},
-    {"_rotio_cpp_flatten_stack_tracks", (DL_FUNC) &_rotio_cpp_flatten_stack_tracks, 1},
-    {"_rotio_cpp_children", (DL_FUNC) &_rotio_cpp_children, 1},
-    {"_rotio_cpp_collection_children", (DL_FUNC) &_rotio_cpp_collection_children, 1},
-    {"_rotio_cpp_collection_set_children", (DL_FUNC) &_rotio_cpp_collection_set_children, 2},
-    {"_rotio_cpp_collection_clear_children", (DL_FUNC) &_rotio_cpp_collection_clear_children, 1},
-    {"_rotio_cpp_collection_insert_child", (DL_FUNC) &_rotio_cpp_collection_insert_child, 3},
-    {"_rotio_cpp_collection_set_child", (DL_FUNC) &_rotio_cpp_collection_set_child, 3},
-    {"_rotio_cpp_collection_remove_child", (DL_FUNC) &_rotio_cpp_collection_remove_child, 2},
-    {"_rotio_cpp_append_child", (DL_FUNC) &_rotio_cpp_append_child, 2},
-    {"_rotio_cpp_insert_child", (DL_FUNC) &_rotio_cpp_insert_child, 3},
-    {"_rotio_cpp_set_child", (DL_FUNC) &_rotio_cpp_set_child, 3},
-    {"_rotio_cpp_remove_child", (DL_FUNC) &_rotio_cpp_remove_child, 2},
-    {"_rotio_cpp_clear_children", (DL_FUNC) &_rotio_cpp_clear_children, 1},
-    {"_rotio_cpp_set_children", (DL_FUNC) &_rotio_cpp_set_children, 2},
-    {"_rotio_cpp_index_of_child", (DL_FUNC) &_rotio_cpp_index_of_child, 2},
-    {"_rotio_cpp_is_parent_of", (DL_FUNC) &_rotio_cpp_is_parent_of, 2},
-    {"_rotio_cpp_has_child", (DL_FUNC) &_rotio_cpp_has_child, 2},
-    {"_rotio_cpp_has_clips", (DL_FUNC) &_rotio_cpp_has_clips, 1},
-    {"_rotio_cpp_find_clips", (DL_FUNC) &_rotio_cpp_find_clips, 1},
-    {"_rotio_cpp_collection_find_clips", (DL_FUNC) &_rotio_cpp_collection_find_clips, 1},
-    {"_rotio_cpp_new_timeline", (DL_FUNC) &_rotio_cpp_new_timeline, 3},
-    {"_rotio_cpp_new_stack", (DL_FUNC) &_rotio_cpp_new_stack, 3},
-    {"_rotio_cpp_new_track", (DL_FUNC) &_rotio_cpp_new_track, 4},
-    {"_rotio_cpp_new_clip", (DL_FUNC) &_rotio_cpp_new_clip, 4},
-    {"_rotio_cpp_new_gap", (DL_FUNC) &_rotio_cpp_new_gap, 3},
-    {"_rotio_cpp_new_transition", (DL_FUNC) &_rotio_cpp_new_transition, 5},
-    {"_rotio_cpp_new_marker", (DL_FUNC) &_rotio_cpp_new_marker, 5},
-    {"_rotio_cpp_new_effect", (DL_FUNC) &_rotio_cpp_new_effect, 4},
-    {"_rotio_cpp_new_time_effect", (DL_FUNC) &_rotio_cpp_new_time_effect, 3},
-    {"_rotio_cpp_new_linear_time_warp", (DL_FUNC) &_rotio_cpp_new_linear_time_warp, 4},
-    {"_rotio_cpp_new_freeze_frame", (DL_FUNC) &_rotio_cpp_new_freeze_frame, 2},
-    {"_rotio_cpp_new_media_reference", (DL_FUNC) &_rotio_cpp_new_media_reference, 3},
-    {"_rotio_cpp_new_external_reference", (DL_FUNC) &_rotio_cpp_new_external_reference, 3},
-    {"_rotio_cpp_new_image_sequence_reference", (DL_FUNC) &_rotio_cpp_new_image_sequence_reference, 10},
-    {"_rotio_cpp_new_generator_reference", (DL_FUNC) &_rotio_cpp_new_generator_reference, 5},
-    {"_rotio_cpp_new_missing_reference", (DL_FUNC) &_rotio_cpp_new_missing_reference, 3},
-    {"_rotio_cpp_new_serializable_collection", (DL_FUNC) &_rotio_cpp_new_serializable_collection, 3},
-    {"_rotio_cpp_effect_name", (DL_FUNC) &_rotio_cpp_effect_name, 1},
-    {"_rotio_cpp_effect_set_effect_name", (DL_FUNC) &_rotio_cpp_effect_set_effect_name, 2},
-    {"_rotio_cpp_effect_enabled", (DL_FUNC) &_rotio_cpp_effect_enabled, 1},
-    {"_rotio_cpp_effect_set_enabled", (DL_FUNC) &_rotio_cpp_effect_set_enabled, 2},
-    {"_rotio_cpp_ltw_time_scalar", (DL_FUNC) &_rotio_cpp_ltw_time_scalar, 1},
-    {"_rotio_cpp_ltw_set_time_scalar", (DL_FUNC) &_rotio_cpp_ltw_set_time_scalar, 2},
-    {"_rotio_cpp_transition_type", (DL_FUNC) &_rotio_cpp_transition_type, 1},
-    {"_rotio_cpp_transition_set_type", (DL_FUNC) &_rotio_cpp_transition_set_type, 2},
-    {"_rotio_cpp_transition_in_offset", (DL_FUNC) &_rotio_cpp_transition_in_offset, 1},
-    {"_rotio_cpp_transition_set_in_offset", (DL_FUNC) &_rotio_cpp_transition_set_in_offset, 2},
-    {"_rotio_cpp_transition_out_offset", (DL_FUNC) &_rotio_cpp_transition_out_offset, 1},
-    {"_rotio_cpp_transition_set_out_offset", (DL_FUNC) &_rotio_cpp_transition_set_out_offset, 2},
-    {"_rotio_cpp_transition_range_in_parent", (DL_FUNC) &_rotio_cpp_transition_range_in_parent, 1},
-    {"_rotio_cpp_transition_trimmed_range_in_parent", (DL_FUNC) &_rotio_cpp_transition_trimmed_range_in_parent, 1},
-    {"_rotio_cpp_marker_color", (DL_FUNC) &_rotio_cpp_marker_color, 1},
-    {"_rotio_cpp_marker_set_color", (DL_FUNC) &_rotio_cpp_marker_set_color, 2},
-    {"_rotio_cpp_marker_marked_range", (DL_FUNC) &_rotio_cpp_marker_marked_range, 1},
-    {"_rotio_cpp_marker_set_marked_range", (DL_FUNC) &_rotio_cpp_marker_set_marked_range, 2},
-    {"_rotio_cpp_marker_comment", (DL_FUNC) &_rotio_cpp_marker_comment, 1},
-    {"_rotio_cpp_marker_set_comment", (DL_FUNC) &_rotio_cpp_marker_set_comment, 2},
-    {"_rotio_cpp_visible", (DL_FUNC) &_rotio_cpp_visible, 1},
-    {"_rotio_cpp_overlapping", (DL_FUNC) &_rotio_cpp_overlapping, 1},
-    {"_rotio_cpp_parent", (DL_FUNC) &_rotio_cpp_parent, 1},
-    {"_rotio_cpp_duration", (DL_FUNC) &_rotio_cpp_duration, 1},
-    {"_rotio_cpp_source_range", (DL_FUNC) &_rotio_cpp_source_range, 1},
-    {"_rotio_cpp_set_source_range", (DL_FUNC) &_rotio_cpp_set_source_range, 2},
-    {"_rotio_cpp_enabled", (DL_FUNC) &_rotio_cpp_enabled, 1},
-    {"_rotio_cpp_set_enabled", (DL_FUNC) &_rotio_cpp_set_enabled, 2},
-    {"_rotio_cpp_available_range", (DL_FUNC) &_rotio_cpp_available_range, 1},
-    {"_rotio_cpp_trimmed_range", (DL_FUNC) &_rotio_cpp_trimmed_range, 1},
-    {"_rotio_cpp_visible_range", (DL_FUNC) &_rotio_cpp_visible_range, 1},
-    {"_rotio_cpp_range_in_parent", (DL_FUNC) &_rotio_cpp_range_in_parent, 1},
-    {"_rotio_cpp_trimmed_range_in_parent", (DL_FUNC) &_rotio_cpp_trimmed_range_in_parent, 1},
-    {"_rotio_cpp_clip_media_reference", (DL_FUNC) &_rotio_cpp_clip_media_reference, 1},
-    {"_rotio_cpp_clip_set_media_reference", (DL_FUNC) &_rotio_cpp_clip_set_media_reference, 2},
-    {"_rotio_cpp_clip_active_media_reference_key", (DL_FUNC) &_rotio_cpp_clip_active_media_reference_key, 1},
-    {"_rotio_cpp_clip_set_active_media_reference_key", (DL_FUNC) &_rotio_cpp_clip_set_active_media_reference_key, 2},
-    {"_rotio_cpp_clip_default_media_key", (DL_FUNC) &_rotio_cpp_clip_default_media_key, 0},
-    {"_rotio_cpp_clip_media_references", (DL_FUNC) &_rotio_cpp_clip_media_references, 1},
-    {"_rotio_cpp_clip_set_media_references", (DL_FUNC) &_rotio_cpp_clip_set_media_references, 3},
-    {"_rotio_cpp_mediaref_available_range", (DL_FUNC) &_rotio_cpp_mediaref_available_range, 1},
-    {"_rotio_cpp_mediaref_set_available_range", (DL_FUNC) &_rotio_cpp_mediaref_set_available_range, 2},
-    {"_rotio_cpp_mediaref_is_missing_reference", (DL_FUNC) &_rotio_cpp_mediaref_is_missing_reference, 1},
-    {"_rotio_cpp_extref_target_url", (DL_FUNC) &_rotio_cpp_extref_target_url, 1},
-    {"_rotio_cpp_extref_set_target_url", (DL_FUNC) &_rotio_cpp_extref_set_target_url, 2},
-    {"_rotio_cpp_imgseq_target_url_base", (DL_FUNC) &_rotio_cpp_imgseq_target_url_base, 1},
-    {"_rotio_cpp_imgseq_set_target_url_base", (DL_FUNC) &_rotio_cpp_imgseq_set_target_url_base, 2},
-    {"_rotio_cpp_imgseq_name_prefix", (DL_FUNC) &_rotio_cpp_imgseq_name_prefix, 1},
-    {"_rotio_cpp_imgseq_name_suffix", (DL_FUNC) &_rotio_cpp_imgseq_name_suffix, 1},
-    {"_rotio_cpp_imgseq_start_frame", (DL_FUNC) &_rotio_cpp_imgseq_start_frame, 1},
-    {"_rotio_cpp_imgseq_frame_step", (DL_FUNC) &_rotio_cpp_imgseq_frame_step, 1},
-    {"_rotio_cpp_imgseq_rate", (DL_FUNC) &_rotio_cpp_imgseq_rate, 1},
-    {"_rotio_cpp_imgseq_frame_zero_padding", (DL_FUNC) &_rotio_cpp_imgseq_frame_zero_padding, 1},
-    {"_rotio_cpp_imgseq_end_frame", (DL_FUNC) &_rotio_cpp_imgseq_end_frame, 1},
-    {"_rotio_cpp_imgseq_number_of_images_in_sequence", (DL_FUNC) &_rotio_cpp_imgseq_number_of_images_in_sequence, 1},
-    {"_rotio_cpp_imgseq_frame_for_time", (DL_FUNC) &_rotio_cpp_imgseq_frame_for_time, 2},
-    {"_rotio_cpp_imgseq_target_url_for_image_number", (DL_FUNC) &_rotio_cpp_imgseq_target_url_for_image_number, 2},
-    {"_rotio_cpp_imgseq_presentation_time_for_image_number", (DL_FUNC) &_rotio_cpp_imgseq_presentation_time_for_image_number, 2},
-    {"_rotio_cpp_genref_generator_kind", (DL_FUNC) &_rotio_cpp_genref_generator_kind, 1},
-    {"_rotio_cpp_genref_set_generator_kind", (DL_FUNC) &_rotio_cpp_genref_set_generator_kind, 2},
-    {"_rotio_cpp_genref_parameters", (DL_FUNC) &_rotio_cpp_genref_parameters, 1},
-    {"_rotio_cpp_genref_set_parameters", (DL_FUNC) &_rotio_cpp_genref_set_parameters, 2},
-    {"_rotio_cpp_register_upgrade_function", (DL_FUNC) &_rotio_cpp_register_upgrade_function, 3},
-    {"_rotio_cpp_register_downgrade_function", (DL_FUNC) &_rotio_cpp_register_downgrade_function, 3},
-    {"_rotio_cpp_type_version_map", (DL_FUNC) &_rotio_cpp_type_version_map, 0},
-    {"_rotio_cpp_to_json_string", (DL_FUNC) &_rotio_cpp_to_json_string, 3},
-    {"_rotio_cpp_to_json_file", (DL_FUNC) &_rotio_cpp_to_json_file, 4},
-    {"_rotio_cpp_from_json_string", (DL_FUNC) &_rotio_cpp_from_json_string, 1},
-    {"_rotio_cpp_from_json_file", (DL_FUNC) &_rotio_cpp_from_json_file, 1},
-    {"_rotio_cpp_clone", (DL_FUNC) &_rotio_cpp_clone, 1},
-    {"_rotio_cpp_schema_name", (DL_FUNC) &_rotio_cpp_schema_name, 1},
-    {"_rotio_cpp_schema_version", (DL_FUNC) &_rotio_cpp_schema_version, 1},
-    {"_rotio_cpp_is_equivalent_to", (DL_FUNC) &_rotio_cpp_is_equivalent_to, 2},
-    {"_rotio_cpp_is_unknown_schema", (DL_FUNC) &_rotio_cpp_is_unknown_schema, 1},
-    {"_rotio_cpp_name", (DL_FUNC) &_rotio_cpp_name, 1},
-    {"_rotio_cpp_set_name", (DL_FUNC) &_rotio_cpp_set_name, 2},
-    {"_rotio_cpp_metadata", (DL_FUNC) &_rotio_cpp_metadata, 1},
-    {"_rotio_cpp_set_metadata", (DL_FUNC) &_rotio_cpp_set_metadata, 2},
-    {"_rotio_cpp_rt_to_seconds", (DL_FUNC) &_rotio_cpp_rt_to_seconds, 1},
-    {"_rotio_cpp_rt_from_seconds", (DL_FUNC) &_rotio_cpp_rt_from_seconds, 2},
-    {"_rotio_cpp_rt_to_frames", (DL_FUNC) &_rotio_cpp_rt_to_frames, 1},
-    {"_rotio_cpp_rt_from_frames", (DL_FUNC) &_rotio_cpp_rt_from_frames, 2},
-    {"_rotio_cpp_rt_rescaled_to", (DL_FUNC) &_rotio_cpp_rt_rescaled_to, 2},
-    {"_rotio_cpp_rt_to_timecode", (DL_FUNC) &_rotio_cpp_rt_to_timecode, 3},
-    {"_rotio_cpp_rt_from_timecode", (DL_FUNC) &_rotio_cpp_rt_from_timecode, 2},
-    {"_rotio_cpp_rt_to_time_string", (DL_FUNC) &_rotio_cpp_rt_to_time_string, 1},
-    {"_rotio_cpp_rt_from_time_string", (DL_FUNC) &_rotio_cpp_rt_from_time_string, 2},
-    {"_rotio_cpp_rt_almost_equal", (DL_FUNC) &_rotio_cpp_rt_almost_equal, 3},
-    {"_rotio_cpp_rt_add", (DL_FUNC) &_rotio_cpp_rt_add, 2},
-    {"_rotio_cpp_rt_subtract", (DL_FUNC) &_rotio_cpp_rt_subtract, 2},
-    {"_rotio_cpp_rt_compare", (DL_FUNC) &_rotio_cpp_rt_compare, 2},
-    {"_rotio_cpp_tr_end_time_exclusive", (DL_FUNC) &_rotio_cpp_tr_end_time_exclusive, 1},
-    {"_rotio_cpp_tr_end_time_inclusive", (DL_FUNC) &_rotio_cpp_tr_end_time_inclusive, 1},
-    {"_rotio_cpp_tr_extended_by", (DL_FUNC) &_rotio_cpp_tr_extended_by, 2},
-    {"_rotio_cpp_tr_clamped_range", (DL_FUNC) &_rotio_cpp_tr_clamped_range, 2},
-    {"_rotio_cpp_tr_contains_time", (DL_FUNC) &_rotio_cpp_tr_contains_time, 2},
-    {"_rotio_cpp_tr_contains_range", (DL_FUNC) &_rotio_cpp_tr_contains_range, 3},
-    {"_rotio_cpp_tr_overlaps_range", (DL_FUNC) &_rotio_cpp_tr_overlaps_range, 3},
-    {"_rotio_cpp_tr_intersects", (DL_FUNC) &_rotio_cpp_tr_intersects, 3},
-    {"_rotio_cpp_tr_range_from_start_end_time", (DL_FUNC) &_rotio_cpp_tr_range_from_start_end_time, 2},
-    {"_rotio_cpp_timeline_tracks", (DL_FUNC) &_rotio_cpp_timeline_tracks, 1},
-    {"_rotio_cpp_timeline_set_tracks", (DL_FUNC) &_rotio_cpp_timeline_set_tracks, 2},
-    {"_rotio_cpp_timeline_global_start_time", (DL_FUNC) &_rotio_cpp_timeline_global_start_time, 1},
-    {"_rotio_cpp_timeline_set_global_start_time", (DL_FUNC) &_rotio_cpp_timeline_set_global_start_time, 2},
-    {"_rotio_cpp_timeline_duration", (DL_FUNC) &_rotio_cpp_timeline_duration, 1},
-    {"_rotio_cpp_timeline_video_tracks", (DL_FUNC) &_rotio_cpp_timeline_video_tracks, 1},
-    {"_rotio_cpp_timeline_audio_tracks", (DL_FUNC) &_rotio_cpp_timeline_audio_tracks, 1},
-    {"_rotio_cpp_timeline_find_clips", (DL_FUNC) &_rotio_cpp_timeline_find_clips, 1},
-    {"_rotio_cpp_track_kind", (DL_FUNC) &_rotio_cpp_track_kind, 1},
-    {"_rotio_cpp_track_set_kind", (DL_FUNC) &_rotio_cpp_track_set_kind, 2},
+    {"_RcppOTIO_cpp_algo_overwrite", (DL_FUNC) &_RcppOTIO_cpp_algo_overwrite, 5},
+    {"_RcppOTIO_cpp_algo_insert", (DL_FUNC) &_RcppOTIO_cpp_algo_insert, 5},
+    {"_RcppOTIO_cpp_algo_trim", (DL_FUNC) &_RcppOTIO_cpp_algo_trim, 4},
+    {"_RcppOTIO_cpp_algo_slice", (DL_FUNC) &_RcppOTIO_cpp_algo_slice, 3},
+    {"_RcppOTIO_cpp_algo_slip", (DL_FUNC) &_RcppOTIO_cpp_algo_slip, 2},
+    {"_RcppOTIO_cpp_algo_slide", (DL_FUNC) &_RcppOTIO_cpp_algo_slide, 2},
+    {"_RcppOTIO_cpp_algo_ripple", (DL_FUNC) &_RcppOTIO_cpp_algo_ripple, 3},
+    {"_RcppOTIO_cpp_algo_roll", (DL_FUNC) &_RcppOTIO_cpp_algo_roll, 3},
+    {"_RcppOTIO_cpp_algo_fill", (DL_FUNC) &_RcppOTIO_cpp_algo_fill, 4},
+    {"_RcppOTIO_cpp_algo_remove", (DL_FUNC) &_RcppOTIO_cpp_algo_remove, 4},
+    {"_RcppOTIO_cpp_track_trimmed_to_range", (DL_FUNC) &_RcppOTIO_cpp_track_trimmed_to_range, 2},
+    {"_RcppOTIO_cpp_flatten_stack", (DL_FUNC) &_RcppOTIO_cpp_flatten_stack, 1},
+    {"_RcppOTIO_cpp_flatten_stack_tracks", (DL_FUNC) &_RcppOTIO_cpp_flatten_stack_tracks, 1},
+    {"_RcppOTIO_cpp_children", (DL_FUNC) &_RcppOTIO_cpp_children, 1},
+    {"_RcppOTIO_cpp_collection_children", (DL_FUNC) &_RcppOTIO_cpp_collection_children, 1},
+    {"_RcppOTIO_cpp_collection_set_children", (DL_FUNC) &_RcppOTIO_cpp_collection_set_children, 2},
+    {"_RcppOTIO_cpp_collection_clear_children", (DL_FUNC) &_RcppOTIO_cpp_collection_clear_children, 1},
+    {"_RcppOTIO_cpp_collection_insert_child", (DL_FUNC) &_RcppOTIO_cpp_collection_insert_child, 3},
+    {"_RcppOTIO_cpp_collection_set_child", (DL_FUNC) &_RcppOTIO_cpp_collection_set_child, 3},
+    {"_RcppOTIO_cpp_collection_remove_child", (DL_FUNC) &_RcppOTIO_cpp_collection_remove_child, 2},
+    {"_RcppOTIO_cpp_append_child", (DL_FUNC) &_RcppOTIO_cpp_append_child, 2},
+    {"_RcppOTIO_cpp_insert_child", (DL_FUNC) &_RcppOTIO_cpp_insert_child, 3},
+    {"_RcppOTIO_cpp_set_child", (DL_FUNC) &_RcppOTIO_cpp_set_child, 3},
+    {"_RcppOTIO_cpp_remove_child", (DL_FUNC) &_RcppOTIO_cpp_remove_child, 2},
+    {"_RcppOTIO_cpp_clear_children", (DL_FUNC) &_RcppOTIO_cpp_clear_children, 1},
+    {"_RcppOTIO_cpp_set_children", (DL_FUNC) &_RcppOTIO_cpp_set_children, 2},
+    {"_RcppOTIO_cpp_index_of_child", (DL_FUNC) &_RcppOTIO_cpp_index_of_child, 2},
+    {"_RcppOTIO_cpp_is_parent_of", (DL_FUNC) &_RcppOTIO_cpp_is_parent_of, 2},
+    {"_RcppOTIO_cpp_has_child", (DL_FUNC) &_RcppOTIO_cpp_has_child, 2},
+    {"_RcppOTIO_cpp_has_clips", (DL_FUNC) &_RcppOTIO_cpp_has_clips, 1},
+    {"_RcppOTIO_cpp_find_clips", (DL_FUNC) &_RcppOTIO_cpp_find_clips, 1},
+    {"_RcppOTIO_cpp_collection_find_clips", (DL_FUNC) &_RcppOTIO_cpp_collection_find_clips, 1},
+    {"_RcppOTIO_cpp_new_timeline", (DL_FUNC) &_RcppOTIO_cpp_new_timeline, 3},
+    {"_RcppOTIO_cpp_new_stack", (DL_FUNC) &_RcppOTIO_cpp_new_stack, 3},
+    {"_RcppOTIO_cpp_new_track", (DL_FUNC) &_RcppOTIO_cpp_new_track, 4},
+    {"_RcppOTIO_cpp_new_clip", (DL_FUNC) &_RcppOTIO_cpp_new_clip, 4},
+    {"_RcppOTIO_cpp_new_gap", (DL_FUNC) &_RcppOTIO_cpp_new_gap, 3},
+    {"_RcppOTIO_cpp_new_transition", (DL_FUNC) &_RcppOTIO_cpp_new_transition, 5},
+    {"_RcppOTIO_cpp_new_marker", (DL_FUNC) &_RcppOTIO_cpp_new_marker, 5},
+    {"_RcppOTIO_cpp_new_effect", (DL_FUNC) &_RcppOTIO_cpp_new_effect, 4},
+    {"_RcppOTIO_cpp_new_time_effect", (DL_FUNC) &_RcppOTIO_cpp_new_time_effect, 3},
+    {"_RcppOTIO_cpp_new_linear_time_warp", (DL_FUNC) &_RcppOTIO_cpp_new_linear_time_warp, 4},
+    {"_RcppOTIO_cpp_new_freeze_frame", (DL_FUNC) &_RcppOTIO_cpp_new_freeze_frame, 2},
+    {"_RcppOTIO_cpp_new_media_reference", (DL_FUNC) &_RcppOTIO_cpp_new_media_reference, 3},
+    {"_RcppOTIO_cpp_new_external_reference", (DL_FUNC) &_RcppOTIO_cpp_new_external_reference, 3},
+    {"_RcppOTIO_cpp_new_image_sequence_reference", (DL_FUNC) &_RcppOTIO_cpp_new_image_sequence_reference, 10},
+    {"_RcppOTIO_cpp_new_generator_reference", (DL_FUNC) &_RcppOTIO_cpp_new_generator_reference, 5},
+    {"_RcppOTIO_cpp_new_missing_reference", (DL_FUNC) &_RcppOTIO_cpp_new_missing_reference, 3},
+    {"_RcppOTIO_cpp_new_serializable_collection", (DL_FUNC) &_RcppOTIO_cpp_new_serializable_collection, 3},
+    {"_RcppOTIO_cpp_effect_name", (DL_FUNC) &_RcppOTIO_cpp_effect_name, 1},
+    {"_RcppOTIO_cpp_effect_set_effect_name", (DL_FUNC) &_RcppOTIO_cpp_effect_set_effect_name, 2},
+    {"_RcppOTIO_cpp_effect_enabled", (DL_FUNC) &_RcppOTIO_cpp_effect_enabled, 1},
+    {"_RcppOTIO_cpp_effect_set_enabled", (DL_FUNC) &_RcppOTIO_cpp_effect_set_enabled, 2},
+    {"_RcppOTIO_cpp_ltw_time_scalar", (DL_FUNC) &_RcppOTIO_cpp_ltw_time_scalar, 1},
+    {"_RcppOTIO_cpp_ltw_set_time_scalar", (DL_FUNC) &_RcppOTIO_cpp_ltw_set_time_scalar, 2},
+    {"_RcppOTIO_cpp_transition_type", (DL_FUNC) &_RcppOTIO_cpp_transition_type, 1},
+    {"_RcppOTIO_cpp_transition_set_type", (DL_FUNC) &_RcppOTIO_cpp_transition_set_type, 2},
+    {"_RcppOTIO_cpp_transition_in_offset", (DL_FUNC) &_RcppOTIO_cpp_transition_in_offset, 1},
+    {"_RcppOTIO_cpp_transition_set_in_offset", (DL_FUNC) &_RcppOTIO_cpp_transition_set_in_offset, 2},
+    {"_RcppOTIO_cpp_transition_out_offset", (DL_FUNC) &_RcppOTIO_cpp_transition_out_offset, 1},
+    {"_RcppOTIO_cpp_transition_set_out_offset", (DL_FUNC) &_RcppOTIO_cpp_transition_set_out_offset, 2},
+    {"_RcppOTIO_cpp_transition_range_in_parent", (DL_FUNC) &_RcppOTIO_cpp_transition_range_in_parent, 1},
+    {"_RcppOTIO_cpp_transition_trimmed_range_in_parent", (DL_FUNC) &_RcppOTIO_cpp_transition_trimmed_range_in_parent, 1},
+    {"_RcppOTIO_cpp_marker_color", (DL_FUNC) &_RcppOTIO_cpp_marker_color, 1},
+    {"_RcppOTIO_cpp_marker_set_color", (DL_FUNC) &_RcppOTIO_cpp_marker_set_color, 2},
+    {"_RcppOTIO_cpp_marker_marked_range", (DL_FUNC) &_RcppOTIO_cpp_marker_marked_range, 1},
+    {"_RcppOTIO_cpp_marker_set_marked_range", (DL_FUNC) &_RcppOTIO_cpp_marker_set_marked_range, 2},
+    {"_RcppOTIO_cpp_marker_comment", (DL_FUNC) &_RcppOTIO_cpp_marker_comment, 1},
+    {"_RcppOTIO_cpp_marker_set_comment", (DL_FUNC) &_RcppOTIO_cpp_marker_set_comment, 2},
+    {"_RcppOTIO_cpp_visible", (DL_FUNC) &_RcppOTIO_cpp_visible, 1},
+    {"_RcppOTIO_cpp_overlapping", (DL_FUNC) &_RcppOTIO_cpp_overlapping, 1},
+    {"_RcppOTIO_cpp_parent", (DL_FUNC) &_RcppOTIO_cpp_parent, 1},
+    {"_RcppOTIO_cpp_duration", (DL_FUNC) &_RcppOTIO_cpp_duration, 1},
+    {"_RcppOTIO_cpp_source_range", (DL_FUNC) &_RcppOTIO_cpp_source_range, 1},
+    {"_RcppOTIO_cpp_set_source_range", (DL_FUNC) &_RcppOTIO_cpp_set_source_range, 2},
+    {"_RcppOTIO_cpp_enabled", (DL_FUNC) &_RcppOTIO_cpp_enabled, 1},
+    {"_RcppOTIO_cpp_set_enabled", (DL_FUNC) &_RcppOTIO_cpp_set_enabled, 2},
+    {"_RcppOTIO_cpp_available_range", (DL_FUNC) &_RcppOTIO_cpp_available_range, 1},
+    {"_RcppOTIO_cpp_trimmed_range", (DL_FUNC) &_RcppOTIO_cpp_trimmed_range, 1},
+    {"_RcppOTIO_cpp_visible_range", (DL_FUNC) &_RcppOTIO_cpp_visible_range, 1},
+    {"_RcppOTIO_cpp_range_in_parent", (DL_FUNC) &_RcppOTIO_cpp_range_in_parent, 1},
+    {"_RcppOTIO_cpp_trimmed_range_in_parent", (DL_FUNC) &_RcppOTIO_cpp_trimmed_range_in_parent, 1},
+    {"_RcppOTIO_cpp_clip_media_reference", (DL_FUNC) &_RcppOTIO_cpp_clip_media_reference, 1},
+    {"_RcppOTIO_cpp_clip_set_media_reference", (DL_FUNC) &_RcppOTIO_cpp_clip_set_media_reference, 2},
+    {"_RcppOTIO_cpp_clip_active_media_reference_key", (DL_FUNC) &_RcppOTIO_cpp_clip_active_media_reference_key, 1},
+    {"_RcppOTIO_cpp_clip_set_active_media_reference_key", (DL_FUNC) &_RcppOTIO_cpp_clip_set_active_media_reference_key, 2},
+    {"_RcppOTIO_cpp_clip_default_media_key", (DL_FUNC) &_RcppOTIO_cpp_clip_default_media_key, 0},
+    {"_RcppOTIO_cpp_clip_media_references", (DL_FUNC) &_RcppOTIO_cpp_clip_media_references, 1},
+    {"_RcppOTIO_cpp_clip_set_media_references", (DL_FUNC) &_RcppOTIO_cpp_clip_set_media_references, 3},
+    {"_RcppOTIO_cpp_mediaref_available_range", (DL_FUNC) &_RcppOTIO_cpp_mediaref_available_range, 1},
+    {"_RcppOTIO_cpp_mediaref_set_available_range", (DL_FUNC) &_RcppOTIO_cpp_mediaref_set_available_range, 2},
+    {"_RcppOTIO_cpp_mediaref_is_missing_reference", (DL_FUNC) &_RcppOTIO_cpp_mediaref_is_missing_reference, 1},
+    {"_RcppOTIO_cpp_extref_target_url", (DL_FUNC) &_RcppOTIO_cpp_extref_target_url, 1},
+    {"_RcppOTIO_cpp_extref_set_target_url", (DL_FUNC) &_RcppOTIO_cpp_extref_set_target_url, 2},
+    {"_RcppOTIO_cpp_imgseq_target_url_base", (DL_FUNC) &_RcppOTIO_cpp_imgseq_target_url_base, 1},
+    {"_RcppOTIO_cpp_imgseq_set_target_url_base", (DL_FUNC) &_RcppOTIO_cpp_imgseq_set_target_url_base, 2},
+    {"_RcppOTIO_cpp_imgseq_name_prefix", (DL_FUNC) &_RcppOTIO_cpp_imgseq_name_prefix, 1},
+    {"_RcppOTIO_cpp_imgseq_name_suffix", (DL_FUNC) &_RcppOTIO_cpp_imgseq_name_suffix, 1},
+    {"_RcppOTIO_cpp_imgseq_start_frame", (DL_FUNC) &_RcppOTIO_cpp_imgseq_start_frame, 1},
+    {"_RcppOTIO_cpp_imgseq_frame_step", (DL_FUNC) &_RcppOTIO_cpp_imgseq_frame_step, 1},
+    {"_RcppOTIO_cpp_imgseq_rate", (DL_FUNC) &_RcppOTIO_cpp_imgseq_rate, 1},
+    {"_RcppOTIO_cpp_imgseq_frame_zero_padding", (DL_FUNC) &_RcppOTIO_cpp_imgseq_frame_zero_padding, 1},
+    {"_RcppOTIO_cpp_imgseq_end_frame", (DL_FUNC) &_RcppOTIO_cpp_imgseq_end_frame, 1},
+    {"_RcppOTIO_cpp_imgseq_number_of_images_in_sequence", (DL_FUNC) &_RcppOTIO_cpp_imgseq_number_of_images_in_sequence, 1},
+    {"_RcppOTIO_cpp_imgseq_frame_for_time", (DL_FUNC) &_RcppOTIO_cpp_imgseq_frame_for_time, 2},
+    {"_RcppOTIO_cpp_imgseq_target_url_for_image_number", (DL_FUNC) &_RcppOTIO_cpp_imgseq_target_url_for_image_number, 2},
+    {"_RcppOTIO_cpp_imgseq_presentation_time_for_image_number", (DL_FUNC) &_RcppOTIO_cpp_imgseq_presentation_time_for_image_number, 2},
+    {"_RcppOTIO_cpp_genref_generator_kind", (DL_FUNC) &_RcppOTIO_cpp_genref_generator_kind, 1},
+    {"_RcppOTIO_cpp_genref_set_generator_kind", (DL_FUNC) &_RcppOTIO_cpp_genref_set_generator_kind, 2},
+    {"_RcppOTIO_cpp_genref_parameters", (DL_FUNC) &_RcppOTIO_cpp_genref_parameters, 1},
+    {"_RcppOTIO_cpp_genref_set_parameters", (DL_FUNC) &_RcppOTIO_cpp_genref_set_parameters, 2},
+    {"_RcppOTIO_cpp_register_upgrade_function", (DL_FUNC) &_RcppOTIO_cpp_register_upgrade_function, 3},
+    {"_RcppOTIO_cpp_register_downgrade_function", (DL_FUNC) &_RcppOTIO_cpp_register_downgrade_function, 3},
+    {"_RcppOTIO_cpp_type_version_map", (DL_FUNC) &_RcppOTIO_cpp_type_version_map, 0},
+    {"_RcppOTIO_cpp_to_json_string", (DL_FUNC) &_RcppOTIO_cpp_to_json_string, 3},
+    {"_RcppOTIO_cpp_to_json_file", (DL_FUNC) &_RcppOTIO_cpp_to_json_file, 4},
+    {"_RcppOTIO_cpp_from_json_string", (DL_FUNC) &_RcppOTIO_cpp_from_json_string, 1},
+    {"_RcppOTIO_cpp_from_json_file", (DL_FUNC) &_RcppOTIO_cpp_from_json_file, 1},
+    {"_RcppOTIO_cpp_clone", (DL_FUNC) &_RcppOTIO_cpp_clone, 1},
+    {"_RcppOTIO_cpp_schema_name", (DL_FUNC) &_RcppOTIO_cpp_schema_name, 1},
+    {"_RcppOTIO_cpp_schema_version", (DL_FUNC) &_RcppOTIO_cpp_schema_version, 1},
+    {"_RcppOTIO_cpp_is_equivalent_to", (DL_FUNC) &_RcppOTIO_cpp_is_equivalent_to, 2},
+    {"_RcppOTIO_cpp_is_unknown_schema", (DL_FUNC) &_RcppOTIO_cpp_is_unknown_schema, 1},
+    {"_RcppOTIO_cpp_name", (DL_FUNC) &_RcppOTIO_cpp_name, 1},
+    {"_RcppOTIO_cpp_set_name", (DL_FUNC) &_RcppOTIO_cpp_set_name, 2},
+    {"_RcppOTIO_cpp_metadata", (DL_FUNC) &_RcppOTIO_cpp_metadata, 1},
+    {"_RcppOTIO_cpp_set_metadata", (DL_FUNC) &_RcppOTIO_cpp_set_metadata, 2},
+    {"_RcppOTIO_cpp_rt_to_seconds", (DL_FUNC) &_RcppOTIO_cpp_rt_to_seconds, 1},
+    {"_RcppOTIO_cpp_rt_from_seconds", (DL_FUNC) &_RcppOTIO_cpp_rt_from_seconds, 2},
+    {"_RcppOTIO_cpp_rt_to_frames", (DL_FUNC) &_RcppOTIO_cpp_rt_to_frames, 1},
+    {"_RcppOTIO_cpp_rt_from_frames", (DL_FUNC) &_RcppOTIO_cpp_rt_from_frames, 2},
+    {"_RcppOTIO_cpp_rt_rescaled_to", (DL_FUNC) &_RcppOTIO_cpp_rt_rescaled_to, 2},
+    {"_RcppOTIO_cpp_rt_to_timecode", (DL_FUNC) &_RcppOTIO_cpp_rt_to_timecode, 3},
+    {"_RcppOTIO_cpp_rt_from_timecode", (DL_FUNC) &_RcppOTIO_cpp_rt_from_timecode, 2},
+    {"_RcppOTIO_cpp_rt_to_time_string", (DL_FUNC) &_RcppOTIO_cpp_rt_to_time_string, 1},
+    {"_RcppOTIO_cpp_rt_from_time_string", (DL_FUNC) &_RcppOTIO_cpp_rt_from_time_string, 2},
+    {"_RcppOTIO_cpp_rt_almost_equal", (DL_FUNC) &_RcppOTIO_cpp_rt_almost_equal, 3},
+    {"_RcppOTIO_cpp_rt_add", (DL_FUNC) &_RcppOTIO_cpp_rt_add, 2},
+    {"_RcppOTIO_cpp_rt_subtract", (DL_FUNC) &_RcppOTIO_cpp_rt_subtract, 2},
+    {"_RcppOTIO_cpp_rt_compare", (DL_FUNC) &_RcppOTIO_cpp_rt_compare, 2},
+    {"_RcppOTIO_cpp_tr_end_time_exclusive", (DL_FUNC) &_RcppOTIO_cpp_tr_end_time_exclusive, 1},
+    {"_RcppOTIO_cpp_tr_end_time_inclusive", (DL_FUNC) &_RcppOTIO_cpp_tr_end_time_inclusive, 1},
+    {"_RcppOTIO_cpp_tr_extended_by", (DL_FUNC) &_RcppOTIO_cpp_tr_extended_by, 2},
+    {"_RcppOTIO_cpp_tr_clamped_range", (DL_FUNC) &_RcppOTIO_cpp_tr_clamped_range, 2},
+    {"_RcppOTIO_cpp_tr_contains_time", (DL_FUNC) &_RcppOTIO_cpp_tr_contains_time, 2},
+    {"_RcppOTIO_cpp_tr_contains_range", (DL_FUNC) &_RcppOTIO_cpp_tr_contains_range, 3},
+    {"_RcppOTIO_cpp_tr_overlaps_range", (DL_FUNC) &_RcppOTIO_cpp_tr_overlaps_range, 3},
+    {"_RcppOTIO_cpp_tr_intersects", (DL_FUNC) &_RcppOTIO_cpp_tr_intersects, 3},
+    {"_RcppOTIO_cpp_tr_range_from_start_end_time", (DL_FUNC) &_RcppOTIO_cpp_tr_range_from_start_end_time, 2},
+    {"_RcppOTIO_cpp_timeline_tracks", (DL_FUNC) &_RcppOTIO_cpp_timeline_tracks, 1},
+    {"_RcppOTIO_cpp_timeline_set_tracks", (DL_FUNC) &_RcppOTIO_cpp_timeline_set_tracks, 2},
+    {"_RcppOTIO_cpp_timeline_global_start_time", (DL_FUNC) &_RcppOTIO_cpp_timeline_global_start_time, 1},
+    {"_RcppOTIO_cpp_timeline_set_global_start_time", (DL_FUNC) &_RcppOTIO_cpp_timeline_set_global_start_time, 2},
+    {"_RcppOTIO_cpp_timeline_duration", (DL_FUNC) &_RcppOTIO_cpp_timeline_duration, 1},
+    {"_RcppOTIO_cpp_timeline_video_tracks", (DL_FUNC) &_RcppOTIO_cpp_timeline_video_tracks, 1},
+    {"_RcppOTIO_cpp_timeline_audio_tracks", (DL_FUNC) &_RcppOTIO_cpp_timeline_audio_tracks, 1},
+    {"_RcppOTIO_cpp_timeline_find_clips", (DL_FUNC) &_RcppOTIO_cpp_timeline_find_clips, 1},
+    {"_RcppOTIO_cpp_track_kind", (DL_FUNC) &_RcppOTIO_cpp_track_kind, 1},
+    {"_RcppOTIO_cpp_track_set_kind", (DL_FUNC) &_RcppOTIO_cpp_track_set_kind, 2},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_rotio(DllInfo *dll) {
+RcppExport void R_init_RcppOTIO(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }

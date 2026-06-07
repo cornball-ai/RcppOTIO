@@ -15,7 +15,7 @@ A \code{TimeRange} or \code{NULL}.
 Trimmed range of an Item within its parent
 }
 \examples{
-library(rotio)
+library(RcppOTIO)
 trk <- Track("V1")
 a <- Clip("A", source_range = TimeRange(RationalTime(0, 24), RationalTime(24, 24)))
 append_child(trk, a)

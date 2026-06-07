@@ -1,4 +1,4 @@
-# rotio
+# RcppOTIO
 
 R bindings for [OpenTimelineIO](https://github.com/AcademySoftwareFoundation/OpenTimelineIO) (OTIO), built as
 an Rcpp wrapper over the OTIO C++ library (0.18.x).
@@ -37,7 +37,7 @@ and `type_version_map` reports the registered schema versions.
 ## Example
 
 ```r
-library(rotio)
+library(RcppOTIO)
 
 tl   <- Timeline("my timeline")
 trk  <- Track("V1", kind = "Video")

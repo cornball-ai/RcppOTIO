@@ -20,7 +20,7 @@ Logical; the setter returns \code{x}.
 Whether an Item or Effect is enabled
 }
 \examples{
-library(rotio)
+library(RcppOTIO)
 clip <- Clip("A")
 enabled(clip)
 enabled(clip) <- FALSE
