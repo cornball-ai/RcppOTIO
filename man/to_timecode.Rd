@@ -4,14 +4,15 @@
 \alias{from_timecode}
 \title{SMPTE timecode conversions}
 \usage{
-to_timecode(rt, rate, drop_frame = -1L)
+to_timecode(rt, rate = NULL, drop_frame = -1L)
 
 from_timecode(timecode, rate)
 }
 \arguments{
 \item{rt}{A \code{RationalTime}.}
 
-\item{rate}{Timecode rate.}
+\item{rate}{Timecode rate. Defaults to the \code{RationalTime}'s own rate
+(OTIO's no-rate \code{to_timecode} overload).}
 
 \item{drop_frame}{-1 infer, 0 force non-drop, 1 force drop-frame.}
 

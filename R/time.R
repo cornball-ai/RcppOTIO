@@ -100,7 +100,8 @@ rescaled_to <- function(rt, new_rate) cpp_rt_rescaled_to(rt, new_rate)
 #' SMPTE timecode conversions
 #'
 #' @param rt A \code{RationalTime}.
-#' @param rate Timecode rate.
+#' @param rate Timecode rate. Defaults to the \code{RationalTime}'s own rate
+#'   (OTIO's no-rate \code{to_timecode} overload).
 #' @param drop_frame -1 infer, 0 force non-drop, 1 force drop-frame.
 #' @return A timecode string.
 #' @examples
@@ -108,7 +109,10 @@ rescaled_to <- function(rt, new_rate) cpp_rt_rescaled_to(rt, new_rate)
 #' tc
 #' from_timecode(tc, 24)
 #' @export
-to_timecode <- function(rt, rate, drop_frame = -1L) {
+to_timecode <- function(rt, rate = NULL, drop_frame = -1L) {
+    if (is.null(rate)) {
+        rate <- rate(rt)
+    }
     cpp_rt_to_timecode(rt, rate, as.integer(drop_frame))
 }
 
