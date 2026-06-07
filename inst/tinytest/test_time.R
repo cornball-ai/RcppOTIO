@@ -19,6 +19,10 @@ expect_equal(value(rescaled_to(RationalTime(24, 24), 48)), 48)
 expect_equal(to_timecode(RationalTime(48, 24), 24), "00:00:02:00")
 expect_equal(value(from_timecode("00:00:02:00", 24)), 48)
 
+## no-rate overload: uses the RationalTime's own rate + infers drop-frame
+expect_equal(to_timecode(RationalTime(48, 24)), "00:00:02:00")
+expect_equal(to_timecode(RationalTime(17982, 30000 / 1001)), "00:10:00;00")
+
 ## arithmetic and comparison (Ops)
 expect_equal(value(RationalTime(10, 24) + RationalTime(5, 24)), 15)
 expect_equal(value(RationalTime(10, 24) - RationalTime(4, 24)), 6)
