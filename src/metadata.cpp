@@ -1,4 +1,4 @@
-#include "rotio.h"
+#include "RcppOTIO.h"
 #include <opentimelineio/serializableObject.h>
 #include <typeinfo>
 

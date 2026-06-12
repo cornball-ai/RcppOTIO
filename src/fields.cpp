@@ -1,4 +1,4 @@
-#include "rotio.h"
+#include "RcppOTIO.h"
 
 using namespace Rcpp;
 

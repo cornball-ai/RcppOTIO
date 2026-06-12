@@ -1,4 +1,4 @@
-#include "rotio.h"
+#include "RcppOTIO.h"
 
 // Build the S3 class chain for an object, most-derived first, ending in
 // "otio". dynamic_cast order matters: test leaves before their bases.
