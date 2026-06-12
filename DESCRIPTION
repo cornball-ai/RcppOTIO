@@ -1,6 +1,6 @@
 Package: RcppOTIO
 Type: Package
-Title: R Bindings for OpenTimelineIO
+Title: R Bindings for 'OpenTimelineIO'
 Version: 0.0.0.8
 Date: 2026-06-04
 Authors@R: c(
@@ -8,8 +8,8 @@ Authors@R: c(
            email = "troy.hernandez@pm.me",
            comment = c(ORCID = "0009-0005-4248-604X")),
     person("cornball.ai", role = "cph"))
-Description: An Rcpp wrapper over the OpenTimelineIO C++ library
-    (OTIO). Provides R bindings for the OTIO time types
+Description: An 'Rcpp' wrapper over the 'OpenTimelineIO' C++ library
+    (OTIO) <https://opentimeline.io/>. Provides R bindings for the OTIO time types
     (RationalTime, TimeRange, TimeTransform) and the serializable
     schema objects (Timeline, Stack, Track, Clip, Gap, Transition,
     Marker, Effect, and media references), including tree
@@ -21,4 +21,6 @@ Suggests: tinytest, simplermarkdown
 VignetteBuilder: simplermarkdown
 SystemRequirements: OpenTimelineIO C++ library (>= 0.18),
     Imath headers; C++17, pandoc
+URL: https://github.com/cornball-ai/RcppOTIO
+BugReports: https://github.com/cornball-ai/RcppOTIO/issues
 Encoding: UTF-8
