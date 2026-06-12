@@ -9,7 +9,8 @@ Authors@R: c(
            comment = c(ORCID = "0009-0005-4248-604X")),
     person("cornball.ai", role = "cph"))
 Description: An 'Rcpp' wrapper over the 'OpenTimelineIO' C++ library
-    (OTIO) <https://opentimeline.io/>. Provides R bindings for the OTIO time types
+    (OTIO) <https://github.com/AcademySoftwareFoundation/OpenTimelineIO>.
+    Provides R bindings for the OTIO time types
     (RationalTime, TimeRange, TimeTransform) and the serializable
     schema objects (Timeline, Stack, Track, Clip, Gap, Transition,
     Marker, Effect, and media references), including tree
