@@ -1,4 +1,4 @@
-#include "rotio.h"
+#include "RcppOTIO.h"
 #include <opentimelineio/editAlgorithm.h>
 #include <opentimelineio/trackAlgorithm.h>
 #include <opentimelineio/stackAlgorithm.h>

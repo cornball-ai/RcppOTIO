@@ -1,5 +1,5 @@
-#ifndef ROTIO_H
-#define ROTIO_H
+#ifndef RCPPOTIO_H
+#define RCPPOTIO_H
 
 // Umbrella header: OTIO includes, namespace aliases, and the shared
 // helper layer (error handling, external-pointer ownership, time-type
@@ -45,4 +45,4 @@ namespace ot = opentime;
 #include "otio_time.h"
 #include "otio_metadata.h"
 
-#endif // ROTIO_H
+#endif // RCPPOTIO_H
