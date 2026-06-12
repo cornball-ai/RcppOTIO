@@ -5,7 +5,7 @@ Version: 0.1.0
 Date: 2026-06-12
 Authors@R: c(
     person("Troy", "Hernandez", role = c("aut", "cre"),
-           email = "troy.hernandez@pm.me",
+           email = "troy@cornball.ai",
            comment = c(ORCID = "0009-0005-4248-604X")),
     person("cornball.ai", role = "cph"))
 Description: An 'Rcpp' wrapper over the 'OpenTimelineIO' C++ library
