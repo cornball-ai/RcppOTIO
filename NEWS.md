@@ -1,3 +1,11 @@
+# RcppOTIO 0.1.0
+
+* First minor release.
+* CRAN pre-submission polish: single-quote 'Rcpp' and 'OpenTimelineIO' in
+  DESCRIPTION, add the OTIO project URL, add URL and BugReports fields.
+* Test harness now redirects the R user cache/data/config dirs to
+  tempfiles so checks leave no files behind.
+
 # RcppOTIO 0.0.0.8
 
 * Renamed the package from rotio to RcppOTIO. The pure-R OpenTimelineIO
