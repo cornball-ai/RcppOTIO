@@ -14,7 +14,7 @@ Description: An 'Rcpp' wrapper over the 'OpenTimelineIO' C++ library
     schema objects (Timeline, Stack, Track, Clip, Gap, Transition,
     Marker, Effect, and media references), including tree
     construction and JSON serialisation round-trips.
-License: MIT + file LICENSE
+License: Apache License (== 2.0)
 Imports: Rcpp (>= 1.0.0)
 LinkingTo: Rcpp
 Suggests: tinytest, simplermarkdown
