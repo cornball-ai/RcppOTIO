@@ -57,11 +57,38 @@ tl2 <- from_json_string(js)
 is_equivalent_to(tl, tl2)          # TRUE
 ```
 
+## Relationship to rotio
+
+[rotio](https://github.com/cornball-ai/rotio) is the lightweight sibling:
+the same OTIO object model and naming, implemented in pure R with no
+compiled code. RcppOTIO binds the real C++ library; rotio uses it in
+Suggests as an optional validation oracle, round-tripping its JSON and
+edit-algorithm output through libopentimelineio in parity tests. If you
+need OTIO in R without a C++ toolchain, use rotio. If you want the
+reference implementation itself, you're in the right place.
+
+Building these packages is also what surfaced
+[OpenTimelineIO#2025](https://github.com/AcademySoftwareFoundation/OpenTimelineIO/pull/2025),
+an edit-algorithm fix found while parity-testing.
+
+## Install
+
+```r
+install.packages("RcppOTIO", repos = c(
+  "https://cornball-ai.github.io/drat",
+  "https://cloud.r-project.org"
+))
+```
+
 ## Requirements
 
-The OpenTimelineIO C++ library and Imath headers must be installed
-(default `/usr/local`). Override at install time with:
+The OpenTimelineIO C++ library (>= 0.18) and Imath headers must be
+installed (default `/usr/local`). Override at install time with:
 
 ```sh
-R CMD INSTALL --configure-vars='OTIO_HOME=/opt/otio' rotio
+R CMD INSTALL --configure-vars='OTIO_HOME=/opt/otio' RcppOTIO
 ```
+
+## License
+
+Apache License 2.0, matching upstream OpenTimelineIO.
